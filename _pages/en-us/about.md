@@ -1,18 +1,19 @@
 ---
 page_id: about
 layout: about
-title: about
+title: 张迁
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: >
+  东北大学秦皇岛分校<br>
+  计算机与通信工程学院
 
 profile:
-  align: right
+  align: left
   image: Qian_Zhang_GitHub.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>东北大学秦皇岛分校</p>
+    <p>计算机与通信工程学院</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
