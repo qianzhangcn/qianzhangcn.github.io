@@ -15,7 +15,7 @@ profile:
     <p>东北大学秦皇岛分校</p>
     <p>计算机与通信工程学院</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -53,6 +53,7 @@ latest_posts:
 ## 📖 代表性成果
 
 **-** **以第一作者完成论文11篇**：已发表10篇 (3篇IEEE TWC、1篇IEEE TCOM、2篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICASSP、1篇VTC)；在审1篇 (1篇IEEE JSAC大修)；其中2篇论文获得ESI高被引论文、1篇论文位列IEEE CL年度最受欢迎论文TOP 2、1篇论文位列IEEE CL最受欢迎论文TOP 50
+
 **-** **以共同第一作者完成论文6篇**：已发表5篇 (1篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICC、1篇WCNC)；在审1篇 (1篇IEEE WCL在审)
 
 **-第一作者 / 共同第一作者**
