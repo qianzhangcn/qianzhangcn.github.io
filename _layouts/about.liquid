@@ -16,7 +16,10 @@ layout: default
 
   <article>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div style="width:260px;
+            float:left;
+            margin-right:40px;
+            margin-bottom:20px;">
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
@@ -37,7 +40,9 @@ layout: default
       </div>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
+    <div style="overflow:hidden;">
+    {{ content }}
+</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
