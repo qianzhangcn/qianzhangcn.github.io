@@ -12,8 +12,8 @@ profile:
   image: Qian_Zhang_GitHub.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>东北大学秦皇岛分校</p>
-    <p>计算机与通信工程学院</p>
+    <p></p>
+    <p></p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
