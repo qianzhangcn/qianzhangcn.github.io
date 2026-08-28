@@ -57,7 +57,7 @@ body {
 }
 
 .top-header-photo img {
-    width: 210px;
+    width: 190px;
     max-width: 100%;
     height: auto;
     display: block;
