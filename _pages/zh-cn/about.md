@@ -73,14 +73,26 @@ body {
 
 
 /* 右侧 Logo */
-.top-header-logo {
-    flex: 0 0 auto;
-    text-align: center;
+/* 顶部整体区域 */
+.top-header-row {
+    position: relative;
 }
 
+
+/* 右侧 Logo：自定义位置 */
+.top-header-logo {
+    position: absolute;
+
+    top: 60px;      /* 上下位置 */
+    right: 40px;    /* 左右位置 */
+
+    z-index: 10;
+}
+
+
+/* Logo 大小 */
 .top-header-logo img {
     width: 170px;
-    max-width: 100%;
     height: auto;
     display: block;
 }
