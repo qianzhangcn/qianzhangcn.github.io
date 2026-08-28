@@ -6,24 +6,11 @@ permalink: /
 subtitle: >
   <br>
 
-
-profile:
-  align: left
-  image: Qian_Zhang_GitHub.png
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>- 学校: 东北大学秦皇岛分校</p>
-    <p>- 学院: 计算机与通信工程学院</p>
-    <p>- 职称: 副教授</p>
-    <p>- 学历: 工学博士</p>
-    <p>- 毕业院校: 山东大学</p>
-    <p>- 邮箱: zq869054246@163.com</p>
-
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: false # includes a list of news items
+  enabled: false
 
 latest_posts:
   enabled: false
@@ -31,200 +18,324 @@ latest_posts:
 
 <style>
 
-/* =========================
-正文排版（保持不变）
-========================= */
+/* =========================================================
+   整体页面
+   ========================================================= */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   顶部个人信息区域：单栏
+   ========================================================= */
+
+.top-profile {
+    width: 100%;
+    margin: 0 auto 35px auto;
+}
+
+
+/* =========================================================
+   个人照片
+   ========================================================= */
+
+.profile-photo {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.profile-photo img {
+    width: 280px;
+    max-width: 85%;
+    height: auto;
+    border-radius: 4px;
+}
+
+
+/* =========================================================
+   姓名
+   ========================================================= */
+
+.profile-name {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   欢迎语
+   ========================================================= */
+
+.profile-welcome {
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   照片下面的个人信息
+   ========================================================= */
+
+.profile-information {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.profile-information p {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   基本信息正文排版
+   ========================================================= */
+
+.bio-justify {
+    width: 100%;
+}
 
 .bio-justify p {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
 
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-character;
+    line-height: 1.8;
 
-  line-height: 1.8;
-
-  margin-top:0;
-  margin-bottom:1.3em;
-
+    margin-top: 0;
+    margin-bottom: 1.3em;
 }
 
 
-/* =========================
-PC端 Logo
-========================= */
+/* =========================================================
+   ICS Logo
+   Logo嵌入“基本信息”正文
+   不使用absolute定位
+   ========================================================= */
 
+.ics-logo-inline {
+    float: right;
 
-.ics-logo {
+    width: 155px;
+    height: auto;
 
-    position:absolute;
+    margin-top: 3px;
+    margin-left: 25px;
+    margin-bottom: 15px;
 
-    top:90px;
-
-    right:300px;
-
-    z-index:20;
-
+    display: block;
 }
 
 
-.ics-logo img {
-
-    width:180px;
-
-    height:auto;
-
+/* 清除Logo浮动，防止影响后面的学术背景 */
+.clear-float {
+    clear: both;
 }
 
 
-/* =========================
-手机端适配
-========================= */
+/* =========================================================
+   列表正文
+   ========================================================= */
 
-@media screen and (max-width:768px){
-
-
-    /* Logo取消悬浮 */
-    .ics-logo {
-
-        position:relative;
-
-        top:auto;
-
-        right:auto;
-
-        width:100%;
-
-        text-align:center;
-
-        margin-bottom:30px;
-
-    }
+.post-content {
+    width: 100%;
+}
 
 
-    .ics-logo img {
+/* =========================================================
+   手机端适配
+   ========================================================= */
 
-        width:90px;
+@media screen and (max-width: 768px) {
 
-    }
+    /* 页面左右留白 */
 
-
-
-    /* 强制 al-folio about 单列 */
-
+    .container,
     .container.mt-5 {
+        width: 100% !important;
+        max-width: 100% !important;
 
-        width:100% !important;
-
-        padding-left:20px !important;
-
-        padding-right:20px !important;
-
+        padding-left: 18px !important;
+        padding-right: 18px !important;
     }
 
 
+    /* 强制主题主体区域单栏 */
 
     .container.mt-5 .row {
-
-        display:flex !important;
-
-        flex-direction:column !important;
-
+        display: block !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-
 
 
     .container.mt-5 .row > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
 
-        width:100% !important;
-
-        max-width:100% !important;
-
-        flex:0 0 100% !important;
-
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
 
+    /* 照片 */
 
-    /* 左侧头像 */
-
-    .profile {
-
-        width:100% !important;
-
-        text-align:center !important;
-
+    .profile-photo {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 20px;
     }
 
 
-
-    .profile img {
-
-        width:220px !important;
-
-        max-width:80% !important;
-
+    .profile-photo img {
+        width: 220px;
+        max-width: 78%;
+        height: auto;
     }
 
+
+    /* 姓名 */
+
+    .profile-name {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+
+
+    /* 欢迎语 */
+
+    .profile-welcome {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
 
 
     /* 个人信息 */
 
-    .profile .more-info {
+    .profile-information {
+        width: 100%;
+        max-width: 100%;
 
-        text-align:left !important;
+        font-size: 15px;
+        line-height: 1.8;
 
+        margin-bottom: 25px;
     }
 
+
+    /* =====================================================
+       手机端 Logo
+       取消文字环绕
+       独占一行，避免正文过窄
+       ===================================================== */
+
+    .ics-logo-inline {
+        float: none;
+
+        display: block;
+
+        width: 95px;
+        height: auto;
+
+        margin: 5px auto 20px auto;
+    }
 
 
     /* 正文 */
 
-    .post-content {
-
-        width:100% !important;
-
+    .bio-justify p {
+        line-height: 1.8;
+        text-align: justify;
     }
 
 
-
-    html,body {
-
-        overflow-x:hidden !important;
-
+    h2 {
+        font-size: 24px;
     }
 
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
 
 }
+
 </style>
 
 
-<div class="ics-logo">
-    <img src="/assets/img/ICS_LOGO.png">
+<!-- =====================================================
+     顶部个人信息
+     ===================================================== -->
+
+<div class="top-profile">
+
+<div class="profile-photo">
+<img src="{{ '/assets/img/Qian_Zhang_GitHub.png' | relative_url }}" alt="Qian Zhang">
+</div>
+
+<h1 class="profile-name">张迁</h1>
+
+<div class="profile-welcome">
+欢迎访问我的个人主页！
+</div>
+
+<div class="profile-information">
+
+<p>🏫 学校：东北大学秦皇岛分校</p>
+
+<p>🏛️ 学院：计算机与通信工程学院</p>
+
+<p>👨‍🏫 职称：副教授</p>
+
+<p>🎓 学历：工学博士</p>
+
+<p>🎓 毕业院校：山东大学</p>
+
+<p>📧 邮箱：zq869054246@163.com</p>
+
+</div>
+
 </div>
 
 
-# 张迁
-
-欢迎访问我的个人主页！
-
 ---
+
 ## 👨‍🏫 **基本信息**
 
+<div class="bio-justify" markdown="1">
 
-**张迁**，**工学博士**，**副教授**，IEEE Member，中国通信学会会员，CSIG交通视频专委会委员。
-2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），合作导师董郑教授；
-2024年受**国家留学基金委资助**赴新加坡南洋理工大学EEE学院联合培养，师从Prof. Yong Liang Guan（副校长）和Prof. Chau Yuen（IEEE Fellow）。  
+<img class="ics-logo-inline" src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}" alt="ICS Logo">
 
-目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。在通信领域顶级期刊IEEE TWC、TCOM和顶级会议IEEE ICC、ICASSP等发表学术论文近30篇，其中第一/共一作者论文15篇。2篇论文入选**🏆ESI高被引论文**（一作），1篇论文位列**IEEE CL年度最受欢迎论文TOP 2**（一作），4篇论文分别位列**IEEE TVT、WCL、CL月度最受欢迎论文TOP 50**（1篇一作、2篇共一、1篇第二）。授权专利3项。担任《**中国通信**》(**英文版**)**首届青年编委**，担任2026 PIMRC TPC Chair；多次担任IEEE ICC、Globecom、WCNC等国际会议TPC Member；常年担任IEEE JSAC、TWC、TCOM、WCM、TIFS、TCCN、TVT、TITS、IOTJ、WCL、CL等十余家国际期刊审稿人。 
+**张迁**，**工学博士**，**副教授**，IEEE Member，中国通信学会会员，CSIG交通视频专委会委员。2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），合作导师董郑教授；2024年受**国家留学基金委资助**赴新加坡南洋理工大学EEE学院联合培养，师从Prof. Yong Liang Guan（副校长）和Prof. Chau Yuen（IEEE Fellow）。
 
-作为核心成员参与国家重点研发计划项目、国家自然科学基金面上项目、山东省重点研发计划（重大科技示范工程）项目等多项国家级省级重点项目。曾获优秀博士/学士毕业论文、山东省/山东大学优秀毕业生、**博士国家奖学金2次**、**本科国家奖学金**、2026年**山东大学学术之星（学院唯一）**、2026年**山东大学研究生优秀成果奖（学院唯一）**、一等奖学金（本科4年）、以及国家级省级创新创业类及学科类竞赛奖项十余项。 
+目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。在通信领域顶级期刊IEEE TWC、TCOM和顶级会议IEEE ICC、ICASSP等发表学术论文近30篇，其中第一/共一作者论文15篇。2篇论文入选**🏆ESI高被引论文**（一作），1篇论文位列**IEEE CL年度最受欢迎论文TOP 2**（一作），4篇论文分别位列**IEEE TVT、WCL、CL月度最受欢迎论文TOP 50**（1篇一作、2篇共一、1篇第二）。授权专利3项。担任《**中国通信**》（**英文版**）**首届青年编委**，担任2026 PIMRC TPC Chair；多次担任IEEE ICC、GLOBECOM、WCNC等国际会议TPC Member；常年担任IEEE JSAC、TWC、TCOM、WCM、TIFS、TCCN、TVT、TITS、IOTJ、WCL、CL等十余家国际期刊审稿人。
+
+作为核心成员参与国家重点研发计划项目、国家自然科学基金面上项目、山东省重点研发计划（重大科技示范工程）项目等多项国家级省级重点项目。曾获优秀博士/学士毕业论文、山东省/山东大学优秀毕业生、**博士国家奖学金2次**、**本科国家奖学金**、2026年**山东大学学术之星（学院唯一）**、2026年**山东大学研究生优秀成果奖（学院唯一）**、一等奖学金（本科4年）、以及国家级省级创新创业类及学科类竞赛奖项十余项。
+
+</div>
+
+<div class="clear-float"></div>
 
 ---
 
 ## 🎓 **学术背景**
-- 2026.07—至今     东北大学秦皇岛分校 计算机与通信工程学院， 副教授
-- 2024.11—2025.11  新加坡南洋理工大学EEE，            联合培养博士，   导师：Yong Liang Guan（副校长）、Chau Yuen（IEEE Fellow）
-- 2021.09—2026.06  山东大学信息科学与工程学院，        工学博士，      导师: 刘琚教授（二级）
+
+- 2026.07—至今　东北大学秦皇岛分校 计算机与通信工程学院，副教授
+- 2024.11—2025.11　新加坡南洋理工大学EEE，联合培养博士，导师：Yong Liang Guan（副校长）、Chau Yuen（IEEE Fellow）
+- 2021.09—2026.06　山东大学信息科学与工程学院，工学博士，导师：刘琚教授（二级）
 
 ---
 
@@ -241,7 +352,7 @@ PC端 Logo
 
 ## 🌐 **学术服务**
 
-- 《中国通信》(英文版)首届青年编委
+- 《中国通信》（英文版）首届青年编委
 - CSIG交通视频专委会委员
 - IEEE PIMRC 2026 TPC Chair
 - IEEE ICC、GLOBECOM、WCNC 等国际会议 TPC Member
@@ -253,20 +364,19 @@ PC端 Logo
 
 **-** **详情见顶部Publications页面**
 
-**-** **以第一作者完成论文11篇**：已发表10篇 (3篇IEEE TWC、1篇IEEE TCOM、2篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICASSP、1篇VTC)；在审1篇 (1篇IEEE JSAC大修)；其中2篇论文获得ESI高被引论文、1篇论文位列IEEE CL年度最受欢迎论文TOP 2、1篇论文位列IEEE CL最受欢迎论文TOP 50
+**-** **以第一作者完成论文11篇**：已发表10篇（3篇IEEE TWC、1篇IEEE TCOM、2篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICASSP、1篇VTC）；在审1篇（1篇IEEE JSAC大修）；其中2篇论文获得ESI高被引论文、1篇论文位列IEEE CL年度最受欢迎论文TOP 2、1篇论文位列IEEE CL最受欢迎论文TOP 50。
 
-**-** **以共同第一作者完成论文6篇**：已发表5篇 (1篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICC、1篇WCNC)；在审1篇 (1篇IEEE WCL在审)
+**-** **以共同第一作者完成论文6篇**：已发表5篇（1篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICC、1篇WCNC）；在审1篇（1篇IEEE WCL在审）。
 
+### **申请专利**
 
-**-** **申请专利**
+[1] 孙福辉; 张迁; 王晓燕; 邵明杰; 刘琚; RIS辅助的MIMO系统的和速率优化方法及装置. （发明专利，授权号：CN117176214B）
 
-[1] 孙福辉; 张迁; 王晓燕; 邵明杰; 刘琚; RIS辅助的MIMO系统的和速率优化方法及装置. (发明专利，授权号：CN117176214B)
+[2] 刘琚; 程学军; 张迁; 罗广惠; 焦钰辉; 一种实际智能超表面辅助RSMA系统波束成形方法. （发明专利，公开号：CN120110450A）
 
-[2] 刘琚; 程学军; 张迁; 罗广惠; 焦钰辉; 一种实际智能超表面辅助RSMA系统波束成形方法. (发明专利，公开号：CN120110450A)
+[3] 刘琚; 程学军; 罗广惠; 张迁; 董郑; 一种超对角智能超表面辅助NOMA系统波束成形方法. （发明专利，公开号：CN119051703A）
 
-[3] 刘琚; 程学军; 罗广惠; 张迁; 董郑; 一种超对角智能超表面辅助NOMA系统波束成形方法. (发明专利，公开号：CN119051703A)
-
-[4] 刘琚; 彭志颖; 王祥丞; 张迁; 高智超; 李紫宇; 一种多服务器MEC-D2D系统联合任务卸载与资源分配方法. (发明专利, 公开号：CN116456497A)
+[4] 刘琚; 彭志颖; 王祥丞; 张迁; 高智超; 李紫宇; 一种多服务器MEC-D2D系统联合任务卸载与资源分配方法. （发明专利，公开号：CN116456497A）
 
 ---
 
@@ -289,10 +399,12 @@ PC端 Logo
 ## 🤝 **招生与合作**
 
 常年与新加坡南洋理工大学、山东大学、电子科技大学、西北工业大学、南京理工大学等国内外知名高校保持科研合作。
-欢迎对无线通信、智能超表面、通感一体化、人工智能通信优化等方向感兴趣的本科生、硕士生及博士生联系交流。个人邮箱：zhangqian@neuq.edu.cn; zq869054246@163.com。
+
+欢迎对无线通信、智能超表面、通感一体化、人工智能通信优化等方向感兴趣的本科生、硕士生及博士生联系交流。
+
+个人邮箱：zhangqian@neuq.edu.cn；zq869054246@163.com。
 
 ---
-
 
 <div style="text-align: center; margin-top: 30px; font-size: 14px; opacity: 0.75;">
   👁️ 本站总访问量：
