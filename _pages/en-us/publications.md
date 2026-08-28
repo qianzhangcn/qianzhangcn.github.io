@@ -167,7 +167,21 @@ nav_order: 2
 }
 </style>
   
-## 📚 **Publications**  (†共同一作、*通讯作者)
+<div class="publications-header">
+
+  <div class="publications-header-title">
+    <h2>📚 <strong>Publications</strong></h2>
+    <div style="margin-top: 6px;">
+      (†共同一作、*通讯作者)
+    </div>
+  </div>
+
+  <div class="publications-header-logo">
+    <img src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}" alt="ICS Logo">
+  </div>
+
+</div>
+
 ---
 
 ### 📘 **Journal Papers**
