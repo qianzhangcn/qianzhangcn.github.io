@@ -10,169 +10,89 @@ nav_order: 2
 ---
 <style>
 
-/* =========================
-正文排版（保持不变）
-========================= */
+/* =========================================================
+   Publications 标题 + ICS Logo
+   Logo嵌入正常文本布局
+   ========================================================= */
 
-.bio-justify p {
+.publications-header {
+    width: 100%;
 
-  text-align: justify;
-  text-align-last: left;
-  text-justify: inter-character;
+    display: flex;
+    flex-direction: row;
 
-  line-height: 1.8;
+    align-items: center;
+    justify-content: space-between;
 
-  margin-top:0;
-  margin-bottom:1.3em;
-
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 
-/* =========================
-PC端 Logo
-========================= */
-
-
-.ics-logo {
-
-    position:absolute;
-
-    top:90px;
-
-    right:300px;
-
-    z-index:20;
-
+/* Publications标题 */
+.publications-header-title {
+    flex: 1;
 }
 
 
-.ics-logo img {
-
-    width:180px;
-
-    height:auto;
-
+/* 标题本身 */
+.publications-header-title h2 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
+/* 右侧Logo */
+.publications-header-logo {
+    flex: 0 0 auto;
 
-/* =========================
-手机端适配
-========================= */
+    margin-left: 40px;
 
-@media screen and (max-width:768px){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
-    /* ===== Logo ===== */
+/* Logo大小 */
+.publications-header-logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
 
-    .ics-logo {
 
-        position:relative;
+/* =========================================================
+   手机端
+   ========================================================= */
 
-        top:auto;
+@media screen and (max-width: 768px) {
 
-        right:auto;
+    .publications-header {
+        flex-direction: column;
 
-        width:100%;
+        align-items: flex-start;
 
-        text-align:center;
-
-        margin-bottom:20px;
-
+        gap: 15px;
     }
 
 
-    .ics-logo img {
+    .publications-header-logo {
+        width: 100%;
 
-        width:90px;
+        margin-left: 0;
 
-        height:auto;
-
+        justify-content: center;
     }
 
 
-
-    /* ===== al-folio 手机端强制单列 ===== */
-
-
-    .container.mt-5 .row {
-
-        display:block !important;
-
-    }
-
-
-    .container.mt-5 .row > div {
-
-        width:100% !important;
-
-        max-width:100% !important;
-
-        flex:0 0 100% !important;
-
-    }
-
-
-
-    /* 左侧头像 */
-
-    .container.mt-5 .profile {
-
-        width:100% !important;
-
-        text-align:center !important;
-
-    }
-
-
-    .container.mt-5 .profile img {
-
-        width:220px !important;
-
-        max-width:80% !important;
-
-        height:auto !important;
-
-    }
-
-
-
-    /* 左侧个人信息 */
-
-    .container.mt-5 .profile .more-info {
-
-        text-align:left !important;
-
-    }
-
-
-
-    /* 正文 */
-
-    .container.mt-5 .post-content {
-
-        width:100% !important;
-
-        max-width:100% !important;
-
-    }
-
-
-
-    html,body {
-
-        overflow-x:hidden !important;
-
+    .publications-header-logo img {
+        width: 90px;
     }
 
 }
 
 </style>
-
-
-<div class="ics-logo">
-    <img src="/assets/img/ICS_LOGO.png">
-</div>
 
 
 <style>
@@ -246,7 +166,21 @@ PC端 Logo
 }
 </style>
   
-## 📚 **Publications**  (†共同一作、*通讯作者)
+<div class="publications-header">
+
+  <div class="publications-header-title">
+    <h2>📚 <strong>Publications</strong></h2>
+    <div style="margin-top: 6px;">
+      (†共同一作、*通讯作者)
+    </div>
+  </div>
+
+  <div class="publications-header-logo">
+    <img src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}" alt="ICS Logo">
+  </div>
+
+</div>
+
 ---
 
 ### 📘 **Journal Papers**
