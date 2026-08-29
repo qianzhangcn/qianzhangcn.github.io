@@ -81,7 +81,7 @@ body {
 */
 
 /* 右侧 Logo：自定义位置 */
-  
+  /*
 .top-header-logo {
     position: absolute;
 
@@ -98,7 +98,7 @@ body {
     height: auto;
     display: block;
 }
-  
+  */
 
 
 /* =========================================================
