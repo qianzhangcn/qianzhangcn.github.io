@@ -50,7 +50,7 @@ body {
 }
 
 .top-header-photo img {
-    width: 180px;   /* 比之前更小 */
+    width: 190px;   /* 比之前更小 */
     max-width: 100%;
     height: auto;
     display: block;
