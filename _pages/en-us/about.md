@@ -108,7 +108,7 @@ body {
 /* Logo 大小 */
 
 .top-header-logo img {
-    width: 170px;
+    width: 0px;
     height: auto;
     display: block;
 }
