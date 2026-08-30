@@ -113,8 +113,143 @@ body {
     display: block;
 }
 
+
+/* =========================================================
+   姓名与欢迎语
+   ========================================================= */
+
+.profile-name {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.profile-welcome {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   正文排版
+   ========================================================= */
+
+.bio-justify p {
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-character;
+
+    line-height: 1.8;
+
+    margin-top: 0;
+    margin-bottom: 1.3em;
+}
+
+
+/* =========================================================
+   手机端适配
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .container,
+    .container.mt-5 {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+
+    /* =====================================================
+       顶部区域手机端改为上下排列
+       ===================================================== */
+
+    .top-header-row {
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 18px;
+
+        margin-top: 5px;
+        margin-bottom: 28px;
+    }
+
+
+    /* 手机端照片 */
+
+    .top-header-photo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .top-header-photo img {
+        width: 190px;
+        max-width: 78%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* 手机端个人信息 */
+
+    .top-header-info {
+        width: 100%;
+
+        font-size: 15px;
+        line-height: 1.8;
+
+        padding-right: 0;
+    }
+
+    .top-header-info p {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+
+    /* =====================================================
+       手机端 Logo
+       取消电脑端绝对定位
+       ===================================================== */
+
+    .top-header-logo {
+        position: static;
+
+        width: 100%;
+        text-align: center;
+
+        margin-top: 5px;
+    }
+
+    .top-header-logo img {
+        width: 0px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    h2 {
+        font-size: 24px;
+    }
+
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+}
+
+</style>
+
+
 <!-- =====================================================
-     顶部区域：照片 + 个人信息 + Logo
+     顶部区域：照片 + 英文个人信息 + Logo
      ===================================================== -->
 
 <div class="top-header-row">
