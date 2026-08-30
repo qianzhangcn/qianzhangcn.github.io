@@ -30,6 +30,7 @@ body {
 
 /* =========================================================
    顶部区域：照片 + 个人信息 + Logo
+   与中文主页保持一致
    ========================================================= */
 
 .top-header-row {
@@ -41,16 +42,22 @@ body {
     gap: 40px;
     margin-top: 10px;
     margin-bottom: 35px;
+
+    /* Logo 使用绝对定位时必须保留 */
+    position: relative;
 }
 
 
-/* 左侧照片 */
+/* =========================================================
+   左侧照片
+   ========================================================= */
+
 .top-header-photo {
     flex: 0 0 auto;
 }
 
 .top-header-photo img {
-    width: 190px;   /* 比之前更小 */
+    width: 190px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -58,12 +65,23 @@ body {
 }
 
 
-/* 中间个人信息 */
+/* =========================================================
+   中间个人信息
+   ========================================================= */
+
 .top-header-info {
     flex: 1;
     min-width: 0;
+
     font-size: 16px;
     line-height: 2.0;
+
+    /*
+       给右侧 Logo 预留空间，
+       避免英文较长时与 Logo 重叠
+    */
+    padding-right: 210px;
+    box-sizing: border-box;
 }
 
 .top-header-info p {
@@ -73,106 +91,27 @@ body {
 
 
 /* =========================================================
-   姓名与欢迎语
+   右侧 Logo
+   可以通过 top 和 right 自定义位置
    ========================================================= */
 
-.profile-name {
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
+.top-header-logo {
+    position: absolute;
 
-  
-.profile-welcome {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
+    top: 60px;      /* 越大越往下 */
+    right: 40px;    /* 越大越往左 */
+
+    z-index: 10;
 }
 
 
-/* =========================================================
-   正文排版
-   ========================================================= */
+/* Logo 大小 */
 
-.bio-justify p {
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-character;
-    line-height: 1.8;
-    margin-top: 0;
-    margin-bottom: 1.3em;
+.top-header-logo img {
+    width: 0px;
+    height: auto;
+    display: block;
 }
-
-
-/* =========================================================
-   手机端适配
-   ========================================================= */
-
-@media screen and (max-width: 768px) {
-
-    .container,
-    .container.mt-5 {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-    }
-
-    /* 顶部区域手机端改为上下排列 */
-    .top-header-row {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        margin-top: 5px;
-        margin-bottom: 28px;
-    }
-
-    .top-header-photo {
-        width: 100%;
-        text-align: center;
-    }
-
-    .top-header-photo img {
-        width: 190px;
-        max-width: 78%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .top-header-info {
-        width: 100%;
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    .top-header-info p {
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
-
-    .top-header-logo {
-        width: 100%;
-        text-align: center;
-    }
-
-    .top-header-logo img {
-        width: 95px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
-}
-
-</style>
-
 
 <!-- =====================================================
      顶部区域：照片 + 个人信息 + Logo
