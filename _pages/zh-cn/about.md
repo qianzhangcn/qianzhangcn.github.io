@@ -284,7 +284,7 @@ body {
 
 <div class="bio-justify" markdown="1">
 
-**张迁**，**工学博士**，**副教授**，IEEE Member，中国通信学会会员，CSIG交通视频专委会委员。  
+**张迁**，**工学博士**，**副教授**，**硕士生导师**，IEEE Member，中国通信学会会员，CSIG交通视频专委会委员。  
 2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），合作导师董郑教授；  
 2024年受**国家留学基金委资助**赴新加坡南洋理工大学EEE学院联合培养，师从Prof. Yong Liang Guan（副校长）和Prof. Chau Yuen（IEEE Fellow）。  
 
