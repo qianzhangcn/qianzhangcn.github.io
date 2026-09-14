@@ -329,12 +329,20 @@ body {
 
 **-** **详情见顶部Publications页面**
 
-**-** **以第一作者完成论文11篇**：已发表10篇 (3篇IEEE TWC、1篇IEEE TCOM、2篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICASSP、1篇VTC)；在审1篇 (1篇IEEE JSAC大修)；其中2篇论文获得ESI高被引论文、1篇论文位列IEEE CL年度最受欢迎论文TOP 2、1篇论文位列IEEE CL最受欢迎论文TOP 50
+**-** **论文**
 
-**-** **以共同第一作者完成论文6篇**：已发表5篇 (1篇IEEE TVT、1篇IEEE WCL、1篇IEEE CL、1篇ICC、1篇WCNC)；在审1篇 (1篇IEEE WCL在审)
+[1] **Qian Zhang**, Zheng Dong, Yufei Zhao, Yao Ge, Yong Liang Guan, Ju Liu, and Chau Yuen, "Multi-resolution codebook design and multiuser interference management for discrete XL-RIS-aided near-field MIMO systems," **_IEEE Transactions on Wireless Communications_**, vol. 25, pp. 2826-2842, 2026. (SCI, JCR Q1, IF = 10.7, **🏆ESI高被引论文**)
+
+[2] **Qian Zhang**, Ju Liu, Haoge Tang, Zheng Dong, and Yonghui Li, "Practical RIS-aided multiuser communications with imperfect CSI: Practical model, amplitude feedback, and beamforming optimization," **_IEEE Transactions on Wireless Communications_**, vol. 23, no. 10, pp. 15245-15260, Oct. 2024. (SCI, JCR Q1, IF = 10.7)
+
+[3] **Qian Zhang**, Ju Liu, Yao Ge, Yufei Zhao, Wali Ullah Khan, Zheng Dong, Yong Liang Guan, Chau Yuen, "Two-stage coded-sliding beam training and QoS-constrained sum-rate maximization for SIM-assisted wireless communications," **_IEEE Transactions on Wireless Communications_**, vol. 25, pp. 12162-12179, 2026. (SCI, JCR Q1, IF = 10.7)
+
+[4] **Qian Zhang**, Ju Lui, Zhichao Gao, Ziyu Li, Zhiying Peng, Zheng Dong, and Hongji Xu, "Robust beamforming design for RIS-aided NOMA secure networks with transceiver hardware impairments," **_IEEE Transactions on Communications_**, vol. 71, no. 6, pp. 3637-3649, June 2023. (SCI, JCR Q1, IF = 8.3)
+
+[5] **Qian Zhang**, Mingjie Shao, Tong Zhang, Gaojie Chen, Ju Liu and Pak Chung Ching, "An efficient sum-rate maximization algorithm for fluid antenna-assisted ISAC system," **_IEEE Communications Letters_**, vol. 29, no. 1, pp. 200-204, Jan. 2025. (SCI, JCR Q2, IF = 4.5, **🏆ESI高被引论文**, **年度最受欢迎论文TOP 2**)
 
 
-**-** **申请专利**
+**-** **专利**
 
 [1] 孙福辉; 张迁; 王晓燕; 邵明杰; 刘琚; RIS辅助的MIMO系统的和速率优化方法及装置. (发明专利，授权号：CN117176214B)
 
