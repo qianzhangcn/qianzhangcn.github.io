@@ -199,19 +199,19 @@ nav_order: 2
 <li>
 <span class="author-name">Qian Zhang</span>, 
 <span class="etal">et al.</span>, 
-"RIS-assisted multiuser NOMA networks with imperfect CSI under transceiver hardware impairments," 
-<span class="journal-name">IEEE Internet of Things Journal</span>, 
+"RIS-aided covert communications with discrete phase control, element control failures, and element activation states," 
+<span class="journal-name">IEEE Transactions on Wireless Communications </span>, 
 2026. 
-  <span class="paper-info">(JCR Q1, IF = 8.33, 在修)</span>
+<span class="paper-info">(JCR Q1, IF = 10.3, 在审)</span>
 </li>
 
 <li>
 <span class="author-name">Qian Zhang</span>, 
 <span class="etal">et al.</span>, 
-"Discrete-Phase RIS-Aided Covert Communications With Random Element-Control Failures and Residual Reflection," 
-<span class="journal-name">IEEE Transactions on Wireless Communications </span>, 
+"RIS-assisted multiuser NOMA networks with imperfect CSI under transceiver hardware impairments," 
+<span class="journal-name">IEEE Internet of Things Journal</span>, 
 2026. 
-<span class="paper-info">(JCR Q1, IF = 10.3, 准备中)</span>
+  <span class="paper-info">(JCR Q1, IF = 8.33, 接收)</span>
 </li>
 
 <li>
