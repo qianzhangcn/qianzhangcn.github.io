@@ -276,9 +276,7 @@ body {
 
 # 张迁
 
-欢迎访问我的个人主页！(<li>
-<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>
-</li>）
+欢迎访问我的个人主页！(<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>）
 
 ---
 
