@@ -276,7 +276,7 @@ body {
 
 # **Qian Zhang**
 
-Welcome to my personal homepage!
+Welcome to my personal homepage! (Google Scholar: https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN)
 
 ---
 
