@@ -428,7 +428,7 @@ Deyu Lin,
 "Enhanced information security via wave-field selectivity and structured wavefront manipulation," 
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
 2025. 
-  <span class="paper-info">(JCR Q1, IF = 10.7, Major Revision)</span>
+  <span class="paper-info">(JCR Q1, IF = 10.7, Accepted)</span>
 </li>
 
 <li>
