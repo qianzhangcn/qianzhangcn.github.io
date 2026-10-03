@@ -427,7 +427,7 @@ Deyu Lin,
 "Enhanced information security via wave-field selectivity and structured wavefront manipulation," 
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
 2025. 
-  <span class="paper-info">(JCR Q1, IF = 10.7, 大修)</span>
+  <span class="paper-info">(JCR Q1, IF = 10.7)</span>
 </li>
 
 <li>
@@ -447,7 +447,7 @@ Xuejun Cheng,
 "Crem'er-Rao bound minimization for discrete SIM-aided ISAC systems," 
 <span class="journal-name">IEEE Internet of Things Journal</span>, 
 2026. 
-  <span class="paper-info">(主要指导人, JCR Q1, IF = 8.33, 在修)</span>
+  <span class="paper-info">(主要指导人, JCR Q1, IF = 8.33, 大修)</span>
 </li>
 
 </ol>
