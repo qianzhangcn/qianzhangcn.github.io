@@ -207,6 +207,17 @@ nav_order: 2
 </li>
 
 <li>
+Yufei Zhao*, 
+Deyu Lin, 
+<span class="author-name">Qian Zhang*</span>, 
+<span class="etal">et al.</span>, 
+"Enhanced information security via wave-field selectivity and structured wavefront manipulation," 
+<span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
+2025. 
+  <span class="paper-info">(JCR Q1, IF = 10.7, Accepted)</span>
+</li>
+
+<li>
 <span class="author-name">Qian Zhang</span>, 
 <span class="etal">et al.</span>, 
 "RIS-assisted multiuser NOMA networks with imperfect CSI under transceiver hardware impairments," 
@@ -418,17 +429,6 @@ Hong Niu,
 2025. 
   <span class="paper-info">(JCR Q1, IF = 6.3) </span>
 <a href="https://doi.org/10.1109/MNET.2026.3685501">DOI</a>
-</li>
-
-<li>
-Yufei Zhao, 
-Deyu Lin, 
-<span class="author-name">Qian Zhang</span>, 
-<span class="etal">et al.</span>, 
-"Enhanced information security via wave-field selectivity and structured wavefront manipulation," 
-<span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
-2025. 
-  <span class="paper-info">(JCR Q1, IF = 10.7, Accepted)</span>
 </li>
 
 <li>
