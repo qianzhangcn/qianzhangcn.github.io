@@ -430,7 +430,7 @@ Hong Niu,
 <span class="journal-name">IEEE Network</span>, 
 2025. 
   <span class="paper-info">(JCR Q1, IF = 6.3) </span>
-<a href="https://doi.org/10.1109/MNET.2026.3685501">DOI</a>
+<a href="https://doi.org/10.1109/MNET.2026.3685501">[Full Paper]</a>
 </li>
 
 <li>
