@@ -20,8 +20,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
+  },{id: "nav-出版物",
+          title: "出版物",
           description: "Main research achievements in the fields of wireless communication and sensing",
           section: "",
           handler: () => {
