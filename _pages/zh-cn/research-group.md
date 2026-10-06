@@ -681,7 +681,40 @@ nav_order: 3
     <img
       src="/assets/img/group/visitor-01.jpg"
       class="ics-visitor-photo"
-      alt="访问学者姓名">
+      alt="程学军">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        程学军
+      </div>
+
+      <div class="ics-visitor-role">
+        访问学者 · 山东大学
+      </div>
+
+      <!--
+      <div class="ics-visitor-status">
+        访问时间：2026年XX月－2026年XX月
+      </div>
+      -->
+
+      <p class="ics-visitor-desc">
+        主要研究方向包括无线通信、通信感知一体化与智能无线网络。
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== 访问学者 2 ==================== -->
+
+  <div class="ics-visitor">
+
+    <img
+      src="/assets/img/group/visitor-01.jpg"
+      class="ics-visitor-photo"
+      alt="程学军">
 
     <div>
 
