@@ -651,17 +651,17 @@ body {
 
     <span class="research-tag">
       超大规模阵列通信
-      <span class="en">XL-MIMO</span>
+      <span class="research-tag en">XL-MIMO</span>
     </span>
 
     <span class="research-tag">
       智能超表面
-      <span class="en">IMS</span>
+      <span class="research-tag en">IMS</span>
     </span>
 
     <span class="research-tag">
       通感一体化
-      <span class="en">ISAC</span>
+      <span class="research-tag en">ISAC</span>
     </span>
 
     <span class="research-tag">
