@@ -1,7 +1,7 @@
 ---
 page_id: about
 layout: about
-title: Profile
+title: "个人主页"
 permalink: /
 subtitle: >
   <br>
