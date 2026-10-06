@@ -951,7 +951,7 @@ nav_order: 3
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          学生姓名
+          王奕霖
         </div>
 
         <div class="ics-member-role">
