@@ -29,7 +29,7 @@ ninja.data = [{
           },
         },{id: "nav-research-group",
           title: "Research Group",
-          description: "Our research group and research interests.",
+          description: "",
           section: "Navigation menu",
           handler: () => {
             window.location.href = "/en-us/research-group/";
