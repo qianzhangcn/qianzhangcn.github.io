@@ -214,6 +214,7 @@ Deyu Lin,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
 2026. 
   <span class="paper-info">(JCR Q1, IF = 10.7, 接收)</span>
+<a href="https://ieeexplore.ieee.org/document/11720371">[Full Paper]</a>
 </li>
 
 <li>
@@ -223,7 +224,7 @@ Deyu Lin,
 <span class="journal-name">IEEE Internet of Things Journal</span>, 
 2026. 
   <span class="paper-info">(JCR Q1, IF = 8.33)</span>
-<a href="https://ieeexplore.ieee.org/document/11720371">DOI</a>
+<a href="https://ieeexplore.ieee.org/document/11720371">[Full Paper]</a>
 </li>
 
 <li>
@@ -234,7 +235,7 @@ Zheng Dong,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>, 
 vol. 25, pp. 2826-2842, 2026. 
 <span class="paper-info">(JCR Q1, IF = 10.7, 🏆 ESI高被引)</span>
-<a href="https://doi.org/10.1109/TWC.2025.3599514">DOI</a>
+<a href="https://doi.org/10.1109/TWC.2025.3599514">[Full Paper]</a>
 </li>
 
 <li>
