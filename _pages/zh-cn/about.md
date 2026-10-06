@@ -650,18 +650,18 @@ body {
   <div class="research-tags">
 
     <span class="research-tag">
-      超大规模阵列通信
-      <span class="research-tag en">XL-MIMO</span>
+      超大规模阵列通信XL-MIMO
+      <span class="en">XL-MIMO</span>
     </span>
 
     <span class="research-tag">
-      智能超表面
-      <span class="research-tag en">IMS</span>
+      智能超表面IMS
+      <span class="en">IMS</span>
     </span>
 
     <span class="research-tag">
-      通感一体化
-      <span class="research-tag en">ISAC</span>
+      通感一体化ISAC
+      <span class="en">ISAC</span>
     </span>
 
     <span class="research-tag">
