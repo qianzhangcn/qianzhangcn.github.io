@@ -36,7 +36,7 @@ nav_order: 3
 }
 
 .ics-logo {
-  width: min(520px, 88%);
+  width: min(320px, 88%);
   height: auto;
   display: block;
   margin: 0 auto 16px;
@@ -377,7 +377,8 @@ nav_order: 3
   }
 
   .ics-logo {
-    width: 95%;
+    width: 280px;
+    max-width: 80%;
   }
 
   .ics-members {
