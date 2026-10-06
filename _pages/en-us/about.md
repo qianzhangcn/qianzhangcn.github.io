@@ -1,8 +1,8 @@
 ---
 page_id: about
 layout: about
-title: Profile
-permalink: /
+title: "Profile"
+permalink: /en-us/
 subtitle: >
   <br>
 
@@ -19,368 +19,1149 @@ latest_posts:
 <style>
 
 /* =========================================================
-   页面整体
+   Global
    ========================================================= */
 
 html,
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
+.profile-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
 
 /* =========================================================
-   顶部区域：照片 + 个人信息 + Logo
-   与中文主页保持一致
+   Entire English page: Times New Roman
    ========================================================= */
 
-.top-header-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 10px;
-    margin-bottom: 35px;
-
-    /* Logo 使用绝对定位时必须保留 */
-    position: relative;
+.profile-page,
+.profile-page *,
+.profile-page p,
+.profile-page span,
+.profile-page div,
+.profile-page a,
+.profile-page h1,
+.profile-page h2,
+.profile-page h3,
+.profile-page strong,
+.profile-page em {
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 
 /* =========================================================
-   左侧照片
+   Top Header
    ========================================================= */
 
-.top-header-photo {
-    flex: 0 0 auto;
+.profile-top {
+  display: grid;
+  grid-template-columns: 190px 1fr 190px;
+  gap: 34px;
+  align-items: center;
+
+  margin-top: 8px;
+  margin-bottom: 26px;
+
+  padding: 24px 0 18px;
 }
 
-.top-header-photo img {
-    width: 190px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
+.profile-photo-wrap {
+  text-align: center;
 }
 
+.profile-photo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 
-/* =========================================================
-   中间个人信息
-   ========================================================= */
-
-.top-header-info {
-    flex: 1;
-    min-width: 0;
-
-    font-size: 16px;
-    line-height: 2.0;
-
-    /*
-       给右侧 Logo 预留空间，
-       避免英文较长时与 Logo 重叠
-    */
-    padding-right: 210px;
-    box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.top-header-info p {
-    margin-top: 6px;
-    margin-bottom: 6px;
+.profile-info {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 2;
 }
 
-
-/* =========================================================
-   右侧 Logo
-   可以通过 top 和 right 自定义位置
-   ========================================================= */
-
-.top-header-logo {
-    position: absolute;
-
-    top: 60px;      /* 越大越往下 */
-    right: 40px;    /* 越大越往左 */
-
-    z-index: 10;
+.profile-info-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 4px 0;
 }
 
+.profile-info-label {
+  width: 105px;
+  flex: 0 0 105px;
+  font-weight: 700;
+}
 
-/* Logo 大小 */
+.profile-logo-wrap {
+  text-align: center;
+}
 
-.top-header-logo img {
-    width: 180px;
-    height: auto;
-    display: block;
+.profile-logo {
+  width: 175px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 
 /* =========================================================
-   姓名与欢迎语
+   Name & Welcome
    ========================================================= */
 
 .profile-name {
-    margin-top: 5px;
-    margin-bottom: 8px;
+  margin: 4px 0 4px;
+  font-size: 2.05rem;
+  font-weight: 700;
 }
 
 .profile-welcome {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
+  margin: 0 0 26px;
+  font-size: 1rem;
+  color: var(--global-text-color-light);
 }
 
 
 /* =========================================================
-   正文排版
+   Section
    ========================================================= */
 
-.bio-justify p {
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-character;
+.profile-section {
+  margin: 44px 0;
+}
 
-    line-height: 1.8;
+.profile-section-title {
+  font-size: 1.62rem;
+  font-weight: 700;
 
-    margin-top: 0;
-    margin-bottom: 1.3em;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid var(--global-divider-color);
+}
+
+.profile-section-title::before {
+  content: "";
+  display: inline-block;
+
+  width: 5px;
+  height: 1.12em;
+
+  margin-right: 11px;
+
+  border-radius: 4px;
+  background: var(--global-theme-color);
+
+  vertical-align: -0.12em;
+}
+
+.profile-text p {
+  text-align: justify;
+  text-align-last: left;
+
+  line-height: 1.85;
+
+  margin-top: 0;
+  margin-bottom: 1.25em;
 }
 
 
 /* =========================================================
-   手机端适配
+   Intro Card
    ========================================================= */
 
-@media screen and (max-width: 768px) {
+.profile-intro-card {
+  background: var(--global-card-bg-color);
 
-    .container,
-    .container.mt-5 {
-        width: 100% !important;
-        max-width: 100% !important;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
 
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-    }
+  padding: 28px 30px;
 
-
-    /* =====================================================
-       顶部区域手机端改为上下排列
-       ===================================================== */
-
-    .top-header-row {
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 18px;
-
-        margin-top: 5px;
-        margin-bottom: 28px;
-    }
+  box-shadow: 0 5px 18px rgba(0,0,0,0.045);
+}
 
 
-    /* 手机端照片 */
+/* =========================================================
+   Timeline
+   ========================================================= */
 
-    .top-header-photo {
-        width: 100%;
-        text-align: center;
-    }
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-    .top-header-photo img {
-        width: 190px;
-        max-width: 78%;
+.timeline-item {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 24px;
 
-        margin-left: auto;
-        margin-right: auto;
-    }
+  padding: 18px 20px;
 
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
 
-    /* 手机端个人信息 */
+  background: var(--global-card-bg-color);
+}
 
-    .top-header-info {
-        width: 100%;
+.timeline-date {
+  font-weight: 700;
+  color: var(--global-theme-color);
+}
 
-        font-size: 15px;
-        line-height: 1.8;
+.timeline-main {
+  font-weight: 600;
+}
 
-        padding-right: 0;
-    }
-
-    .top-header-info p {
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
-
-
-    /* =====================================================
-       手机端 Logo
-       取消电脑端绝对定位
-       ===================================================== */
-
-    .top-header-logo {
-        position: static;
-
-        width: 100%;
-        text-align: center;
-
-        margin-top: 5px;
-    }
-
-    .top-header-logo img {
-        width: 0px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
+.timeline-sub {
+  margin-top: 3px;
+  font-size: 0.94rem;
+  color: var(--global-text-color-light);
+}
 
 
-    h2 {
-        font-size: 24px;
-    }
+/* =========================================================
+   Research Tags
+   ========================================================= */
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.research-tag {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+
+  color: var(--global-theme-color);
+
+  font-size: 0.94rem;
+  font-weight: 600;
+
+  background: var(--global-card-bg-color);
+}
 
 
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
+/* =========================================================
+   Service Cards
+   ========================================================= */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  padding: 18px 20px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Publications
+   ========================================================= */
+
+.pub-note {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border-left: 4px solid var(--global-theme-color);
+  background: var(--global-card-bg-color);
+
+  border-radius: 0 10px 10px 0;
+}
+
+.pub-item {
+  margin-bottom: 20px;
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  background: var(--global-card-bg-color);
+}
+
+.pub-index {
+  font-weight: 700;
+  color: var(--global-theme-color);
+}
+
+.pub-text {
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   Patents
+   ========================================================= */
+
+.patent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.patent-item {
+  padding: 16px 18px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 11px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Awards
+   ========================================================= */
+
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 18px;
+}
+
+.award-item {
+  padding: 15px 17px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 11px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Cooperation
+   ========================================================= */
+
+.coop-box {
+  padding: 24px 28px;
+
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0 12px 12px 0;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Visitor Counter
+   ========================================================= */
+
+.visit-counter {
+  text-align: center;
+
+  margin-top: 48px;
+  padding-top: 22px;
+
+  border-top: 1px solid var(--global-divider-color);
+
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .profile-top {
+    grid-template-columns: 170px 1fr;
+  }
+
+  .profile-logo-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .profile-logo {
+    width: 155px;
+  }
+
+  .service-grid,
+  .award-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+
+  .container,
+  .container.mt-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .profile-top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 190px;
+  }
+
+  .profile-logo {
+    display: none;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .profile-info-row {
+    display: flex;
+  }
+
+  .profile-info-label {
+    width: 95px;
+    flex: 0 0 95px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .profile-section {
+    margin: 36px 0;
+  }
+
+  .profile-section-title {
+    font-size: 1.4rem;
+  }
+
 }
 
 </style>
 
 
-<!-- =====================================================
-     顶部区域：照片 + 英文个人信息 + Logo
-     ===================================================== -->
+<div class="profile-page">
 
-<div class="top-header-row">
 
-  <div class="top-header-photo">
-    <img src="{{ '/assets/img/Qian_Zhang_GitHub_2.png' | relative_url }}" alt="Qian Zhang">
+<!-- =========================================================
+     Top Profile Information
+     ========================================================= -->
+
+<div class="profile-top">
+
+  <div class="profile-photo-wrap">
+    <img
+      src="{{ '/assets/img/Qian_Zhang_GitHub_2.png' | relative_url }}"
+      class="profile-photo"
+      alt="Qian Zhang">
   </div>
 
-  <div class="top-header-info">
-    <p>- Institution: Northeastern University at Qinhuangdao</p>
-    <p>- School: School of Computer and Communication Engineering</p>
-    <p>- Academic Rank: Associate Professor</p>
-    <p>- Degree: Ph.D. in Engineering</p>
-    <p>- Alma Mater: Shandong University</p>
-    <p>- Email: zq869054246@163.com</p>
+
+  <div class="profile-info">
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">University:</span>
+      <span>Northeastern University at Qinhuangdao</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">School:</span>
+      <span>School of Computer and Communication Engineering</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">Position:</span>
+      <span>Associate Professor</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">Degree:</span>
+      <span>Ph.D. in Engineering</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">Alma Mater:</span>
+      <span>Shandong University</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">Email:</span>
+      <span>zq869054246@163.com</span>
+    </div>
+
   </div>
 
-  <div class="top-header-logo">
-    <img src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}" alt="ICS Logo">
+
+  <div class="profile-logo-wrap">
+    <img
+      src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}"
+      class="profile-logo"
+      alt="ICS Lab Logo">
   </div>
 
 </div>
 
 
-# **Qian Zhang**
+<!-- =========================================================
+     Name
+     ========================================================= -->
 
-Welcome to my personal homepage! (<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">Google Scholar Homepage</a>)
+<h1 class="profile-name">Qian Zhang</h1>
 
----
-
-## 👨‍🏫 **Basic Information**
-
-<div class="bio-justify" markdown="1">
-
-**Qian Zhang**, **Ph.D. in Engineering**, **Associate Professor**, IEEE Member, Member of the China Institute of Communications, Committee Member of the CSIG Traffic Video Special Committee.  
-In 2021, he was recommended for admission to the direct Ph.D. program at Shandong University, under the supervision of Prof. Ju Liu (Level-II Professor) and Prof. Zheng Dong.  
-In 2024, supported by the **China Scholarship Council**, he joined the School of Electrical and Electronic Engineering at Nanyang Technological University (NTU), Singapore, as a visiting Ph.D. student, under the joint supervision of Prof. Yong Liang Guan (Vice President of NTU) and Prof. Chau Yuen (IEEE Fellow).  
-He received the Ph.D. degree in Engineering from Shandong University in June 2026.
-
-His current research interests include intelligent metasurfaces, convex optimization theory, and artificial intelligence algorithms for wireless communications and sensing.  
-He has published over 30 academic papers in top-tier journals and conferences in wireless communications, including IEEE TWC, IEEE TCOM, IEEE ICC, and IEEE ICASSP, among which 18 papers were published as the first, co-first author, or corresponding author.  
-Two of his first-authored papers were recognized as **🏆ESI Highly Cited Papers**. One of his first-authored papers was selected as one of the **Top 2 Most Popular Papers of the Year in IEEE CL**, and four papers were ranked in the **Top 50 Most Popular Papers of the Month by IEEE TVT, WCL, and CL**, respectively (1 first-authored paper, 2 co-first-authored papers, and 1 second-authored paper).  
-He has been granted three patents. He serves as a **Young Editorial Board Member of China Communications** and a **TPC Chair for IEEE PIMRC 2026**. He has also served multiple times as a TPC Member for international conferences, including IEEE ICC, IEEE GLOBECOM, and IEEE WCNC. He regularly serves as a reviewer for more than ten international journals, including IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN, TVT, TITS, IOTJ, WCL, and CL.
-
-As a core member, he has participated in several major national- and provincial-level projects, including the National Key Research and Development Program of China, the General Program of the National Natural Science Foundation of China, and the Key Research and Development Program of Shandong Province (Major Science and Technology Demonstration Project).  
-He has received the Outstanding Doctoral/Bachelor's Thesis Award, the Outstanding Graduate Awards of Shandong Province and Shandong University, **two National Scholarships for Doctoral Students**, **the National Scholarship for Undergraduate Students**, the **2026 Academic Star Award of Shandong University as the sole recipient from his school**, the **2026 Outstanding Graduate Research Achievement Award of Shandong University as the sole recipient from his school**, First-Class Scholarships throughout his four undergraduate years, and more than ten awards in national- and provincial-level innovation, entrepreneurship, and disciplinary competitions.
-
-</div>
-
----
-
-## 🎓 **Academic Background**
-
-- 2026.07—Present  School of Computer and Communication Engineering, Northeastern University at Qinhuangdao, **Associate Professor**
-- 2024.11—2025.11  School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore, **Visiting Ph.D. Student**, Supervisors: Yong Liang Guan (Vice President) and Chau Yuen (IEEE Fellow)
-- 2021.09—2026.06  School of Information Science and Engineering, Shandong University, **Ph.D. in Engineering**, Supervisor: Prof. Ju Liu (Level-II Professor)
-
----
-
-## 🔬 **Research Interests**
-
-- Extremely Large-Scale MIMO Communications (XL-MIMO)
-- Intelligent Metasurfaces (IMS)
-- Integrated Sensing and Communication (ISAC)
-- Near-Field Wireless Communications
-- Beam Training
-- Deep Unfolding
-
----
-
-## 🌐 **Academic Services**
-
-- Young Editorial Board Member of China Communications
-- Committee Member of the CSIG Traffic Video Special Committee
-- TPC Chair, IEEE PIMRC 2026
-- TPC Member for international conferences, including IEEE ICC, GLOBECOM, and WCNC
-- Reviewer for more than ten international journals, including IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN, TVT, TITS, IOTJ, WCL, and CL
-
----
-
-## 📖 **Representative Achievements**
-
-**-** **For details, please refer to the Publications page at the top**
-
-**-** **Authored 11 papers as the first author**: 10 published papers (3 in IEEE TWC, 1 in IEEE TCOM, 2 in IEEE TVT, 1 in IEEE WCL, 1 in IEEE CL, 1 in ICASSP, and 1 in VTC); 1 paper under review (1 IEEE JSAC paper under major revision). Among them, 2 papers were recognized as ESI Highly Cited Papers, 1 paper was ranked among the Top 2 Most Popular Papers of the Year in IEEE CL, and 1 paper was ranked among the Top 50 Most Popular Papers in IEEE CL.
-
-**-** **Authored 6 papers as a co-first author**: 5 published papers (1 in IEEE TVT, 1 in IEEE WCL, 1 in IEEE CL, 1 in ICC, and 1 in WCNC); 1 paper under review (1 IEEE WCL paper under review).
+<p class="profile-welcome">
+  Welcome to my personal homepage!
+  (<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=en">Google Scholar</a>)
+</p>
 
 
-**-** **Patent Applications**
+<!-- =========================================================
+     Biography
+     ========================================================= -->
 
-[1] Fuhui Sun; Qian Zhang; Xiaoyan Wang; Mingjie Shao; Ju Liu; Sum-Rate Optimization Method and Apparatus for RIS-Assisted MIMO Systems. (Invention Patent, Grant No.: CN117176214B)
+<section class="profile-section">
 
-[2] Ju Liu; Xuejun Cheng; Qian Zhang; Guanghui Luo; Yuhui Jiao; A Beamforming Method for Practical Intelligent Metasurface-Assisted RSMA Systems. (Invention Patent, Publication No.: CN120110450A)
+  <h2 class="profile-section-title">👨‍🏫 Biography</h2>
 
-[3] Ju Liu; Xuejun Cheng; Guanghui Luo; Qian Zhang; Zheng Dong; A Beamforming Method for Beyond-Diagonal Intelligent Metasurface-Assisted NOMA Systems. (Invention Patent, Publication No.: CN119051703A)
+  <div class="profile-intro-card profile-text">
 
-[4] Ju Liu; Zhiying Peng; Xiangcheng Wang; Qian Zhang; Zhichao Gao; Ziyu Li; A Joint Task Offloading and Resource Allocation Method for Multi-Server MEC-D2D Systems. (Invention Patent, Publication No.: CN116456497A)
+    <p>
+      <strong>Qian Zhang</strong> received the Ph.D. degree in Engineering and is currently
+      an <strong>Associate Professor</strong> and <strong>Master's Supervisor</strong>
+      with the School of Computer and Communication Engineering,
+      Northeastern University at Qinhuangdao.
+      He is an <strong>IEEE Member</strong>, a member of the China Institute of Communications,
+      and a member of the CSIG Technical Committee on Transportation Video.
+    </p>
 
----
+    <p>
+      He received the Ph.D. degree from Shandong University in June 2026 through
+      a direct Ph.D. program, under the supervision of
+      <strong>Prof. Ju Liu</strong>, with <strong>Prof. Zheng Dong</strong>
+      serving as the co-supervisor.
+      From November 2024 to November 2025, he was supported by the
+      <strong>China Scholarship Council</strong> as a visiting Ph.D. student
+      with the School of Electrical and Electronic Engineering,
+      Nanyang Technological University, Singapore, under the supervision of
+      <strong>Prof. Yong Liang Guan</strong>, Vice President of NTU,
+      and <strong>Prof. Chau Yuen</strong>, IEEE Fellow.
+    </p>
 
-## 🏆 **Honors and Awards**
+    <p>
+      His current research interests include intelligent metasurfaces,
+      convex optimization theory, and artificial intelligence algorithms
+      for wireless communications and sensing.
+      He has published more than <strong>30 academic papers</strong>
+      in leading journals and conferences in wireless communications,
+      including <em>IEEE Transactions on Wireless Communications</em>,
+      <em>IEEE Transactions on Communications</em>,
+      IEEE ICC, and ICASSP.
+      Among these publications, <strong>18 papers were authored as first author,
+      co-first author, or corresponding author</strong>.
+    </p>
 
-- Recommended Admission to Graduate Study without Entrance Examination (2020)
-- National Scholarship for Undergraduate Students (2020, ranked first in the school)
-- National Encouragement Scholarship (2018, 2019)
-- National Scholarship for Doctoral Students (2024, 2025)
-- Outstanding Graduate of Shandong Province (2021)
-- Outstanding Graduate of Shandong University (2026)
-- Academic Star of Shandong University (2026, the sole recipient from the school)
-- Outstanding Graduate Research Achievement Award of Shandong University (2026, the sole recipient from the school)
-- Excellence Award in the Ph.D. Midterm Assessment (ranked first)
-- First-Class Undergraduate Academic Scholarship (the sole recipient in the major throughout all four years)
-- Outstanding Ph.D. Student Source Scholarship and First-Class Scholarship for New Graduate Students
+    <p>
+      Two of his first-authored papers were selected as
+      <strong>🏆 ESI Highly Cited Papers</strong>.
+      One first-authored paper was ranked among the
+      <strong>Top 2 Most Popular Papers of the Year in IEEE Communications Letters</strong>,
+      while four papers were ranked among the
+      <strong>Top 50 Most Popular Papers</strong>
+      in IEEE TVT, WCL, and CL.
+      He has also been granted multiple invention patents.
+    </p>
 
----
+    <p>
+      He currently serves as a member of the
+      <strong>inaugural Young Editorial Board of <em>China Communications</em></strong>
+      and as <strong>TPC Chair of IEEE PIMRC 2026</strong>.
+      He has served as a TPC Member for international conferences including
+      IEEE ICC, GLOBECOM, and WCNC.
+      He also regularly serves as a reviewer for more than ten IEEE journals,
+      including IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN, TVT, TITS,
+      IoTJ, WCL, and CL.
+    </p>
 
-## 🤝 **Student Recruitment and Collaboration**
+    <p>
+      As a core research member, he has participated in several major national
+      and provincial research projects, including the National Key Research and
+      Development Program of China, the General Program of the National Natural
+      Science Foundation of China, and the Key Research and Development Program
+      of Shandong Province.
+    </p>
 
-Undergraduate, master's, and doctoral students interested in wireless communications, intelligent metasurfaces, integrated sensing and communication, and AI-enabled communication optimization are welcome to contact me for academic exchange and collaboration.
+    <p>
+      His honors include Outstanding Doctoral/Bachelor's Thesis,
+      Outstanding Graduate of Shandong Province,
+      Outstanding Graduate of Shandong University,
+      <strong>National Scholarship for Ph.D. Students twice</strong>,
+      <strong>National Scholarship for Undergraduate Students</strong>,
+      <strong>Academic Star of Shandong University 2026</strong>
+      (the only recipient in the school),
+      and the <strong>Outstanding Graduate Research Achievement Award
+      of Shandong University 2026</strong>
+      (the only recipient in the school).
+      He has also received more than ten national- and provincial-level awards
+      in innovation, entrepreneurship, and academic competitions.
+    </p>
 
-Email: zhangqian@neuq.edu.cn; zq869054246@163.com.
+  </div>
 
----
+</section>
 
-<div style="text-align: center; margin-top: 30px; font-size: 14px; opacity: 0.75;">
-  👁️ Total Visits:
+
+<!-- =========================================================
+     Academic Background
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🎓 Academic Background</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <div class="timeline-date">
+        Jul. 2026 — Present
+      </div>
+
+      <div>
+        <div class="timeline-main">
+          School of Computer and Communication Engineering,
+          Northeastern University at Qinhuangdao
+        </div>
+
+        <div class="timeline-sub">
+          Associate Professor
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-date">
+        Nov. 2024 — Nov. 2025
+      </div>
+
+      <div>
+        <div class="timeline-main">
+          School of Electrical and Electronic Engineering,
+          Nanyang Technological University, Singapore
+        </div>
+
+        <div class="timeline-sub">
+          Visiting Ph.D. Student ·
+          Supervisors: Prof. Yong Liang Guan (Vice President) and
+          Prof. Chau Yuen (IEEE Fellow)
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-date">
+        Sep. 2021 — Jun. 2026
+      </div>
+
+      <div>
+        <div class="timeline-main">
+          School of Information Science and Engineering,
+          Shandong University
+        </div>
+
+        <div class="timeline-sub">
+          Ph.D. in Engineering ·
+          Supervisor: Prof. Ju Liu ·
+          Co-supervisor: Prof. Zheng Dong
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Research Interests
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🔬 Research Interests</h2>
+
+  <div class="research-tags">
+
+    <span class="research-tag">
+      Extremely Large-Scale MIMO (XL-MIMO)
+    </span>
+
+    <span class="research-tag">
+      Intelligent Metasurfaces (IMS)
+    </span>
+
+    <span class="research-tag">
+      Integrated Sensing and Communication (ISAC)
+    </span>
+
+    <span class="research-tag">
+      Near-Field Wireless Communications
+    </span>
+
+    <span class="research-tag">
+      Beam Training
+    </span>
+
+    <span class="research-tag">
+      Deep Unfolding
+    </span>
+
+    <span class="research-tag">
+      Deep Reinforcement Learning
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Academic Services
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🌐 Academic Services</h2>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      Inaugural Young Editorial Board Member,
+      <em>China Communications</em>
+    </div>
+
+    <div class="service-card">
+      Member, CSIG Technical Committee on Transportation Video
+    </div>
+
+    <div class="service-card">
+      IEEE PIMRC 2026 TPC Chair
+    </div>
+
+    <div class="service-card">
+      TPC Member, IEEE ICC / GLOBECOM / WCNC
+    </div>
+
+    <div class="service-card" style="grid-column: 1 / -1;">
+      Reviewer for IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN,
+      TVT, TITS, IoTJ, WCL, CL, and other international journals.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Selected Publications
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">📖 Selected Publications</h2>
+
+  <div class="pub-note">
+    For the complete publication list, please visit the
+    <a href="{{ '/Publications/' | relative_url }}">
+      <strong>Publications</strong>
+    </a>
+    page.
+  </div>
+
+
+  <h3 style="margin-top: 28px;">Journal Papers</h3>
+
+
+  <div class="pub-item">
+
+    <div class="pub-text">
+
+      <span class="pub-index">[1]</span>
+
+      <strong>Qian Zhang</strong>, Zheng Dong, Yufei Zhao, Yao Ge,
+      Yong Liang Guan, Ju Liu, and Chau Yuen,
+
+      “Multi-resolution codebook design and multiuser interference management
+      for discrete XL-RIS-aided near-field MIMO systems,”
+
+      <strong>
+        <em>IEEE Transactions on Wireless Communications</em>
+      </strong>,
+
+      vol. 25, pp. 2826–2842, 2026.
+
+    </div>
+
+    <div style="margin-top: 6px;">
+      <strong>
+        SCI, JCR Q1, IF = 10.7, 🏆 ESI Highly Cited Paper
+      </strong>
+    </div>
+
+  </div>
+
+
+  <div class="pub-item">
+
+    <div class="pub-text">
+
+      <span class="pub-index">[2]</span>
+
+      <strong>Qian Zhang</strong>, Ju Liu, Haoge Tang, Zheng Dong,
+      and Yonghui Li,
+
+      “Practical RIS-aided multiuser communications with imperfect CSI:
+      Practical model, amplitude feedback, and beamforming optimization,”
+
+      <strong>
+        <em>IEEE Transactions on Wireless Communications</em>
+      </strong>,
+
+      vol. 23, no. 10, pp. 15245–15260, Oct. 2024.
+
+    </div>
+
+    <div style="margin-top: 6px;">
+      <strong>
+        SCI, JCR Q1, IF = 10.7
+      </strong>
+    </div>
+
+  </div>
+
+
+  <div class="pub-item">
+
+    <div class="pub-text">
+
+      <span class="pub-index">[3]</span>
+
+      <strong>Qian Zhang</strong>, Ju Liu, Yao Ge, Yufei Zhao,
+      Wali Ullah Khan, Zheng Dong, Yong Liang Guan, and Chau Yuen,
+
+      “Two-stage coded-sliding beam training and QoS-constrained
+      sum-rate maximization for SIM-assisted wireless communications,”
+
+      <strong>
+        <em>IEEE Transactions on Wireless Communications</em>
+      </strong>,
+
+      vol. 25, pp. 12162–12179, 2026.
+
+    </div>
+
+    <div style="margin-top: 6px;">
+      <strong>
+        SCI, JCR Q1, IF = 10.7
+      </strong>
+    </div>
+
+  </div>
+
+
+  <div class="pub-item">
+
+    <div class="pub-text">
+
+      <span class="pub-index">[4]</span>
+
+      <strong>Qian Zhang</strong>, Ju Liu, Zhichao Gao, Ziyu Li,
+      Zhiying Peng, Zheng Dong, and Hongji Xu,
+
+      “Robust beamforming design for RIS-aided NOMA secure networks
+      with transceiver hardware impairments,”
+
+      <strong>
+        <em>IEEE Transactions on Communications</em>
+      </strong>,
+
+      vol. 71, no. 6, pp. 3637–3649, June 2023.
+
+    </div>
+
+    <div style="margin-top: 6px;">
+      <strong>
+        SCI, JCR Q1, IF = 8.3
+      </strong>
+    </div>
+
+  </div>
+
+
+  <div class="pub-item">
+
+    <div class="pub-text">
+
+      <span class="pub-index">[5]</span>
+
+      <strong>Qian Zhang</strong>, Mingjie Shao, Tong Zhang,
+      Gaojie Chen, Ju Liu, and Pak Chung Ching,
+
+      “An efficient sum-rate maximization algorithm for
+      fluid antenna-assisted ISAC system,”
+
+      <strong>
+        <em>IEEE Communications Letters</em>
+      </strong>,
+
+      vol. 29, no. 1, pp. 200–204, Jan. 2025.
+
+    </div>
+
+    <div style="margin-top: 6px;">
+
+      <strong>
+        SCI, JCR Q2, IF = 4.5,
+        🏆 ESI Highly Cited Paper,
+        Top 2 Most Popular Papers of the Year
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       Patents
+       ========================================================= -->
+
+  <h3 style="margin-top: 34px;">Patents</h3>
+
+  <div class="patent-list">
+
+
+    <div class="patent-item">
+
+      <strong>[1]</strong>
+
+      Fuhui Sun, Qian Zhang, Xiaoyan Wang, Mingjie Shao, and Ju Liu,
+
+      “Sum-rate optimization method and apparatus for RIS-assisted
+      MIMO systems.”
+
+      (Chinese Invention Patent,
+      Grant No. CN117176214B)
+
+    </div>
+
+
+    <div class="patent-item">
+
+      <strong>[2]</strong>
+
+      Ju Liu, Xuejun Cheng, Qian Zhang, Guanghui Luo, and Yuhui Jiao,
+
+      “Beamforming method for practical intelligent-surface-assisted
+      RSMA systems.”
+
+      (Chinese Invention Patent,
+      Publication No. CN120110450A)
+
+    </div>
+
+
+    <div class="patent-item">
+
+      <strong>[3]</strong>
+
+      Ju Liu, Xuejun Cheng, Guanghui Luo, Qian Zhang, and Zheng Dong,
+
+      “Beamforming method for beyond-diagonal intelligent-surface-assisted
+      NOMA systems.”
+
+      (Chinese Invention Patent,
+      Publication No. CN119051703A)
+
+    </div>
+
+
+    <div class="patent-item">
+
+      <strong>[4]</strong>
+
+      Ju Liu, Zhiying Peng, Xiangcheng Wang, Qian Zhang,
+      Zhichao Gao, and Ziyu Li,
+
+      “Joint task offloading and resource allocation method for
+      multi-server MEC-D2D systems.”
+
+      (Chinese Invention Patent,
+      Grant No. CN116456497B)
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Honors and Awards
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🏆 Honors and Awards</h2>
+
+  <div class="award-grid">
+
+    <div class="award-item">
+      Recommendation for Postgraduate Study without Entrance Examination (2020)
+    </div>
+
+    <div class="award-item">
+      National Scholarship for Undergraduate Students
+      (2020, ranked 1st in the school)
+    </div>
+
+    <div class="award-item">
+      National Encouragement Scholarship (2018, 2019)
+    </div>
+
+    <div class="award-item">
+      National Scholarship for Ph.D. Students (2024, 2025)
+    </div>
+
+    <div class="award-item">
+      Outstanding Graduate of Shandong Province (2021)
+    </div>
+
+    <div class="award-item">
+      Outstanding Graduate of Shandong University (2026)
+    </div>
+
+    <div class="award-item">
+      Academic Star of Shandong University
+      (2026, only recipient in the school)
+    </div>
+
+    <div class="award-item">
+      Outstanding Graduate Research Achievement Award,
+      Shandong University
+      (2026, only recipient in the school)
+    </div>
+
+    <div class="award-item">
+      Outstanding Award in Ph.D. Mid-Term Evaluation
+      (Ranked 1st)
+    </div>
+
+    <div class="award-item">
+      First-Class Academic Scholarship for Four Consecutive Years
+      during Undergraduate Study
+    </div>
+
+    <div class="award-item">
+      Outstanding Ph.D. Student Scholarship and
+      First-Class Entrance Scholarship
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Recruitment and Collaboration
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🤝 Recruitment and Collaboration</h2>
+
+  <div class="coop-box profile-text">
+
+    <p>
+      We maintain active research collaborations with leading universities
+      and research institutions, including Nanyang Technological University,
+      Shandong University, University of Electronic Science and Technology
+      of China, Northwestern Polytechnical University, and
+      Nanjing University of Science and Technology.
+    </p>
+
+    <p>
+      Undergraduate students, master's students, Ph.D. students,
+      and researchers who are interested in wireless communications,
+      intelligent metasurfaces, integrated sensing and communication,
+      and AI-enabled wireless optimization are welcome to contact us
+      for research collaboration.
+    </p>
+
+    <p>
+      Email:
+      <strong>zhangqian@neuq.edu.cn</strong>;
+      <strong>zq869054246@163.com</strong>.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     Visitor Counter
+     ========================================================= -->
+
+<div class="visit-counter">
+
+  👁️ Total Page Views:
   <span id="busuanzi_site_pv">Loading...</span>
+
   &nbsp;&nbsp;|&nbsp;&nbsp;
+
   👤 Total Visitors:
   <span id="busuanzi_site_uv">Loading...</span>
+
 </div>
 
-<script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script
+  src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
+  defer>
+</script>
+
+
+</div>
