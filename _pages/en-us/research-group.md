@@ -680,7 +680,7 @@ nav_order: 3
     <div>
 
       <div class="ics-visitor-name">
-        Xuejun Cheng
+        Xuejun Cheng (<a href="https://scholar.google.com/citations?user=anxnepIAAAAJ&hl=zh-CN">谷歌学术主页</a>)
       </div>
 
       <div class="ics-visitor-role">
