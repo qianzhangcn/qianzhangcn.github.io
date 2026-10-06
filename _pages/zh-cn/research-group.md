@@ -979,8 +979,6 @@ nav_order: 3
     -->
 
 
-  </div>
-
 </section>
 
 
