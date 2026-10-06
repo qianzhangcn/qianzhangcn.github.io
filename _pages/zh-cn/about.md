@@ -19,374 +19,940 @@ latest_posts:
 <style>
 
 /* =========================================================
-   页面整体
+   Global
    ========================================================= */
 
 html,
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
+}
+
+.profile-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* 英文统一 Times New Roman */
+.profile-page .en,
+.profile-page .en * {
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 
 /* =========================================================
-   顶部区域：照片 + 个人信息 + Logo
-   与中文主页保持一致
+   Top Header
    ========================================================= */
 
-.top-header-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin-top: 10px;
-    margin-bottom: 35px;
+.profile-top {
+  display: grid;
+  grid-template-columns: 190px 1fr 190px;
+  gap: 34px;
+  align-items: center;
 
-    /* Logo 使用绝对定位时必须保留 */
-    position: relative;
+  margin-top: 8px;
+  margin-bottom: 26px;
+
+  padding: 24px 0 18px;
+}
+
+.profile-photo-wrap {
+  text-align: center;
+}
+
+.profile-photo {
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.profile-info {
+  min-width: 0;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.profile-info-label {
+  min-width: 72px;
+  font-weight: 600;
+}
+
+.profile-logo-wrap {
+  text-align: center;
+}
+
+.profile-logo {
+  width: 175px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 
 /* =========================================================
-   左侧照片
-   ========================================================= */
-
-.top-header-photo {
-    flex: 0 0 auto;
-}
-
-.top-header-photo img {
-    width: 190px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-}
-
-
-/* =========================================================
-   中间个人信息
-   ========================================================= */
-
-.top-header-info {
-    flex: 1;
-    min-width: 0;
-
-    font-size: 16px;
-    line-height: 2.0;
-
-    /*
-       给右侧 Logo 预留空间，
-       避免英文较长时与 Logo 重叠
-    */
-    padding-right: 210px;
-    box-sizing: border-box;
-}
-
-.top-header-info p {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-
-/* =========================================================
-   右侧 Logo
-   可以通过 top 和 right 自定义位置
-   ========================================================= */
-
-.top-header-logo {
-    position: absolute;
-
-    top: 60px;      /* 越大越往下 */
-    right: 40px;    /* 越大越往左 */
-
-    z-index: 10;
-}
-
-
-/* Logo 大小 */
-
-.top-header-logo img {
-    width: 180px;
-    height: auto;
-    display: block;
-}
-
-
-/* =========================================================
-   姓名与欢迎语
+   Name & Welcome
    ========================================================= */
 
 .profile-name {
-    margin-top: 5px;
-    margin-bottom: 8px;
+  margin: 4px 0 4px;
+  font-size: 2.05rem;
+  font-weight: 700;
 }
 
 .profile-welcome {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 16px;
+  margin: 0 0 26px;
+  font-size: 1rem;
+  color: var(--global-text-color-light);
 }
 
 
 /* =========================================================
-   正文排版
+   Section
    ========================================================= */
 
-.bio-justify p {
-    text-align: justify;
-    text-align-last: left;
-    text-justify: inter-character;
+.profile-section {
+  margin: 44px 0;
+}
 
-    line-height: 1.8;
+.profile-section-title {
+  font-size: 1.62rem;
+  font-weight: 700;
 
-    margin-top: 0;
-    margin-bottom: 1.3em;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+
+  border-bottom: 2px solid var(--global-divider-color);
+}
+
+.profile-section-title::before {
+  content: "";
+  display: inline-block;
+
+  width: 5px;
+  height: 1.12em;
+
+  margin-right: 11px;
+
+  border-radius: 4px;
+  background: var(--global-theme-color);
+
+  vertical-align: -0.12em;
+}
+
+.profile-text p {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-character;
+
+  line-height: 1.85;
+
+  margin-top: 0;
+  margin-bottom: 1.25em;
 }
 
 
 /* =========================================================
-   手机端适配
+   Intro Card
    ========================================================= */
 
-@media screen and (max-width: 768px) {
+.profile-intro-card {
+  background: var(--global-card-bg-color);
 
-    .container,
-    .container.mt-5 {
-        width: 100% !important;
-        max-width: 100% !important;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 14px;
 
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-    }
+  padding: 28px 30px;
 
-
-    /* =====================================================
-       顶部区域手机端改为上下排列
-       ===================================================== */
-
-    .top-header-row {
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 18px;
-
-        margin-top: 5px;
-        margin-bottom: 28px;
-    }
+  box-shadow: 0 5px 18px rgba(0,0,0,0.045);
+}
 
 
-    /* 手机端照片 */
+/* =========================================================
+   Timeline
+   ========================================================= */
 
-    .top-header-photo {
-        width: 100%;
-        text-align: center;
-    }
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 
-    .top-header-photo img {
-        width: 190px;
-        max-width: 78%;
+.timeline-item {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 24px;
 
-        margin-left: auto;
-        margin-right: auto;
-    }
+  padding: 18px 20px;
 
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
 
-    /* 手机端个人信息 */
+  background: var(--global-card-bg-color);
+}
 
-    .top-header-info {
-        width: 100%;
+.timeline-date {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: var(--global-theme-color);
+}
 
-        font-size: 15px;
-        line-height: 1.8;
+.timeline-main {
+  font-weight: 600;
+}
 
-        padding-right: 0;
-    }
-
-    .top-header-info p {
-        margin-top: 4px;
-        margin-bottom: 4px;
-    }
-
-
-    /* =====================================================
-       手机端 Logo
-       取消电脑端绝对定位
-       ===================================================== */
-
-    .top-header-logo {
-        position: static;
-
-        width: 100%;
-        text-align: center;
-
-        margin-top: 5px;
-    }
-
-    .top-header-logo img {
-        width: 0px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
+.timeline-sub {
+  margin-top: 3px;
+  font-size: 0.94rem;
+  color: var(--global-text-color-light);
+}
 
 
-    h2 {
-        font-size: 24px;
-    }
+/* =========================================================
+   Research Tags
+   ========================================================= */
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.research-tag {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  border: 1px solid var(--global-theme-color);
+  border-radius: 999px;
+
+  color: var(--global-theme-color);
+
+  font-size: 0.94rem;
+  font-weight: 600;
+
+  background: var(--global-card-bg-color);
+}
 
 
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
+/* =========================================================
+   Service Cards
+   ========================================================= */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  padding: 18px 20px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Publications
+   ========================================================= */
+
+.pub-note {
+  margin-bottom: 20px;
+
+  padding: 14px 18px;
+
+  border-left: 4px solid var(--global-theme-color);
+  background: var(--global-card-bg-color);
+
+  border-radius: 0 10px 10px 0;
+}
+
+.pub-item {
+  margin-bottom: 20px;
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+
+  background: var(--global-card-bg-color);
+}
+
+.pub-index {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  color: var(--global-theme-color);
+}
+
+.pub-text {
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   Patent
+   ========================================================= */
+
+.patent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.patent-item {
+  padding: 16px 18px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 11px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Awards
+   ========================================================= */
+
+.award-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 18px;
+}
+
+.award-item {
+  padding: 15px 17px;
+
+  border: 1px solid var(--global-divider-color);
+  border-radius: 11px;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Cooperation
+   ========================================================= */
+
+.coop-box {
+  padding: 24px 28px;
+
+  border-left: 4px solid var(--global-theme-color);
+  border-radius: 0 12px 12px 0;
+
+  background: var(--global-card-bg-color);
+}
+
+
+/* =========================================================
+   Visitor Counter
+   ========================================================= */
+
+.visit-counter {
+  text-align: center;
+
+  margin-top: 48px;
+  padding-top: 22px;
+
+  border-top: 1px solid var(--global-divider-color);
+
+  font-size: 0.9rem;
+  color: var(--global-text-color-light);
+}
+
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .profile-top {
+    grid-template-columns: 170px 1fr;
+  }
+
+  .profile-logo-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .profile-logo {
+    width: 155px;
+  }
+
+  .service-grid,
+  .award-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+
+  .container,
+  .container.mt-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .profile-top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 190px;
+  }
+
+  .profile-logo {
+    display: none;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .profile-info-row {
+    display: block;
+  }
+
+  .profile-info-label {
+    display: inline;
+    min-width: 0;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .profile-section {
+    margin: 36px 0;
+  }
+
+  .profile-section-title {
+    font-size: 1.4rem;
+  }
+
 }
 
 </style>
 
 
-<!-- =====================================================
-     顶部区域：照片 + 英文个人信息 + Logo
-     ===================================================== -->
+<div class="profile-page">
 
-<div class="top-header-row">
 
-  <div class="top-header-photo">
-    <img src="{{ '/assets/img/Qian_Zhang_GitHub_2.png' | relative_url }}" alt="Qian Zhang">
+<!-- =========================================================
+     顶部个人信息
+     ========================================================= -->
+
+<div class="profile-top">
+
+  <div class="profile-photo-wrap">
+    <img
+      src="{{ '/assets/img/Qian_Zhang_GitHub_2.png' | relative_url }}"
+      class="profile-photo"
+      alt="Qian Zhang">
   </div>
 
-  <div class="top-header-info">
-    <p>- 学校: 东北大学秦皇岛分校</p>
-    <p>- 学院: 计算机与通信工程学院</p>
-    <p>- 职称: 副教授</p>
-    <p>- 学历: 工学博士</p>
-    <p>- 毕业院校: 山东大学</p>
-    <p>- 邮箱: zq869054246@163.com</p>
+
+  <div class="profile-info">
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">学校：</span>
+      <span>东北大学秦皇岛分校</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">学院：</span>
+      <span>计算机与通信工程学院</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">职称：</span>
+      <span>副教授</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">学历：</span>
+      <span>工学博士</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">毕业院校：</span>
+      <span>山东大学</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">邮箱：</span>
+      <span class="en">zq869054246@163.com</span>
+    </div>
+
   </div>
 
-  <div class="top-header-logo">
-    <img src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}" alt="ICS Logo">
+
+  <div class="profile-logo-wrap">
+    <img
+      src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}"
+      class="profile-logo"
+      alt="ICS Logo">
   </div>
 
 </div>
 
 
-# 张迁
+<!-- =========================================================
+     姓名
+     ========================================================= -->
 
-欢迎访问我的个人主页！(<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>）
+<h1 class="profile-name">张迁</h1>
 
----
-
-## 👨‍🏫 **基本信息**
-
-<div class="bio-justify" markdown="1">
-
-**张迁**，**工学博士**，**副教授**，**硕士生导师**，IEEE Member，中国通信学会会员，CSIG交通视频专委会委员。  
-2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），合作导师董郑教授；  
-2024年受**国家留学基金委资助**赴新加坡南洋理工大学EEE学院联合培养，师从Prof. Yong Liang Guan（副校长）和Prof. Chau Yuen（IEEE Fellow）。  
-
-目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。在通信领域顶级期刊IEEE TWC、TCOM和顶级会议IEEE ICC、ICASSP等发表学术论文30余篇，其中**第一/共一/通讯作者论文18篇**。2篇论文入选**🏆ESI高被引论文**（一作），1篇论文位列**IEEE CL年度最受欢迎论文TOP 2**（一作），4篇论文分别位列**IEEE TVT、WCL、CL月度最受欢迎论文TOP 50**（1篇一作、2篇共一、1篇第二）。授权专利3项。担任《**中国通信**》(**英文版**) **首届青年编委**，担任2026 PIMRC TPC Chair；多次担任IEEE ICC、Globecom、WCNC等国际会议TPC Member；常年担任IEEE JSAC、TWC、TCOM、WCM、TIFS、TCCN、TVT、TITS、IOTJ、WCL、CL等十余家国际期刊审稿人。 
-
-作为核心成员参与国家重点研发计划项目、国家自然科学基金面上项目、山东省重点研发计划（重大科技示范工程）项目等多项国家级省级重点项目。曾获优秀博士/学士毕业论文、山东省/山东大学优秀毕业生、**博士国家奖学金2次**、**本科国家奖学金**、2026年**山东大学学术之星（学院唯一）**、2026年**山东大学研究生优秀成果奖（学院唯一）**、一等奖学金（本科4年）、以及国家级省级创新创业类及学科类竞赛奖项十余项。 
-
-</div>
-
----
-
-## 🎓 **学术背景**
-
-- 2026.07—至今     东北大学秦皇岛分校 计算机与通信工程学院， 副教授
-- 2024.11—2025.11  新加坡南洋理工大学EEE，            联合培养博士，   导师：Yong Liang Guan（副校长）、Chau Yuen（IEEE Fellow）
-- 2021.09—2026.06  山东大学信息科学与工程学院，        工学博士，      导师: 刘琚教授（二级）
-
----
-
-## 🔬 **研究方向**
-
-- 超大规模阵列通信（XL-MIMO）
-- 智能超表面（IMS）
-- 通感一体化（ISAC）
-- 近场无线通信
-- 波束训练
-- Deep Unfolding
-- Deep Reinforcement Learning
-
----
-
-## 🌐 **学术服务**
-
-- 《中国通信》(英文版)首届青年编委
-- CSIG交通视频专委会委员
-- IEEE PIMRC 2026 TPC Chair
-- IEEE ICC、GLOBECOM、WCNC 等国际会议 TPC Member
-- IEEE JSAC、TWC、TCOM、WCM、TIFS、TCCN、TVT、TITS、IOTJ、WCL、CL等十余家国际期刊审稿人
-
----
-
-## 📖 **代表性成果**
-
-**-** **详情见顶部Publications页面**
-
-**-** **论文**
-
-[1] **Qian Zhang**, Zheng Dong, Yufei Zhao, Yao Ge, Yong Liang Guan, Ju Liu, and Chau Yuen, "Multi-resolution codebook design and multiuser interference management for discrete XL-RIS-aided near-field MIMO systems," **_IEEE Transactions on Wireless Communications_**, vol. 25, pp. 2826-2842, 2026. (SCI, JCR Q1, IF = 10.7, **🏆ESI高被引论文**)
-
-[2] **Qian Zhang**, Ju Liu, Haoge Tang, Zheng Dong, and Yonghui Li, "Practical RIS-aided multiuser communications with imperfect CSI: Practical model, amplitude feedback, and beamforming optimization," **_IEEE Transactions on Wireless Communications_**, vol. 23, no. 10, pp. 15245-15260, Oct. 2024. (SCI, JCR Q1, IF = 10.7)
-
-[3] **Qian Zhang**, Ju Liu, Yao Ge, Yufei Zhao, Wali Ullah Khan, Zheng Dong, Yong Liang Guan, Chau Yuen, "Two-stage coded-sliding beam training and QoS-constrained sum-rate maximization for SIM-assisted wireless communications," **_IEEE Transactions on Wireless Communications_**, vol. 25, pp. 12162-12179, 2026. (SCI, JCR Q1, IF = 10.7)
-
-[4] **Qian Zhang**, Ju Lui, Zhichao Gao, Ziyu Li, Zhiying Peng, Zheng Dong, and Hongji Xu, "Robust beamforming design for RIS-aided NOMA secure networks with transceiver hardware impairments," **_IEEE Transactions on Communications_**, vol. 71, no. 6, pp. 3637-3649, June 2023. (SCI, JCR Q1, IF = 8.3)
-
-[5] **Qian Zhang**, Mingjie Shao, Tong Zhang, Gaojie Chen, Ju Liu and Pak Chung Ching, "An efficient sum-rate maximization algorithm for fluid antenna-assisted ISAC system," **_IEEE Communications Letters_**, vol. 29, no. 1, pp. 200-204, Jan. 2025. (SCI, JCR Q2, IF = 4.5, **🏆ESI高被引论文**, **年度最受欢迎论文TOP 2**)
+<p class="profile-welcome">
+  欢迎访问我的个人主页！
+  （<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>）
+</p>
 
 
-**-** **专利**
+<!-- =========================================================
+     基本信息
+     ========================================================= -->
 
-[1] 孙福辉; 张迁; 王晓燕; 邵明杰; 刘琚; RIS辅助的MIMO系统的和速率优化方法及装置. (发明专利，授权号：CN117176214B)
+<section class="profile-section">
 
-[2] 刘琚; 程学军; 张迁; 罗广惠; 焦钰辉; 一种实际智能超表面辅助RSMA系统波束成形方法. (发明专利，公开号：CN120110450A)
+  <h2 class="profile-section-title">👨‍🏫 基本信息</h2>
 
-[3] 刘琚; 程学军; 罗广惠; 张迁; 董郑; 一种超对角智能超表面辅助NOMA系统波束成形方法. (发明专利，公开号：CN119051703A)
+  <div class="profile-intro-card profile-text">
 
-[4] 刘琚; 彭志颖; 王祥丞; 张迁; 高智超; 李紫宇; 一种多服务器MEC-D2D系统联合任务卸载与资源分配方法. (发明专利, 授权号：CN116456497B)
+    <p>
+      <strong>张迁</strong>，<strong>工学博士</strong>，<strong>副教授</strong>，
+      <strong>硕士生导师</strong>，<span class="en">IEEE Member</span>，
+      中国通信学会会员，<span class="en">CSIG</span>交通视频专委会委员。
+      2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），
+      合作导师董郑教授；2024年受<strong>国家留学基金委资助</strong>赴新加坡南洋理工大学
+      <span class="en">EEE</span>学院联合培养，
+      师从<span class="en">Prof. Yong Liang Guan</span>（副校长）和
+      <span class="en">Prof. Chau Yuen</span>（<span class="en">IEEE Fellow</span>）。
+    </p>
 
----
+    <p>
+      目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。
+      在通信领域顶级期刊
+      <span class="en">IEEE TWC</span>、<span class="en">TCOM</span>
+      和顶级会议
+      <span class="en">IEEE ICC</span>、<span class="en">ICASSP</span>
+      等发表学术论文30余篇，其中
+      <strong>第一/共一/通讯作者论文18篇</strong>。
+      2篇论文入选<strong>🏆 ESI高被引论文</strong>（一作），
+      1篇论文位列<strong><span class="en">IEEE CL</span>年度最受欢迎论文 TOP 2</strong>（一作），
+      4篇论文分别位列
+      <strong><span class="en">IEEE TVT</span>、<span class="en">WCL</span>、<span class="en">CL</span>月度最受欢迎论文 TOP 50</strong>
+      （1篇一作、2篇共一、1篇第二）。
+      授权专利3项。
+    </p>
 
-## 🏆 **荣誉奖励**
+    <p>
+      担任《<strong>中国通信</strong>》（英文版）<strong>首届青年编委</strong>，
+      担任<span class="en">2026 PIMRC TPC Chair</span>；
+      多次担任<span class="en">IEEE ICC</span>、<span class="en">GLOBECOM</span>、
+      <span class="en">WCNC</span>等国际会议<span class="en">TPC Member</span>；
+      常年担任<span class="en">IEEE JSAC</span>、<span class="en">TWC</span>、
+      <span class="en">TCOM</span>、<span class="en">WCM</span>、
+      <span class="en">TIFS</span>、<span class="en">TCCN</span>、
+      <span class="en">TVT</span>、<span class="en">TITS</span>、
+      <span class="en">IOTJ</span>、<span class="en">WCL</span>、
+      <span class="en">CL</span>等十余家国际期刊审稿人。
+    </p>
 
-- 推荐免试攻读研究生资格（2020）
-- 本科国家奖学金（2020、学院排名第一）
-- 国家励志奖学金（2018、2019）
-- 博士国家奖学金（2024、2025）
-- 山东省优秀毕业生（2021）
-- 山东大学优秀毕业生（2026）
-- 山东大学学术之星（2026、学院唯一）
-- 山东大学研究生优秀成果奖（2026、学院唯一）
-- 博士中期考核优秀奖（排名第一）
-- 本科一等学业奖学金（四年专业唯一）
-- 博士优秀生源奖学金、新生一等奖学金
+    <p>
+      作为核心成员参与国家重点研发计划项目、国家自然科学基金面上项目、
+      山东省重点研发计划（重大科技示范工程）项目等多项国家级省级重点项目。
+      曾获优秀博士/学士毕业论文、山东省/山东大学优秀毕业生、
+      <strong>博士国家奖学金2次</strong>、<strong>本科国家奖学金</strong>、
+      2026年<strong>山东大学学术之星（学院唯一）</strong>、
+      2026年<strong>山东大学研究生优秀成果奖（学院唯一）</strong>、
+      一等奖学金（本科4年），以及国家级省级创新创业类及学科类竞赛奖项十余项。
+    </p>
 
----
+  </div>
 
-## 🤝 **招生与合作**
+</section>
 
-长期与新加坡南洋理工大学、山东大学、电子科技大学、西北工业大学、南京理工大学等国内外知名高校保持科研合作。  
 
-欢迎对无线通信、智能超表面、通感一体化、人工智能通信优化等方向感兴趣的本科生、硕士生及博士生联系交流。
+<!-- =========================================================
+     学术背景
+     ========================================================= -->
 
-个人邮箱：zhangqian@neuq.edu.cn; zq869054246@163.com。
+<section class="profile-section">
 
----
+  <h2 class="profile-section-title">🎓 学术背景</h2>
 
-<div style="text-align: center; margin-top: 30px; font-size: 14px; opacity: 0.75;">
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">2026.07 — 至今</div>
+      <div>
+        <div class="timeline-main">东北大学秦皇岛分校 · 计算机与通信工程学院</div>
+        <div class="timeline-sub">副教授</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024.11 — 2025.11</div>
+      <div>
+        <div class="timeline-main">新加坡南洋理工大学 · <span class="en">EEE</span></div>
+        <div class="timeline-sub">
+          联合培养博士 · 导师：
+          <span class="en">Yong Liang Guan</span>（副校长）、
+          <span class="en">Chau Yuen</span>（<span class="en">IEEE Fellow</span>）
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2021.09 — 2026.06</div>
+      <div>
+        <div class="timeline-main">山东大学 · 信息科学与工程学院</div>
+        <div class="timeline-sub">工学博士 · 导师：刘琚教授（二级）</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     研究方向
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🔬 研究方向</h2>
+
+  <div class="research-tags">
+
+    <span class="research-tag">
+      超大规模阵列通信
+      <span class="en">XL-MIMO</span>
+    </span>
+
+    <span class="research-tag">
+      智能超表面
+      <span class="en">IMS</span>
+    </span>
+
+    <span class="research-tag">
+      通感一体化
+      <span class="en">ISAC</span>
+    </span>
+
+    <span class="research-tag">
+      近场无线通信
+    </span>
+
+    <span class="research-tag">
+      波束训练
+    </span>
+
+    <span class="research-tag en">
+      Deep Unfolding
+    </span>
+
+    <span class="research-tag en">
+      Deep Reinforcement Learning
+    </span>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     学术服务
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🌐 学术服务</h2>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      《中国通信》（英文版）首届青年编委
+    </div>
+
+    <div class="service-card">
+      <span class="en">CSIG</span>交通视频专委会委员
+    </div>
+
+    <div class="service-card">
+      <span class="en">IEEE PIMRC 2026 TPC Chair</span>
+    </div>
+
+    <div class="service-card">
+      <span class="en">IEEE ICC / GLOBECOM / WCNC TPC Member</span>
+    </div>
+
+    <div class="service-card" style="grid-column: 1 / -1;">
+      <span class="en">
+        Reviewer for IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN, TVT,
+        TITS, IOTJ, WCL, CL, etc.
+      </span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     代表性成果
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">📖 代表性成果</h2>
+
+  <div class="pub-note">
+    完整论文列表请见顶部
+    <a href="{{ '/publications/' | relative_url }}">
+      <strong><span class="en">Publications</span></strong>
+    </a>
+    页面。
+  </div>
+
+
+  <h3 style="margin-top: 28px;">论文</h3>
+
+
+  <div class="pub-item">
+    <div class="pub-text en">
+      <span class="pub-index">[1]</span>
+      <strong>Qian Zhang</strong>, Zheng Dong, Yufei Zhao, Yao Ge,
+      Yong Liang Guan, Ju Liu, and Chau Yuen,
+      “Multi-resolution codebook design and multiuser interference management
+      for discrete XL-RIS-aided near-field MIMO systems,”
+      <strong><em>IEEE Transactions on Wireless Communications</em></strong>,
+      vol. 25, pp. 2826–2842, 2026.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>SCI, JCR Q1, IF = 10.7, 🏆 ESI高被引论文</strong>
+    </div>
+  </div>
+
+
+  <div class="pub-item">
+    <div class="pub-text en">
+      <span class="pub-index">[2]</span>
+      <strong>Qian Zhang</strong>, Ju Liu, Haoge Tang, Zheng Dong,
+      and Yonghui Li,
+      “Practical RIS-aided multiuser communications with imperfect CSI:
+      Practical model, amplitude feedback, and beamforming optimization,”
+      <strong><em>IEEE Transactions on Wireless Communications</em></strong>,
+      vol. 23, no. 10, pp. 15245–15260, Oct. 2024.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>SCI, JCR Q1, IF = 10.7</strong>
+    </div>
+  </div>
+
+
+  <div class="pub-item">
+    <div class="pub-text en">
+      <span class="pub-index">[3]</span>
+      <strong>Qian Zhang</strong>, Ju Liu, Yao Ge, Yufei Zhao,
+      Wali Ullah Khan, Zheng Dong, Yong Liang Guan, Chau Yuen,
+      “Two-stage coded-sliding beam training and QoS-constrained sum-rate maximization
+      for SIM-assisted wireless communications,”
+      <strong><em>IEEE Transactions on Wireless Communications</em></strong>,
+      vol. 25, pp. 12162–12179, 2026.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>SCI, JCR Q1, IF = 10.7</strong>
+    </div>
+  </div>
+
+
+  <div class="pub-item">
+    <div class="pub-text en">
+      <span class="pub-index">[4]</span>
+      <strong>Qian Zhang</strong>, Ju Lui, Zhichao Gao, Ziyu Li,
+      Zhiying Peng, Zheng Dong, and Hongji Xu,
+      “Robust beamforming design for RIS-aided NOMA secure networks
+      with transceiver hardware impairments,”
+      <strong><em>IEEE Transactions on Communications</em></strong>,
+      vol. 71, no. 6, pp. 3637–3649, June 2023.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>SCI, JCR Q1, IF = 8.3</strong>
+    </div>
+  </div>
+
+
+  <div class="pub-item">
+    <div class="pub-text en">
+      <span class="pub-index">[5]</span>
+      <strong>Qian Zhang</strong>, Mingjie Shao, Tong Zhang, Gaojie Chen,
+      Ju Liu and Pak Chung Ching,
+      “An efficient sum-rate maximization algorithm for fluid antenna-assisted ISAC system,”
+      <strong><em>IEEE Communications Letters</em></strong>,
+      vol. 29, no. 1, pp. 200–204, Jan. 2025.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>
+        SCI, JCR Q2, IF = 4.5, 🏆 ESI高被引论文，
+        年度最受欢迎论文 TOP 2
+      </strong>
+    </div>
+  </div>
+
+
+  <h3 style="margin-top: 34px;">专利</h3>
+
+  <div class="patent-list">
+
+    <div class="patent-item">
+      <strong>[1]</strong>
+      孙福辉；张迁；王晓燕；邵明杰；刘琚；
+      RIS辅助的MIMO系统的和速率优化方法及装置。
+      （发明专利，授权号：<span class="en">CN117176214B</span>）
+    </div>
+
+    <div class="patent-item">
+      <strong>[2]</strong>
+      刘琚；程学军；张迁；罗广惠；焦钰辉；
+      一种实际智能超表面辅助RSMA系统波束成形方法。
+      （发明专利，公开号：<span class="en">CN120110450A</span>）
+    </div>
+
+    <div class="patent-item">
+      <strong>[3]</strong>
+      刘琚；程学军；罗广惠；张迁；董郑；
+      一种超对角智能超表面辅助NOMA系统波束成形方法。
+      （发明专利，公开号：<span class="en">CN119051703A</span>）
+    </div>
+
+    <div class="patent-item">
+      <strong>[4]</strong>
+      刘琚；彭志颖；王祥丞；张迁；高智超；李紫宇；
+      一种多服务器MEC-D2D系统联合任务卸载与资源分配方法。
+      （发明专利，授权号：<span class="en">CN116456497B</span>）
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     荣誉奖励
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🏆 荣誉奖励</h2>
+
+  <div class="award-grid">
+
+    <div class="award-item">推荐免试攻读研究生资格（2020）</div>
+
+    <div class="award-item">本科国家奖学金（2020，学院排名第一）</div>
+
+    <div class="award-item">国家励志奖学金（2018、2019）</div>
+
+    <div class="award-item">博士国家奖学金（2024、2025）</div>
+
+    <div class="award-item">山东省优秀毕业生（2021）</div>
+
+    <div class="award-item">山东大学优秀毕业生（2026）</div>
+
+    <div class="award-item">山东大学学术之星（2026，学院唯一）</div>
+
+    <div class="award-item">山东大学研究生优秀成果奖（2026，学院唯一）</div>
+
+    <div class="award-item">博士中期考核优秀奖（排名第一）</div>
+
+    <div class="award-item">本科一等学业奖学金（四年专业唯一）</div>
+
+    <div class="award-item">
+      博士优秀生源奖学金、新生一等奖学金
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     招生与合作
+     ========================================================= -->
+
+<section class="profile-section">
+
+  <h2 class="profile-section-title">🤝 招生与合作</h2>
+
+  <div class="coop-box profile-text">
+
+    <p>
+      长期与新加坡南洋理工大学、山东大学、电子科技大学、
+      西北工业大学、南京理工大学等国内外知名高校保持科研合作。
+    </p>
+
+    <p>
+      欢迎对无线通信、智能超表面、通感一体化、
+      人工智能通信优化等方向感兴趣的本科生、硕士生及博士生联系交流。
+    </p>
+
+    <p>
+      个人邮箱：
+      <span class="en">zhangqian@neuq.edu.cn</span>；
+      <span class="en">zq869054246@163.com</span>。
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     访问量
+     ========================================================= -->
+
+<div class="visit-counter">
+
   👁️ 本站总访问量：
   <span id="busuanzi_site_pv">加载中...</span> 次
+
   &nbsp;&nbsp;|&nbsp;&nbsp;
+
   👤 本站总访客数：
   <span id="busuanzi_site_uv">加载中...</span> 人
+
 </div>
 
-<script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js" defer></script>
+
+<script
+  src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
+  defer>
+</script>
+
+
+</div>
