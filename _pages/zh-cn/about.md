@@ -569,7 +569,7 @@ body {
     </p>
 
     <p>
-      担任《<strong>中国通信</strong>》（英文版）<strong>首届青年编委</strong>，
+      担任《中国通信》（英文版）首届青年编委，
       担任<span class="en">2026 PIMRC TPC Chair</span>；
       多次担任<span class="en">IEEE ICC</span>、<span class="en">GLOBECOM</span>、
       <span class="en">WCNC</span>等国际会议<span class="en">TPC Member</span>；
