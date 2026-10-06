@@ -411,7 +411,7 @@ nav_order: 2
   <div class="publications-logo">
 
     <img
-      src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}"
+      src="{{ '/assets/img/Northeastern_University.png' | relative_url }}"
       alt="ICS Lab Logo">
 
   </div>
