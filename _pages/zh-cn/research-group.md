@@ -679,7 +679,7 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/chengxuejun.jpg"
+      src="/assets/img/group/chengxuejun.png"
       class="ics-visitor-photo"
       alt="程学军">
 
@@ -712,7 +712,7 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/wangmaoyuan.jpg"
+      src="/assets/img/group/wangmaoyuan.png"
       class="ics-visitor-photo"
       alt="王茂源">
 
