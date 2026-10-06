@@ -550,5 +550,17 @@ Dalian, China, 2023, pp. 1-6.
 <a href="https://ieeexplore.ieee.org/document/10233623">[Full Paper]</a>
 </li>
 
+<li>
+Liangcheng Qiu, Yao Ge, Yisheng Chen, 
+<span class="author-name">Qian Zhang</span>, 
+<span class="etal">et al.</span>, 
+"AFDM-based grant-free random access with structured sparse bayesian learning receiver," 
+2026 IEEE Globecom Workshops 
+(<span class="conference-name">GC Wkshps</span>).
+</li>
+
+
+
+
 </ol>
 
