@@ -422,14 +422,6 @@ nav_order: 3
     class="ics-logo"
     alt="ICS Lab">
 
-  <div class="ics-hero-title en">
-    ICS Lab
-  </div>
-
-  <p class="ics-hero-subtitle en">
-    Intelligent Cooperative Systems Laboratory
-  </p>
-
 </div>
 
 
