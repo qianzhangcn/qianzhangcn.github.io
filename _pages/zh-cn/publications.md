@@ -222,7 +222,8 @@ Deyu Lin,
 "RIS-assisted multiuser NOMA networks with imperfect CSI under transceiver hardware impairments," 
 <span class="journal-name">IEEE Internet of Things Journal</span>, 
 2026. 
-  <span class="paper-info">(JCR Q1, IF = 8.33, 接收)</span>
+  <span class="paper-info">(JCR Q1, IF = 8.33)</span>
+<a href="https://ieeexplore.ieee.org/document/11720371">DOI</a>
 </li>
 
 <li>
