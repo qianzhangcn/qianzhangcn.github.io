@@ -511,7 +511,7 @@ body {
 
   <div class="profile-logo-wrap">
     <img
-      src="{{ '/assets/img/ICS_LOGO.png' | relative_url }}"
+      src="{{ '/assets/img/Northeastern_University.png' | relative_url }}"
       class="profile-logo"
       alt="ICS Logo">
   </div>
