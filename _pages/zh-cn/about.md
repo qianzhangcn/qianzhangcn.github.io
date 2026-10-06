@@ -476,35 +476,35 @@ body {
 
   <div class="profile-info">
 
-    <div class="profile-info-row">
-      <span class="profile-info-label">学校：</span>
-      <span>东北大学秦皇岛分校</span>
-    </div>
-
-    <div class="profile-info-row">
-      <span class="profile-info-label">学院：</span>
-      <span>计算机与通信工程学院</span>
-    </div>
-
-    <div class="profile-info-row">
-      <span class="profile-info-label">职称：</span>
-      <span>副教授</span>
-    </div>
-
-    <div class="profile-info-row">
-      <span class="profile-info-label">学历：</span>
-      <span>工学博士</span>
-    </div>
-
-    <div class="profile-info-row">
-      <span class="profile-info-label">毕业院校：</span>
-      <span>山东大学</span>
-    </div>
-
-    <div class="profile-info-row">
-      <span class="profile-info-label">邮箱：</span>
-      <span class="en">zq869054246@163.com</span>
-    </div>
+      <div class="profile-info-row">
+        <span class="profile-info-label">学　　校：</span>
+        <span>东北大学秦皇岛分校</span>
+      </div>
+      
+      <div class="profile-info-row">
+        <span class="profile-info-label">学　　院：</span>
+        <span>计算机与通信工程学院</span>
+      </div>
+      
+      <div class="profile-info-row">
+        <span class="profile-info-label">职　　称：</span>
+        <span>副教授</span>
+      </div>
+      
+      <div class="profile-info-row">
+        <span class="profile-info-label">学　　历：</span>
+        <span>工学博士</span>
+      </div>
+      
+      <div class="profile-info-row">
+        <span class="profile-info-label">毕业院校：</span>
+        <span>山东大学</span>
+      </div>
+      
+      <div class="profile-info-row">
+        <span class="profile-info-label">邮　　箱：</span>
+        <span class="en">zq869054246@163.com</span>
+      </div>
 
   </div>
 
