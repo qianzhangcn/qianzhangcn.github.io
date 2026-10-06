@@ -666,20 +666,20 @@ nav_order: 3
 
 
 <!-- =======================================================
-     访问学者
+     合作学者
      ======================================================= -->
 
 <section class="ics-section">
 
-  <h2 class="ics-section-title">访问学者</h2>
+  <h2 class="ics-section-title">合作学者</h2>
 
 
-  <!-- ==================== 访问学者 1 ==================== -->
+  <!-- ==================== 合作学者 1 ==================== -->
 
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/visitor-01.jpg"
+      src="/assets/img/group/chengxuejun.jpg"
       class="ics-visitor-photo"
       alt="程学军">
 
@@ -690,7 +690,7 @@ nav_order: 3
       </div>
 
       <div class="ics-visitor-role">
-        访问学者 · 山东大学
+        合作学者 · 山东大学
       </div>
 
       <!--
@@ -700,7 +700,7 @@ nav_order: 3
       -->
 
       <p class="ics-visitor-desc">
-        主要研究方向包括无线通信、通信感知一体化与智能无线网络。
+        山东大学在读博士研究生，新加坡国立大学公派联培博士生，主要研究方向包括智能超表面波束赋形、通信感知一体化与智能无线网络。
       </p>
 
     </div>
@@ -712,27 +712,28 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/visitor-01.jpg"
+      src="/assets/img/group/wangmaoyuan.jpg"
       class="ics-visitor-photo"
-      alt="程学军">
+      alt="王茂源">
 
     <div>
 
       <div class="ics-visitor-name">
-        访问学者姓名
+        王茂源
       </div>
 
       <div class="ics-visitor-role">
-        访问学者 · XXXX大学
+        合作学者 · 山东大学
       </div>
 
+      <!--
       <div class="ics-visitor-status">
         访问时间：2026年XX月－2026年XX月
       </div>
+      -->
 
       <p class="ics-visitor-desc">
         主要研究方向包括无线通信、通信感知一体化与智能无线网络。
-        访问期间围绕 XXXX 问题与团队开展合作研究。
       </p>
 
     </div>
