@@ -763,12 +763,12 @@ nav_order: 3
       <img
         src="/assets/img/group/master-01.jpg"
         class="ics-member-photo"
-        alt="学生姓名">
+        alt="空缺">
 
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          学生姓名
+          空缺
         </div>
 
         <div class="ics-member-role">
@@ -795,12 +795,12 @@ nav_order: 3
       <img
         src="/assets/img/group/master-02.jpg"
         class="ics-member-photo"
-        alt="学生姓名">
+        alt="空缺">
 
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          学生姓名
+          空缺
         </div>
 
         <div class="ics-member-role">
@@ -827,12 +827,12 @@ nav_order: 3
       <img
         src="/assets/img/group/master-03.jpg"
         class="ics-member-photo"
-        alt="学生姓名">
+        alt="空缺">
 
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          学生姓名
+          空缺
         </div>
 
         <div class="ics-member-role">
@@ -880,12 +880,12 @@ nav_order: 3
       <img
         src="/assets/img/group/undergraduate-01.jpg"
         class="ics-member-photo"
-        alt="学生姓名">
+        alt="王鹿涵">
 
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          学生姓名
+          王鹿涵
         </div>
 
         <div class="ics-member-role">
@@ -893,7 +893,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2023级 · 在读
+          2025级 · 在读
         </div>
 
         <div class="ics-member-status">
@@ -912,7 +912,7 @@ nav_order: 3
       <img
         src="/assets/img/group/undergraduate-02.jpg"
         class="ics-member-photo"
-        alt="学生姓名">
+        alt="王奕霖">
 
       <div class="ics-member-info">
 
@@ -925,7 +925,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2024级 · 在读
+          2026级 · 在读
         </div>
 
         <div class="ics-member-status">
@@ -936,35 +936,6 @@ nav_order: 3
 
     </div>
 
-
-    <!-- ==================== 本科生 3 ==================== -->
-
-    <div class="ics-member-card">
-
-      <img
-        src="/assets/img/group/undergraduate-03.jpg"
-        class="ics-member-photo"
-        alt="学生姓名">
-
-      <div class="ics-member-info">
-
-        <div class="ics-member-name">
-          学生姓名
-        </div>
-
-        <div class="ics-member-role">
-          本科生
-        </div>
-
-        <div class="ics-member-status">
-          2024级 · 在读
-        </div>
-
-        <div class="ics-member-status">
-          本科科研成员
-        </div>
-
-      </div>
 
     </div>
 
