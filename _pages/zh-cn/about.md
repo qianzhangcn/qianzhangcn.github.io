@@ -630,7 +630,7 @@ body {
       <div class="timeline-date">2021.09 — 2026.06</div>
       <div>
         <div class="timeline-main">山东大学 · 信息科学与工程学院</div>
-        <div class="timeline-sub">工学博士 · 导师：刘琚教授（二级）</div>
+        <div class="timeline-sub">工学博士 · 导师：刘琚教授（二级）、合作导师：董郑教授</div>
       </div>
     </div>
 
