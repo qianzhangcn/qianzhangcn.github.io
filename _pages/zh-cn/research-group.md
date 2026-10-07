@@ -1101,8 +1101,66 @@ nav_order: 3
     合作学者
   </h2>
 
-
   <!-- ==================== 合作学者 1 ==================== -->
+
+  <div class="ics-visitor">
+
+    <img
+      src="{{ '/assets/img/group/Hui_Wang.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="王辉"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        王辉
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 浙江大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        浙江大学良渚实验室博士后。2025年博士毕业于山东大学，主要研究方向包括脑机接口、语言解码、脑电大模型和图神经网络等，已在Expert Systems with Applications、IEEE Transactions on Affective Computing等期刊发表多篇论文。
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== 合作学者 2 ==================== -->
+
+  <div class="ics-visitor">
+
+    <img
+      src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="李云潇"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        李云潇
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 山东大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        山东大学在读博士生，主要研究方向包括通信感知一体化、流体天线、无人机轨迹优化、以及物理层安全。
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== 合作学者 3 ==================== -->
 
   <div class="ics-visitor">
 
@@ -1133,7 +1191,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 2 ==================== -->
+  <!-- ==================== 合作学者 4 ==================== -->
 
   <div class="ics-visitor">
 
@@ -1332,3 +1390,76 @@ nav_order: 3
 
 
 </div>
+
+
+
+<style>
+
+/* =========================================================
+   两个导航按钮：默认透明背景、紫色文字和描边
+   同时覆盖“研究方向”按钮原来的默认紫色填充
+   ========================================================= */
+
+.ics-page .ics-hero-actions .ics-hero-button {
+  background: transparent;
+  color: var(--ics-accent, #b509ac);
+  border: 1px solid var(--ics-accent, #b509ac);
+
+  box-shadow: none;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =========================================================
+   鼠标悬停：当前按钮变为紫色背景、白色文字
+   移开鼠标后自动恢复
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .ics-page .ics-hero-actions .ics-hero-button:hover {
+    background: var(--ics-accent, #b509ac);
+    color: #ffffff;
+    border-color: var(--ics-accent, #b509ac);
+
+    text-decoration: none;
+  }
+
+}
+
+
+/* 键盘操作：保留焦点边框，不保持紫色填充 */
+
+.ics-page .ics-hero-actions .ics-hero-button:focus-visible {
+  outline: 2px solid var(--ics-accent, #b509ac);
+  outline-offset: 4px;
+}
+
+
+/* 尊重系统的减少动态效果设置 */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ics-page .ics-hero-actions .ics-hero-button {
+    transition: none;
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
