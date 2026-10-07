@@ -942,34 +942,66 @@ nav_order: 3
 <!-- 上面是你原来代码最后的结束标签，保留不动 -->
 
 
-<!-- 从这里开始追加：修复学生照片裁剪 -->
 <style>
 
+/* =========================================================
+   学生卡片：增加照片四周的留白
+   ========================================================= */
+
+.ics-page .ics-member-card {
+  box-sizing: border-box;
+
+  /* 上方 24px，左右 20px，底部由信息区域控制 */
+  padding: 24px 20px 0;
+}
+
+
+/* =========================================================
+   学生照片：完整显示，不裁剪、不拉伸
+   ========================================================= */
+
 .ics-page .ics-member-photo {
+  display: block;
+
   width: 100%;
   height: 320px;
   max-height: none;
 
-  /* 完整显示照片，不裁剪、不拉伸 */
+  margin: 0 auto;
+  padding: 0;
+
   object-fit: contain;
   object-position: center center;
 
-  display: block;
   background: var(--global-card-bg-color, #ffffff);
 }
 
-/* 手机端 */
+
+/* =========================================================
+   姓名与身份信息：调整照片下方间距
+   ========================================================= */
+
+.ics-page .ics-member-info {
+  padding: 18px 0 24px;
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
 @media screen and (max-width: 620px) {
+
+  .ics-page .ics-member-card {
+    padding: 20px 16px 0;
+  }
 
   .ics-page .ics-member-photo {
     height: 300px;
     max-height: none;
-    object-fit: contain;
-    object-position: center center;
   }
 
 }
 
 </style>
-
 
