@@ -10,397 +10,738 @@ nav_order: 3
 <style>
 
 /* =========================================================
-   ICS Lab Research Group Page
+   页面基础：所有样式仅作用于课题组页面
    ========================================================= */
 
 .ics-page {
+  --ics-accent: var(--global-theme-color, #b509ac);
+  --ics-text: var(--global-text-color, #222222);
+  --ics-muted: var(--global-text-color-light, #6b7280);
+  --ics-border: var(--global-divider-color, #e5e7eb);
+  --ics-surface: var(--global-card-bg-color, var(--global-bg-color, #ffffff));
+
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
+  padding-bottom: 40px;
+
+  color: var(--ics-text);
   line-height: 1.8;
+  overflow-wrap: break-word;
 }
 
-/* 所有英文统一 Times New Roman */
+/* 英文优先使用 Times New Roman，中文使用后备中文字体 */
+
+.ics-page,
+.ics-page * {
+  box-sizing: border-box;
+  font-family: "Times New Roman", "Songti SC", "SimSun", serif !important;
+}
+
 .ics-page .en,
 .ics-page .en * {
   font-family: "Times New Roman", Times, serif !important;
 }
 
-
-/* =========================================================
-   Hero
-   ========================================================= */
-
-.ics-hero {
-  text-align: center;
-  padding: 10px 20px 35px;
+.ics-page a {
+  color: var(--ics-accent);
 }
 
-.ics-logo {
-  width: min(320px, 88%);
-  height: auto;
-  display: block;
-  margin: 0 auto 16px;
-}
-
-.ics-hero-title {
-  margin: 0 0 4px;
-  font-size: 2.1rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.ics-hero-subtitle {
-  margin: 0;
-  font-size: 1.12rem;
-  color: var(--global-text-color-light);
+.ics-page a:focus-visible {
+  outline: 2px solid var(--ics-accent);
+  outline-offset: 4px;
 }
 
 
 /* =========================================================
-   Section
+   首屏：左侧实验室介绍，右侧 Logo
    ========================================================= */
 
-.ics-section {
-  margin: 46px 0;
-}
-
-.ics-section-title {
-  font-size: 1.62rem;
-  font-weight: 700;
-  margin-bottom: 22px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--global-divider-color);
-}
-
-.ics-section-title::before {
-  content: "";
-  display: inline-block;
-  width: 5px;
-  height: 1.12em;
-  background: var(--global-theme-color);
-  margin-right: 11px;
-  border-radius: 4px;
-  vertical-align: -0.12em;
-}
-
-.ics-text {
-  font-size: 1.01rem;
-  text-align: justify;
-  margin-bottom: 14px;
-}
-
-
-/* =========================================================
-   Intro
-   ========================================================= */
-
-.ics-intro-box {
-  background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
-  border-radius: 15px;
-  padding: 28px 31px;
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.045);
-}
-
-
-/* =========================================================
-   ICS Values
-   ========================================================= */
-
-.ics-values {
+.ics-page .ics-hero {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 25px;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: center;
+  gap: 36px;
+
+  margin: 8px 0 40px;
+  padding: 32px;
+
+  border: 1px solid var(--ics-border);
+  border-radius: 18px;
+  background: var(--ics-surface);
+
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.035);
 }
 
-.ics-value-card {
-  padding: 28px 22px 25px;
-  text-align: center;
-  border: 1px solid var(--global-divider-color);
+.ics-page .ics-hero-text {
+  min-width: 0;
+}
+
+/* ICS Lab 标识 */
+
+.ics-page .ics-hero-badge {
+  display: inline-block;
+
+  margin-bottom: 12px;
+  padding: 3px 13px;
+
+  border: 1px solid var(--ics-accent);
+  border-radius: 999px;
+
+  color: var(--ics-accent);
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* 实验室中文名称 */
+
+.ics-page .ics-hero-title {
+  margin: 0 0 8px;
+
+  font-size: clamp(1.7rem, 2.8vw, 2.15rem);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 实验室英文名称 */
+
+.ics-page .ics-hero-subtitle {
+  margin: 0 0 16px;
+
+  color: var(--ics-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* 首屏简短介绍 */
+
+.ics-page .ics-hero-lead {
+  margin: 0 0 18px;
+
+  font-size: 1rem;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* 研究主题标签 */
+
+.ics-page .ics-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ics-page .ics-hero-tag {
+  display: inline-block;
+
+  padding: 4px 11px;
+
+  border: 1px solid var(--ics-border);
+  border-radius: 7px;
+
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* 页面内导航按钮 */
+
+.ics-page .ics-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 22px;
+}
+
+.ics-page .ics-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 7px 20px;
+
+  border: 1px solid var(--ics-accent);
+  border-radius: 8px;
+
+  color: var(--ics-accent);
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.ics-page .ics-hero-button-primary {
+  background: var(--ics-accent);
+  color: var(--global-bg-color, #ffffff);
+}
+
+.ics-page .ics-hero-button:hover {
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.ics-page .ics-hero-button-primary:hover {
+  color: var(--global-bg-color, #ffffff);
+}
+
+/* Logo 区域：保持原图比例，避免占满整个首屏 */
+
+.ics-page .ics-hero-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.ics-page .ics-logo {
+  display: block;
+
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   通用章节
+   ========================================================= */
+
+.ics-page .ics-section {
+  margin: 42px 0 0;
+
+  /* 点击首屏导航后，避免标题被固定导航栏遮挡 */
+  scroll-margin-top: 100px;
+}
+
+.ics-page .ics-section-title {
+  position: relative;
+
+  margin: 0 0 22px;
+  padding: 0 0 12px 17px;
+
+  border-bottom: 2px solid var(--ics-border);
+
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.ics-page .ics-section-title::before {
+  content: "";
+  position: absolute;
+
+  top: 0.16em;
+  left: 0;
+
+  width: 5px;
+  height: 1.05em;
+
+  border-radius: 4px;
+  background: var(--ics-accent);
+}
+
+.ics-page .ics-text {
+  margin: 0 0 14px;
+
+  font-size: 1.01rem;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+
+/* =========================================================
+   课题组简介
+   ========================================================= */
+
+.ics-page .ics-intro-box {
+  padding: 26px 30px;
+
+  border: 1px solid var(--ics-border);
   border-radius: 15px;
-  background: var(--global-card-bg-color);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  background: var(--ics-surface);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
 }
 
-.ics-value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.08);
+.ics-page .ics-intro-box .ics-text:last-child,
+.ics-page .ics-section > .ics-text:last-child {
+  margin-bottom: 0;
 }
 
-.ics-value-letter {
-  font-family: "Times New Roman", Times, serif;
+
+/* =========================================================
+   ICS 核心价值
+   ========================================================= */
+
+.ics-page .ics-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+
+  margin-top: 24px;
+}
+
+.ics-page .ics-value-card {
+  min-width: 0;
+  padding: 26px 22px;
+
+  border: 1px solid var(--ics-border);
+  border-radius: 15px;
+
+  background: var(--ics-surface);
+  text-align: center;
+}
+
+.ics-page .ics-value-letter {
+  margin-bottom: 10px;
+
+  color: var(--ics-accent);
   font-size: 2.55rem;
   font-weight: 700;
-  color: var(--global-theme-color);
   line-height: 1;
-  margin-bottom: 10px;
 }
 
-.ics-value-title {
-  font-family: "Times New Roman", Times, serif;
+.ics-page .ics-value-title {
+  margin-bottom: 5px;
+
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 
-.ics-value-cn {
-  font-size: 1.02rem;
-  font-weight: 650;
+.ics-page .ics-value-cn {
   margin-bottom: 8px;
+
+  font-size: 1.02rem;
+  font-weight: 700;
 }
 
-.ics-value-desc {
-  font-size: 0.93rem;
-  color: var(--global-text-color-light);
-  line-height: 1.7;
+.ics-page .ics-value-desc {
+  color: var(--ics-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
 }
 
 
 /* =========================================================
-   Mission
+   宗旨与目标
    ========================================================= */
 
-.ics-mission {
-  border-left: 4px solid var(--global-theme-color);
-  background: var(--global-card-bg-color);
-  padding: 24px 29px;
+.ics-page .ics-mission {
+  margin-bottom: 22px;
+  padding: 23px 27px;
+
+  border-left: 4px solid var(--ics-accent);
   border-radius: 0 13px 13px 0;
+
+  background: var(--ics-surface);
 }
 
-.ics-mission-main {
-  font-size: 1.10rem;
-  font-weight: 600;
-  line-height: 1.9;
+.ics-page .ics-mission-main {
   margin: 0;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.9;
 }
 
- 
+
 /* =========================================================
-   Research Areas
+   研究方向
    ========================================================= */
 
-.ics-research-grid {
+.ics-page .ics-research-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.ics-research-item {
-  border: 1px solid var(--global-divider-color);
-  border-radius: 12px;
+.ics-page .ics-research-item {
+  min-width: 0;
   padding: 20px 22px;
-  background: var(--global-card-bg-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  border: 1px solid var(--ics-border);
+  border-radius: 12px;
+
+  background: var(--ics-surface);
 }
 
-.ics-research-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.06);
-}
+.ics-page .ics-research-cn {
+  margin-bottom: 5px;
 
-.ics-research-cn {
-  font-weight: 650;
   font-size: 1.02rem;
-  margin-bottom: 3px;
+  font-weight: 700;
 }
 
-.ics-research-en {
-  font-family: "Times New Roman", Times, serif;
+.ics-page .ics-research-en {
+  color: var(--ics-muted);
   font-size: 0.95rem;
-  color: var(--global-text-color-light);
+  line-height: 1.65;
 }
 
 
 /* =========================================================
-   Visiting Scholars
+   合作学者
    ========================================================= */
 
-.ics-visitor {
+.ics-page .ics-visitor {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 28px;
   align-items: center;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 15px;
-  padding: 22px;
+
   margin-bottom: 22px;
-  background: var(--global-card-bg-color);
+  padding: 24px;
+
+  border: 1px solid var(--ics-border);
+  border-radius: 15px;
+
+  background: var(--ics-surface);
 }
 
-.ics-visitor-photo {
+.ics-page .ics-visitor:last-child {
+  margin-bottom: 0;
+}
+
+.ics-page .ics-visitor-photo {
+  display: block;
+
   width: 160px;
+  max-width: 100%;
   height: 195px;
-  object-fit: cover;
-  object-position: center top;
+
+  margin: 0 auto;
+
   border-radius: 10px;
+
+  object-fit: contain;
+  object-position: center;
 }
 
-.ics-visitor-name {
+.ics-page .ics-visitor-name {
+  margin-bottom: 5px;
+
   font-size: 1.22rem;
   font-weight: 700;
-  margin-bottom: 3px;
+  line-height: 1.7;
 }
 
-.ics-visitor-role {
+.ics-page .ics-visitor-role {
+  margin-bottom: 10px;
+
+  color: var(--ics-accent);
   font-size: 0.95rem;
-  color: var(--global-theme-color);
-  font-weight: 600;
-  margin-bottom: 9px;
+  font-weight: 700;
 }
 
-.ics-visitor-status {
-  font-size: 0.92rem;
-  color: var(--global-text-color-light);
-  margin-bottom: 8px;
-}
-
-.ics-visitor-desc {
-  font-size: 0.97rem;
+.ics-page .ics-visitor-desc {
   margin: 0;
-  line-height: 1.8;
+
+  font-size: 0.97rem;
+  line-height: 1.85;
   text-align: justify;
 }
 
 
 /* =========================================================
-   Student Cards
+   学生卡片
+   已合并：照片完整显示、照片上方和左右留白
    ========================================================= */
 
-.ics-members {
+.ics-page .ics-members {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
+  align-items: stretch;
 }
 
-.ics-member-card {
+.ics-page .ics-member-card {
+  min-width: 0;
+
+  /* 照片上方留白 24px，左右留白 20px */
+  padding: 24px 20px 0;
+
   overflow: hidden;
-  background: var(--global-card-bg-color);
-  border: 1px solid var(--global-divider-color);
+
+  border: 1px solid var(--ics-border);
   border-radius: 15px;
+
+  background: var(--ics-surface);
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.ics-member-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.08);
-}
+/* 固定照片展示区域，完整显示原图，不裁剪、不拉伸 */
 
-.ics-member-photo {
-  width: 100%;
-  height: 270px;
-  object-fit: cover;
-  object-position: center top;
+.ics-page .ics-member-photo {
   display: block;
+
+  width: 100%;
+  height: 320px;
+  max-height: none;
+
+  margin: 0 auto;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: var(--ics-surface);
 }
 
-.ics-member-info {
-  padding: 18px 14px 21px;
+.ics-page .ics-member-info {
+  padding: 18px 0 24px;
 }
 
-.ics-member-name {
+.ics-page .ics-member-name {
+  margin: 0 0 5px;
+
   font-size: 1.18rem;
   font-weight: 700;
-  margin: 0 0 5px;
 }
 
-.ics-member-role {
+.ics-page .ics-member-role {
   display: inline-block;
-  padding: 3px 12px;
+  max-width: 100%;
+
   margin: 4px 0 9px;
+  padding: 3px 12px;
+
+  border: 1px solid var(--ics-accent);
   border-radius: 20px;
-  color: var(--global-theme-color);
-  border: 1px solid var(--global-theme-color);
-  font-size: 0.84rem;
-  font-weight: 600;
+
+  color: var(--ics-accent);
+  font-size: 0.87rem;
+  font-weight: 700;
 }
 
-.ics-member-status {
-  font-size: 0.92rem;
-  color: var(--global-text-color-light);
-  margin: 2px 0;
+.ics-page .ics-member-status {
+  margin: 3px 0;
+
+  color: var(--ics-muted);
+  font-size: 0.93rem;
+  line-height: 1.75;
 }
 
 
 /* =========================================================
-   Ending
+   页尾
    ========================================================= */
 
-.ics-ending {
+.ics-page .ics-ending {
+  margin: 54px 0 0;
+  padding: 28px 15px 8px;
+
+  border-top: 1px solid var(--ics-border);
   text-align: center;
-  margin: 58px 0 25px;
-  padding: 30px 15px 5px;
-  border-top: 1px solid var(--global-divider-color);
 }
 
-.ics-ending-cn {
+.ics-page .ics-ending-cn {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.ics-ending-en {
-  font-family: "Times New Roman", Times, serif;
-  color: var(--global-text-color-light);
-  margin-top: 4px;
+.ics-page .ics-ending-en {
+  margin-top: 5px;
+
+  color: var(--ics-muted);
 }
 
 
 /* =========================================================
-   Responsive
+   交互效果
+   不移动卡片，避免照片看起来上下错位
    ========================================================= */
 
-@media (max-width: 900px) {
+.ics-page .ics-value-card,
+.ics-page .ics-research-item,
+.ics-page .ics-member-card {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-  .ics-values {
-    grid-template-columns: 1fr;
-  }
+@media (hover: hover) and (pointer: fine) {
 
-  .ics-members {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .ics-research-grid {
-    grid-template-columns: 1fr;
+  .ics-page .ics-value-card:hover,
+  .ics-page .ics-research-item:hover,
+  .ics-page .ics-member-card:hover {
+    border-color: var(--ics-accent);
+    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
   }
 
 }
 
-@media (max-width: 620px) {
 
-  .ics-page {
-    padding: 0 2px;
+/* =========================================================
+   平板端
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+  .ics-page .ics-hero {
+    grid-template-columns: minmax(0, 1fr) 230px;
+    gap: 24px;
+    padding: 26px;
   }
 
-  .ics-hero {
-    padding: 5px 5px 25px;
+  .ics-page .ics-hero-title {
+    font-size: 1.8rem;
   }
 
-  .ics-logo {
-    width: 280px;
-    max-width: 80%;
+  .ics-page .ics-members {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .ics-members {
-    grid-template-columns: 1fr;
+  .ics-page .ics-research-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .ics-member-photo {
-    height: auto;
-    max-height: 440px;
+}
+
+
+/* =========================================================
+   窄屏：首屏改为上下布局
+   ========================================================= */
+
+@media screen and (max-width: 760px) {
+
+  .ics-page .ics-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 
-  .ics-visitor {
-    grid-template-columns: 1fr;
+  .ics-page .ics-hero-text {
     text-align: center;
   }
 
-  .ics-visitor-photo {
+  .ics-page .ics-hero-lead {
+    text-align: left;
+  }
+
+  .ics-page .ics-hero-tags,
+  .ics-page .ics-hero-actions {
+    justify-content: center;
+  }
+
+  .ics-page .ics-hero-logo-wrap {
+    max-width: 240px;
+    justify-self: center;
+  }
+
+  .ics-page .ics-values {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+@media screen and (max-width: 620px) {
+
+  .ics-page .ics-hero {
+    padding: 22px 18px;
+    margin-bottom: 32px;
+    border-radius: 14px;
+  }
+
+  .ics-page .ics-hero-title {
+    font-size: 1.65rem;
+  }
+
+  .ics-page .ics-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .ics-page .ics-hero-lead {
+    font-size: 0.97rem;
+  }
+
+  .ics-page .ics-hero-logo-wrap {
+    max-width: 210px;
+  }
+
+  .ics-page .ics-section {
+    margin-top: 34px;
+  }
+
+  .ics-page .ics-section-title {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+  }
+
+  .ics-page .ics-intro-box,
+  .ics-page .ics-value-card,
+  .ics-page .ics-research-item {
+    padding: 20px 18px;
+  }
+
+  .ics-page .ics-mission {
+    padding: 20px 18px;
+  }
+
+  .ics-page .ics-text,
+  .ics-page .ics-visitor-desc {
+    text-align: left;
+  }
+
+  .ics-page .ics-visitor {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+
+    padding: 22px 18px;
+    text-align: center;
+  }
+
+  .ics-page .ics-members {
+    grid-template-columns: minmax(0, 1fr);
+
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
   }
 
-  .ics-visitor-desc {
-    text-align: left;
+  .ics-page .ics-member-card {
+    padding: 20px 16px 0;
+  }
+
+  .ics-page .ics-member-photo {
+    height: 300px;
+    max-height: none;
+  }
+
+  .ics-page .ics-ending {
+    margin-top: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   减少动态效果的系统偏好
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ics-page .ics-hero-button,
+  .ics-page .ics-value-card,
+  .ics-page .ics-research-item,
+  .ics-page .ics-member-card {
+    transition: none;
   }
 
 }
@@ -408,30 +749,98 @@ nav_order: 3
 </style>
 
 
-<div class="ics-page">
+<div class="ics-page" lang="zh-CN">
 
 
-<!-- =======================================================
-     实验室 Logo
-     ======================================================= -->
+<!-- =========================================================
+     首屏：左侧实验室介绍，右侧 Logo
+     ========================================================= -->
 
-<div class="ics-hero">
+<section class="ics-hero" aria-labelledby="ics-hero-title">
 
-  <img
-    src="/assets/img/ICS_Lab_LOGO.png"
-    class="ics-logo"
-    alt="ICS Lab">
+  <div class="ics-hero-text">
 
-</div>
+    <div class="ics-hero-badge en">
+      ICS Lab
+    </div>
+
+    <h2 class="ics-hero-title" id="ics-hero-title">
+      智能协同系统实验室
+    </h2>
+
+    <p class="ics-hero-subtitle en">
+      Intelligent Cooperative Systems Laboratory
+    </p>
+
+    <p class="ics-hero-lead">
+      以智能协作为核心，聚焦通信、感知与控制深度融合，
+      面向未来智能无线网络与无人系统开展研究。
+    </p>
+
+    <div class="ics-hero-tags" aria-label="研究主题">
+
+      <span class="ics-hero-tag">
+        通感控一体化
+      </span>
+
+      <span class="ics-hero-tag">
+        智能超表面
+      </span>
+
+      <span class="ics-hero-tag">
+        无人机通信
+      </span>
+
+      <span class="ics-hero-tag">
+        人工智能赋能通信
+      </span>
+
+    </div>
+
+    <nav class="ics-hero-actions" aria-label="课题组页面导航">
+
+      <a
+        class="ics-hero-button ics-hero-button-primary"
+        href="#ics-research">
+        研究方向
+      </a>
+
+      <a
+        class="ics-hero-button"
+        href="#ics-members">
+        团队成员
+      </a>
+
+    </nav>
+
+  </div>
 
 
-<!-- =======================================================
+  <div class="ics-hero-logo-wrap">
+
+    <img
+      src="{{ '/assets/img/ICS_Lab_LOGO.png' | relative_url }}"
+      class="ics-logo"
+      alt="ICS Lab 智能协同系统实验室标志"
+      decoding="async">
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
      课题组简介
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-about"
+  aria-labelledby="ics-about-title">
 
-  <h2 class="ics-section-title">课题组简介</h2>
+  <h2 class="ics-section-title" id="ics-about-title">
+    课题组简介
+  </h2>
 
   <div class="ics-intro-box">
 
@@ -456,16 +865,22 @@ nav_order: 3
 </section>
 
 
-<!-- =======================================================
-     ICS 内涵
-     ======================================================= -->
+<!-- =========================================================
+     ICS 的内涵
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-values"
+  aria-labelledby="ics-values-title">
 
-  <h2 class="ics-section-title"><span class="en">ICS</span> 的内涵</h2>
+  <h2 class="ics-section-title" id="ics-values-title">
+    <span class="en">ICS</span> 的内涵
+  </h2>
 
   <p class="ics-text">
-    <span class="en">ICS</span> 不仅代表课题组所关注的智能协同系统及通信、感知与控制融合研究，
+    <span class="en">ICS</span>
+    不仅代表课题组所关注的智能协同系统及通信、感知与控制融合研究，
     同时也体现课题组共同坚持的科研理念：
     <span class="en">Innovation, Collaboration, and Synergy</span>。
   </p>
@@ -473,12 +888,11 @@ nav_order: 3
 
   <div class="ics-values">
 
-
     <div class="ics-value-card">
 
-      <div class="ics-value-letter">I</div>
+      <div class="ics-value-letter en">I</div>
 
-      <div class="ics-value-title">
+      <div class="ics-value-title en">
         Innovation
       </div>
 
@@ -496,9 +910,9 @@ nav_order: 3
 
     <div class="ics-value-card">
 
-      <div class="ics-value-letter">C</div>
+      <div class="ics-value-letter en">C</div>
 
-      <div class="ics-value-title">
+      <div class="ics-value-title en">
         Collaboration
       </div>
 
@@ -516,9 +930,9 @@ nav_order: 3
 
     <div class="ics-value-card">
 
-      <div class="ics-value-letter">S</div>
+      <div class="ics-value-letter en">S</div>
 
-      <div class="ics-value-title">
+      <div class="ics-value-title en">
         Synergy
       </div>
 
@@ -533,19 +947,23 @@ nav_order: 3
 
     </div>
 
-
   </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      课题组宗旨与目标
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-mission"
+  aria-labelledby="ics-mission-title">
 
-  <h2 class="ics-section-title">课题组宗旨与目标</h2>
+  <h2 class="ics-section-title" id="ics-mission-title">
+    课题组宗旨与目标
+  </h2>
 
   <div class="ics-mission">
 
@@ -556,7 +974,7 @@ nav_order: 3
 
   </div>
 
-  <p class="ics-text" style="margin-top:22px;">
+  <p class="ics-text">
     课题组坚持问题驱动与前沿探索并重，注重基础理论、算法设计与实际应用的有机结合。
     我们希望围绕未来无线网络、低空智能网络、无人系统及智能协同系统中的关键问题，
     构建从理论建模、算法设计到系统验证的完整研究体系。
@@ -571,13 +989,18 @@ nav_order: 3
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      主要研究方向
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-research"
+  aria-labelledby="ics-research-title">
 
-  <h2 class="ics-section-title">主要研究方向</h2>
+  <h2 class="ics-section-title" id="ics-research-title">
+    主要研究方向
+  </h2>
 
   <div class="ics-research-grid">
 
@@ -588,7 +1011,7 @@ nav_order: 3
         通信感知一体化
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         Integrated Sensing and Communication (ISAC)
       </div>
 
@@ -601,7 +1024,7 @@ nav_order: 3
         通信–感知–控制一体化
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         Integrated Communication, Sensing and Control
       </div>
 
@@ -614,7 +1037,7 @@ nav_order: 3
         无人机通信与低空智能网络
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         UAV Communications and Low-Altitude Intelligent Networks
       </div>
 
@@ -627,7 +1050,7 @@ nav_order: 3
         多无人系统智能协同
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         Intelligent Cooperation for Multi-UAV Systems
       </div>
 
@@ -640,7 +1063,7 @@ nav_order: 3
         智能超表面与可重构无线环境
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         RIS / SIM and Reconfigurable Wireless Environments
       </div>
 
@@ -653,7 +1076,7 @@ nav_order: 3
         人工智能赋能无线通信
       </div>
 
-      <div class="ics-research-en">
+      <div class="ics-research-en en">
         Artificial Intelligence for Wireless Communications
       </div>
 
@@ -665,13 +1088,18 @@ nav_order: 3
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      合作学者
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-members"
+  aria-labelledby="ics-members-title">
 
-  <h2 class="ics-section-title">合作学者</h2>
+  <h2 class="ics-section-title" id="ics-members-title">
+    合作学者
+  </h2>
 
 
   <!-- ==================== 合作学者 1 ==================== -->
@@ -679,42 +1107,42 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/chengxuejun.jpg"
+      src="{{ '/assets/img/group/chengxuejun.jpg' | relative_url }}"
       class="ics-visitor-photo"
-      alt="程学军">
+      alt="程学军"
+      loading="lazy"
+      decoding="async">
 
     <div>
 
       <div class="ics-visitor-name">
-        程学军（<a href="https://scholar.google.com/citations?user=anxnepIAAAAJ&hl=zh-CN">谷歌学术主页</a>）
+        程学军（<a href="https://scholar.google.com/citations?user=anxnepIAAAAJ&amp;hl=zh-CN">谷歌学术主页</a>）
       </div>
 
       <div class="ics-visitor-role">
         合作学者 · 山东大学
       </div>
 
-      <!--
-      <div class="ics-visitor-status">
-        访问时间：2026年XX月－2026年XX月
-      </div>
-      -->
-
       <p class="ics-visitor-desc">
-        山东大学在读博士研究生，国家公派新加坡国立大学联培博士生，主要研究方向包括智能超表面波束赋形、通信感知一体化与多址技术。
+        山东大学在读博士研究生，国家公派新加坡国立大学联培博士生，
+        主要研究方向包括智能超表面波束赋形、通信感知一体化与多址技术。
       </p>
 
     </div>
 
   </div>
 
-  <!-- ==================== 访问学者 2 ==================== -->
+
+  <!-- ==================== 合作学者 2 ==================== -->
 
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/wangmaoyuan.png"
+      src="{{ '/assets/img/group/wangmaoyuan.png' | relative_url }}"
       class="ics-visitor-photo"
-      alt="王茂源">
+      alt="王茂源"
+      loading="lazy"
+      decoding="async">
 
     <div>
 
@@ -726,78 +1154,46 @@ nav_order: 3
         合作学者 · 山东大学
       </div>
 
-      <!--
-      <div class="ics-visitor-status">
-        访问时间：2026年XX月－2026年XX月
-      </div>
-      -->
-
       <p class="ics-visitor-desc">
-        山东大学在读硕士研究生，主要研究方向包括柔性智能超表面、通信感知一体化与深度强化学习。
+        山东大学在读硕士研究生，
+        主要研究方向包括柔性智能超表面、通信感知一体化与深度强化学习。
       </p>
 
     </div>
 
   </div>
 
-
-  <!--
-  如果有第二位访问学者，复制下面这一段并取消注释。
-
-  <div class="ics-visitor">
-
-    <img
-      src="/assets/img/group/visitor-02.jpg"
-      class="ics-visitor-photo"
-      alt="访问学者姓名">
-
-    <div>
-
-      <div class="ics-visitor-name">
-        访问学者姓名
-      </div>
-
-      <div class="ics-visitor-role">
-        访问学者 · XXXX大学
-      </div>
-
-      <div class="ics-visitor-status">
-        访问时间：2026年XX月－2026年XX月
-      </div>
-
-      <p class="ics-visitor-desc">
-        主要从事 XXXX 方向研究。
-        访问期间重点围绕 XXXX 开展合作研究与学术交流。
-      </p>
-
-    </div>
-
-  </div>
-  -->
-
+  <!-- 增加合作学者时，在本 section 内复制一个完整的 .ics-visitor。 -->
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      硕士研究生
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-masters"
+  aria-labelledby="ics-masters-title">
 
-  <h2 class="ics-section-title">硕士研究生</h2>
+  <h2 class="ics-section-title" id="ics-masters-title">
+    硕士研究生
+  </h2>
 
   <div class="ics-members">
 
 
-    <!-- ==================== 硕士生 1 ==================== -->
+    <!-- ==================== 硕士生空缺 ==================== -->
 
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/Master_Vacant.png"
+        src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
         class="ics-member-photo"
-        alt="空缺">
+        alt="硕士研究生名额空缺，尚未招录"
+        loading="lazy"
+        decoding="async">
 
       <div class="ics-member-info">
 
@@ -821,28 +1217,25 @@ nav_order: 3
 
     </div>
 
-    
-
-    </div>
-
-
-    <!--
-    如果有第 2 位硕士生，直接复制一个 .ics-member-card 即可。
-    -->
-
+    <!-- 增加硕士生时，在本 .ics-members 内复制一个完整的 .ics-member-card。 -->
 
   </div>
 
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      本科生
-     ======================================================= -->
+     ========================================================= -->
 
-<section class="ics-section">
+<section
+  class="ics-section"
+  id="ics-undergraduates"
+  aria-labelledby="ics-undergraduates-title">
 
-  <h2 class="ics-section-title">本科生</h2>
+  <h2 class="ics-section-title" id="ics-undergraduates-title">
+    本科生
+  </h2>
 
   <div class="ics-members">
 
@@ -852,9 +1245,11 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/Luhan_Wang.jpg"
+        src="{{ '/assets/img/group/Luhan_Wang.jpg' | relative_url }}"
         class="ics-member-photo"
-        alt="王鹿涵">
+        alt="王鹿涵"
+        loading="lazy"
+        decoding="async">
 
       <div class="ics-member-info">
 
@@ -884,9 +1279,11 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/Yilin_Wang.jpeg"
+        src="{{ '/assets/img/group/Yilin_Wang.jpeg' | relative_url }}"
         class="ics-member-photo"
-        alt="王奕霖">
+        alt="王奕霖"
+        loading="lazy"
+        decoding="async">
 
       <div class="ics-member-info">
 
@@ -910,21 +1307,16 @@ nav_order: 3
 
     </div>
 
+    <!-- 增加本科生时，在本 .ics-members 内复制一个完整的 .ics-member-card。 -->
 
-    </div>
-
-
-    <!--
-    如果还有更多本科生，直接复制一个 .ics-member-card 即可。
-    -->
-
+  </div>
 
 </section>
 
 
-<!-- =======================================================
-     Ending
-     ======================================================= -->
+<!-- =========================================================
+     页尾
+     ========================================================= -->
 
 <div class="ics-ending">
 
@@ -932,76 +1324,11 @@ nav_order: 3
     创新 · 合作 · 协同成长
   </div>
 
-  <div class="ics-ending-en">
+  <div class="ics-ending-en en">
     Innovation · Collaboration · Synergy
   </div>
 
 </div>
 
+
 </div>
-<!-- 上面是你原来代码最后的结束标签，保留不动 -->
-
-
-<style>
-
-/* =========================================================
-   学生卡片：增加照片四周的留白
-   ========================================================= */
-
-.ics-page .ics-member-card {
-  box-sizing: border-box;
-
-  /* 上方 24px，左右 20px，底部由信息区域控制 */
-  padding: 24px 20px 0;
-}
-
-
-/* =========================================================
-   学生照片：完整显示，不裁剪、不拉伸
-   ========================================================= */
-
-.ics-page .ics-member-photo {
-  display: block;
-
-  width: 100%;
-  height: 320px;
-  max-height: none;
-
-  margin: 0 auto;
-  padding: 0;
-
-  object-fit: contain;
-  object-position: center center;
-
-  background: var(--global-card-bg-color, #ffffff);
-}
-
-
-/* =========================================================
-   姓名与身份信息：调整照片下方间距
-   ========================================================= */
-
-.ics-page .ics-member-info {
-  padding: 18px 0 24px;
-}
-
-
-/* =========================================================
-   手机端
-   ========================================================= */
-
-@media screen and (max-width: 620px) {
-
-  .ics-page .ics-member-card {
-    padding: 20px 16px 0;
-  }
-
-  .ics-page .ics-member-photo {
-    height: 300px;
-    max-height: none;
-  }
-
-}
-
-</style>
-
