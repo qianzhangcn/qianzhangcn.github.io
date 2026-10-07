@@ -1273,7 +1273,7 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
-        src="{{ '/assets/img/group/Yilin_Wang.jpeg' | relative_url }}"
+        src="{{ '/assets/img/group/Yilin_Wang.png' | relative_url }}"
         class="ics-member-photo"
         alt="王奕霖"
         loading="lazy"
