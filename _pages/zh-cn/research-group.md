@@ -866,7 +866,7 @@ nav_order: 3
   aria-labelledby="ics-values-title">
 
   <h2 class="ics-section-title" id="ics-values-title">
-    <span class="en">ICS</span> 的内涵
+    什么是<span class="en">ICS?</span> 
   </h2>
 
   <p class="ics-text">
