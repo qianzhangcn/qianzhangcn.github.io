@@ -1092,8 +1092,67 @@ nav_order: 3
     合作学者
   </h2>
 
-
   <!-- ==================== 合作学者 1 ==================== -->
+
+  <div class="ics-visitor ics-hover-card">
+
+    <img
+      src="{{ '/assets/img/group/Hui_Wang.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="王辉"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        王辉
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 浙江大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        浙江大学良渚实验室博士后。2025年博士毕业于山东大学，主要研究方向包括脑机接口、语言解码、脑电大模型和图神经网络等，
+        已在Expert Systems with Applications、IEEE Transactions on Affective Computing等期刊发表多篇论文。
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== 合作学者 2 ==================== -->
+
+  <div class="ics-visitor ics-hover-card">
+
+    <img
+      src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="李云潇"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        李云潇
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 山东大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        山东大学在读博士生，主要研究方向包括通信感知一体化、流体天线、无人机轨迹优化、以及物理层安全。
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== 合作学者 3 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
@@ -1124,7 +1183,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 2 ==================== -->
+  <!-- ==================== 合作学者 4 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
