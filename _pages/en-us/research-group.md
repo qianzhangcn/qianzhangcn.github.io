@@ -884,4 +884,51 @@ nav_order: 3
 </div>
 
 
+<style>
+
+/* =========================================================
+   学生照片：完整显示，不裁剪、不拉伸
+   同时适用于本科生和硕士研究生
+   ========================================================= */
+
+.ics-page .ics-member-photo {
+  width: 100%;
+
+  /* 统一照片区域高度 */
+  height: 320px;
+
+  /* 取消原来的最大高度限制 */
+  max-height: none;
+
+  /* 关键修改：完整显示照片，不裁剪 */
+  object-fit: contain;
+
+  /* 照片在区域内居中 */
+  object-position: center center;
+
+  display: block;
+
+  /* 留白区域与卡片背景一致 */
+  background: var(--global-card-bg-color, #ffffff);
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+@media screen and (max-width: 620px) {
+
+  .ics-page .ics-member-photo {
+    height: 300px;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center center;
+  }
+
+}
+
+</style>
+
 </div>
