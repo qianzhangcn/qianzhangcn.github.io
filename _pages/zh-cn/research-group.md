@@ -852,7 +852,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/undergraduate-01.jpg"
+        src="/assets/img/group/Luhan_Wang.jpg"
         class="ics-member-photo"
         alt="王鹿涵">
 
