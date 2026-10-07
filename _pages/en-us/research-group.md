@@ -750,7 +750,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/master-01.jpg"
+        src="/assets/img/group/Master_Vacant.png"
         class="ics-member-photo"
         alt="Vacant">
 
