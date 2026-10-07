@@ -938,4 +938,38 @@ nav_order: 3
 
 </div>
 
+</div>
+<!-- 上面是你原来代码最后的结束标签，保留不动 -->
+
+
+<!-- 从这里开始追加：修复学生照片裁剪 -->
+<style>
+
+.ics-page .ics-member-photo {
+  width: 100%;
+  height: 320px;
+  max-height: none;
+
+  /* 完整显示照片，不裁剪、不拉伸 */
+  object-fit: contain;
+  object-position: center center;
+
+  display: block;
+  background: var(--global-card-bg-color, #ffffff);
+}
+
+/* 手机端 */
+@media screen and (max-width: 620px) {
+
+  .ics-page .ics-member-photo {
+    height: 300px;
+    max-height: none;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+}
+
+</style>
+
 
