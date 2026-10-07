@@ -10,7 +10,7 @@ nav_order: 3
 <style>
 
 /* =========================================================
-   页面基础：所有样式仅作用于课题组页面
+   页面基础：不影响个人主页、出版物或网站导航栏
    ========================================================= */
 
 .ics-page {
@@ -20,6 +20,12 @@ nav_order: 3
   --ics-border: var(--global-divider-color, #e5e7eb);
   --ics-surface: var(--global-card-bg-color, var(--global-bg-color, #ffffff));
 
+  --ics-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+
+  --ics-hover-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.12),
+    0 0 0 1px var(--ics-accent);
+
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
@@ -28,9 +34,10 @@ nav_order: 3
   color: var(--ics-text);
   line-height: 1.8;
   overflow-wrap: break-word;
+  isolation: isolate;
 }
 
-/* 英文优先使用 Times New Roman，中文使用后备中文字体 */
+/* 英文使用 Times New Roman；中文使用后备中文字体 */
 
 .ics-page,
 .ics-page * {
@@ -45,6 +52,12 @@ nav_order: 3
 
 .ics-page a {
   color: var(--ics-accent);
+  text-decoration: none;
+}
+
+.ics-page a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .ics-page a:focus-visible {
@@ -54,7 +67,31 @@ nav_order: 3
 
 
 /* =========================================================
-   首屏：左侧实验室介绍，右侧 Logo
+   所有内容卡片共用的样式
+   合作学者、学生、研究方向等均使用 ics-hover-card
+   ========================================================= */
+
+.ics-page .ics-hover-card {
+  position: relative;
+  z-index: 0;
+
+  min-width: 0;
+
+  border: 1px solid var(--ics-border);
+  background: var(--ics-surface);
+  box-shadow: var(--ics-shadow);
+
+  transform: none;
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+/* =========================================================
+   首屏：左文右图
    ========================================================= */
 
 .ics-page .ics-hero {
@@ -66,18 +103,12 @@ nav_order: 3
   margin: 8px 0 40px;
   padding: 32px;
 
-  border: 1px solid var(--ics-border);
   border-radius: 18px;
-  background: var(--ics-surface);
-
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.035);
 }
 
 .ics-page .ics-hero-text {
   min-width: 0;
 }
-
-/* ICS Lab 标识 */
 
 .ics-page .ics-hero-badge {
   display: inline-block;
@@ -94,8 +125,6 @@ nav_order: 3
   letter-spacing: 0.04em;
 }
 
-/* 实验室中文名称 */
-
 .ics-page .ics-hero-title {
   margin: 0 0 8px;
 
@@ -103,8 +132,6 @@ nav_order: 3
   font-weight: 700;
   line-height: 1.4;
 }
-
-/* 实验室英文名称 */
 
 .ics-page .ics-hero-subtitle {
   margin: 0 0 16px;
@@ -114,8 +141,6 @@ nav_order: 3
   line-height: 1.6;
 }
 
-/* 首屏简短介绍 */
-
 .ics-page .ics-hero-lead {
   margin: 0 0 18px;
 
@@ -123,8 +148,6 @@ nav_order: 3
   line-height: 1.9;
   text-align: left;
 }
-
-/* 研究主题标签 */
 
 .ics-page .ics-hero-tags {
   display: flex;
@@ -143,51 +166,6 @@ nav_order: 3
   font-size: 0.88rem;
   line-height: 1.6;
 }
-
-/* 页面内导航按钮 */
-
-.ics-page .ics-hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-
-  margin-top: 22px;
-}
-
-.ics-page .ics-hero-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 42px;
-  padding: 7px 20px;
-
-  border: 1px solid var(--ics-accent);
-  border-radius: 8px;
-
-  color: var(--ics-accent);
-  font-size: 0.94rem;
-  font-weight: 700;
-  text-decoration: none;
-
-  transition: box-shadow 0.2s ease;
-}
-
-.ics-page .ics-hero-button-primary {
-  background: var(--ics-accent);
-  color: var(--global-bg-color, #ffffff);
-}
-
-.ics-page .ics-hero-button:hover {
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
-}
-
-.ics-page .ics-hero-button-primary:hover {
-  color: var(--global-bg-color, #ffffff);
-}
-
-/* Logo 区域：保持原图比例，避免占满整个首屏 */
 
 .ics-page .ics-hero-logo-wrap {
   display: flex;
@@ -211,7 +189,48 @@ nav_order: 3
   height: auto;
 
   margin: 0 auto;
+
   object-fit: contain;
+}
+
+
+/* =========================================================
+   首屏按钮：默认不填充，只有悬停时紫底白字
+   ========================================================= */
+
+.ics-page .ics-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 22px;
+}
+
+.ics-page .ics-hero-actions .ics-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+  padding: 7px 20px;
+
+  border: 1px solid var(--ics-accent);
+  border-radius: 8px;
+
+  background: transparent;
+  color: var(--ics-accent);
+
+  font-size: 0.94rem;
+  font-weight: 700;
+
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 
@@ -222,7 +241,7 @@ nav_order: 3
 .ics-page .ics-section {
   margin: 42px 0 0;
 
-  /* 点击首屏导航后，避免标题被固定导航栏遮挡 */
+  /* 点击页面内导航后，避免标题被顶部导航栏遮挡 */
   scroll-margin-top: 100px;
 }
 
@@ -261,19 +280,9 @@ nav_order: 3
   text-align: justify;
 }
 
-
-/* =========================================================
-   课题组简介
-   ========================================================= */
-
 .ics-page .ics-intro-box {
   padding: 26px 30px;
-
-  border: 1px solid var(--ics-border);
   border-radius: 15px;
-
-  background: var(--ics-surface);
-  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.035);
 }
 
 .ics-page .ics-intro-box .ics-text:last-child,
@@ -295,13 +304,9 @@ nav_order: 3
 }
 
 .ics-page .ics-value-card {
-  min-width: 0;
   padding: 26px 22px;
 
-  border: 1px solid var(--ics-border);
   border-radius: 15px;
-
-  background: var(--ics-surface);
   text-align: center;
 }
 
@@ -330,6 +335,7 @@ nav_order: 3
 
 .ics-page .ics-value-desc {
   color: var(--ics-muted);
+
   font-size: 0.94rem;
   line-height: 1.8;
 }
@@ -345,8 +351,6 @@ nav_order: 3
 
   border-left: 4px solid var(--ics-accent);
   border-radius: 0 13px 13px 0;
-
-  background: var(--ics-surface);
 }
 
 .ics-page .ics-mission-main {
@@ -369,13 +373,8 @@ nav_order: 3
 }
 
 .ics-page .ics-research-item {
-  min-width: 0;
   padding: 20px 22px;
-
-  border: 1px solid var(--ics-border);
   border-radius: 12px;
-
-  background: var(--ics-surface);
 }
 
 .ics-page .ics-research-cn {
@@ -387,28 +386,26 @@ nav_order: 3
 
 .ics-page .ics-research-en {
   color: var(--ics-muted);
+
   font-size: 0.95rem;
   line-height: 1.65;
 }
 
 
 /* =========================================================
-   合作学者
+   合作学者：整张卡片参与悬停，不仅是姓名链接
    ========================================================= */
 
 .ics-page .ics-visitor {
   display: grid;
   grid-template-columns: 160px minmax(0, 1fr);
-  gap: 28px;
   align-items: center;
+  gap: 28px;
 
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding: 24px;
 
-  border: 1px solid var(--ics-border);
   border-radius: 15px;
-
-  background: var(--ics-surface);
 }
 
 .ics-page .ics-visitor:last-child {
@@ -423,7 +420,6 @@ nav_order: 3
   height: 195px;
 
   margin: 0 auto;
-
   border-radius: 10px;
 
   object-fit: contain;
@@ -456,33 +452,24 @@ nav_order: 3
 
 
 /* =========================================================
-   学生卡片
-   已合并：照片完整显示、照片上方和左右留白
+   学生卡片：保留留白、完整照片和统一图片区域高度
    ========================================================= */
 
 .ics-page .ics-members {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
   align-items: stretch;
+  gap: 25px;
 }
 
 .ics-page .ics-member-card {
-  min-width: 0;
-
   /* 照片上方留白 24px，左右留白 20px */
   padding: 24px 20px 0;
 
   overflow: hidden;
-
-  border: 1px solid var(--ics-border);
   border-radius: 15px;
-
-  background: var(--ics-surface);
   text-align: center;
 }
-
-/* 固定照片展示区域，完整显示原图，不裁剪、不拉伸 */
 
 .ics-page .ics-member-photo {
   display: block;
@@ -494,6 +481,7 @@ nav_order: 3
   margin: 0 auto;
   padding: 0;
 
+  /* 完整显示照片，不裁剪、不拉伸 */
   object-fit: contain;
   object-position: center;
 
@@ -554,31 +542,37 @@ nav_order: 3
 
 .ics-page .ics-ending-en {
   margin-top: 5px;
-
   color: var(--ics-muted);
 }
 
 
 /* =========================================================
-   交互效果
-   不移动卡片，避免照片看起来上下错位
+   统一悬停效果
+   鼠标位于卡片内任意位置，整张卡片都会突出
    ========================================================= */
 
-.ics-page .ics-value-card,
-.ics-page .ics-research-item,
-.ics-page .ics-member-card {
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
+@media (any-hover: hover) {
 
-@media (hover: hover) and (pointer: fine) {
+  .ics-page .ics-hover-card:hover {
+    z-index: 2;
 
-  .ics-page .ics-value-card:hover,
-  .ics-page .ics-research-item:hover,
-  .ics-page .ics-member-card:hover {
+    /* 整张卡片轻微上浮，不改变其他卡片的布局 */
+    transform: translateY(-5px);
+
+    /* 紫色描边 + 明显阴影 */
     border-color: var(--ics-accent);
-    box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--ics-hover-shadow);
+  }
+
+  /* 两个按钮都只在鼠标悬停时填充紫色 */
+  .ics-page .ics-hero-actions .ics-hero-button:hover {
+    background: var(--ics-accent);
+    color: #ffffff;
+
+    border-color: var(--ics-accent);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+
+    text-decoration: none;
   }
 
 }
@@ -686,10 +680,7 @@ nav_order: 3
 
   .ics-page .ics-intro-box,
   .ics-page .ics-value-card,
-  .ics-page .ics-research-item {
-    padding: 20px 18px;
-  }
-
+  .ics-page .ics-research-item,
   .ics-page .ics-mission {
     padding: 20px 18px;
   }
@@ -732,16 +723,18 @@ nav_order: 3
 
 
 /* =========================================================
-   减少动态效果的系统偏好
+   减少动态效果时保留描边和阴影，仅取消位移动画
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .ics-page .ics-hero-button,
-  .ics-page .ics-value-card,
-  .ics-page .ics-research-item,
-  .ics-page .ics-member-card {
+  .ics-page .ics-hover-card,
+  .ics-page .ics-hero-actions .ics-hero-button {
     transition: none;
+  }
+
+  .ics-page .ics-hover-card:hover {
+    transform: none;
   }
 
 }
@@ -753,10 +746,12 @@ nav_order: 3
 
 
 <!-- =========================================================
-     首屏：左侧实验室介绍，右侧 Logo
+     首屏
      ========================================================= -->
 
-<section class="ics-hero" aria-labelledby="ics-hero-title">
+<section
+  class="ics-hero ics-hover-card"
+  aria-labelledby="ics-hero-title">
 
   <div class="ics-hero-text">
 
@@ -799,15 +794,11 @@ nav_order: 3
 
     <nav class="ics-hero-actions" aria-label="课题组页面导航">
 
-      <a
-        class="ics-hero-button ics-hero-button-primary"
-        href="#ics-research">
+      <a class="ics-hero-button" href="#ics-research">
         研究方向
       </a>
 
-      <a
-        class="ics-hero-button"
-        href="#ics-members">
+      <a class="ics-hero-button" href="#ics-members">
         团队成员
       </a>
 
@@ -842,7 +833,7 @@ nav_order: 3
     课题组简介
   </h2>
 
-  <div class="ics-intro-box">
+  <div class="ics-intro-box ics-hover-card">
 
     <p class="ics-text">
       <span class="en">ICS Lab</span>（智能协同系统实验室，
@@ -875,7 +866,7 @@ nav_order: 3
   aria-labelledby="ics-values-title">
 
   <h2 class="ics-section-title" id="ics-values-title">
-   什么是 <span class="en">ICS?</span> 
+    <span class="en">ICS</span> 的内涵
   </h2>
 
   <p class="ics-text">
@@ -888,7 +879,7 @@ nav_order: 3
 
   <div class="ics-values">
 
-    <div class="ics-value-card">
+    <div class="ics-value-card ics-hover-card">
 
       <div class="ics-value-letter en">I</div>
 
@@ -908,7 +899,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-value-card">
+    <div class="ics-value-card ics-hover-card">
 
       <div class="ics-value-letter en">C</div>
 
@@ -928,7 +919,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-value-card">
+    <div class="ics-value-card ics-hover-card">
 
       <div class="ics-value-letter en">S</div>
 
@@ -965,7 +956,7 @@ nav_order: 3
     课题组宗旨与目标
   </h2>
 
-  <div class="ics-mission">
+  <div class="ics-mission ics-hover-card">
 
     <p class="ics-mission-main">
       以智能协作为核心，通过通信连接、感知理解和智能控制，
@@ -1005,7 +996,7 @@ nav_order: 3
   <div class="ics-research-grid">
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         通信感知一体化
@@ -1018,7 +1009,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         通信–感知–控制一体化
@@ -1031,7 +1022,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         无人机通信与低空智能网络
@@ -1044,7 +1035,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         多无人系统智能协同
@@ -1057,7 +1048,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         智能超表面与可重构无线环境
@@ -1070,7 +1061,7 @@ nav_order: 3
     </div>
 
 
-    <div class="ics-research-item">
+    <div class="ics-research-item ics-hover-card">
 
       <div class="ics-research-cn">
         人工智能赋能无线通信
@@ -1101,68 +1092,10 @@ nav_order: 3
     合作学者
   </h2>
 
+
   <!-- ==================== 合作学者 1 ==================== -->
 
-  <div class="ics-visitor">
-
-    <img
-      src="{{ '/assets/img/group/Hui_Wang.jpg' | relative_url }}"
-      class="ics-visitor-photo"
-      alt="王辉"
-      loading="lazy"
-      decoding="async">
-
-    <div>
-
-      <div class="ics-visitor-name">
-        王辉
-      </div>
-
-      <div class="ics-visitor-role">
-        合作学者 · 浙江大学
-      </div>
-
-      <p class="ics-visitor-desc">
-        浙江大学良渚实验室博士后。2025年博士毕业于山东大学，主要研究方向包括脑机接口、语言解码、脑电大模型和图神经网络等，已在Expert Systems with Applications、IEEE Transactions on Affective Computing等期刊发表多篇论文。
-      </p>
-
-    </div>
-
-  </div>
-
-  <!-- ==================== 合作学者 2 ==================== -->
-
-  <div class="ics-visitor">
-
-    <img
-      src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
-      class="ics-visitor-photo"
-      alt="李云潇"
-      loading="lazy"
-      decoding="async">
-
-    <div>
-
-      <div class="ics-visitor-name">
-        李云潇
-      </div>
-
-      <div class="ics-visitor-role">
-        合作学者 · 山东大学
-      </div>
-
-      <p class="ics-visitor-desc">
-        山东大学在读博士生，主要研究方向包括通信感知一体化、流体天线、无人机轨迹优化、以及物理层安全。
-      </p>
-
-    </div>
-
-  </div>
-
-
-  <!-- ==================== 合作学者 3 ==================== -->
-
-  <div class="ics-visitor">
+  <div class="ics-visitor ics-hover-card">
 
     <img
       src="{{ '/assets/img/group/chengxuejun.jpg' | relative_url }}"
@@ -1191,9 +1124,9 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 4 ==================== -->
+  <!-- ==================== 合作学者 2 ==================== -->
 
-  <div class="ics-visitor">
+  <div class="ics-visitor ics-hover-card">
 
     <img
       src="{{ '/assets/img/group/wangmaoyuan.png' | relative_url }}"
@@ -1221,7 +1154,10 @@ nav_order: 3
 
   </div>
 
-  <!-- 增加合作学者时，在本 section 内复制一个完整的 .ics-visitor。 -->
+  <!--
+    新增合作学者时复制完整卡片。
+    请保留 class 中的 ics-hover-card，以保持统一悬停效果。
+  -->
 
 </section>
 
@@ -1244,7 +1180,7 @@ nav_order: 3
 
     <!-- ==================== 硕士生空缺 ==================== -->
 
-    <div class="ics-member-card">
+    <div class="ics-member-card ics-hover-card">
 
       <img
         src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
@@ -1275,7 +1211,7 @@ nav_order: 3
 
     </div>
 
-    <!-- 增加硕士生时，在本 .ics-members 内复制一个完整的 .ics-member-card。 -->
+    <!-- 新增硕士生时，在本 .ics-members 内复制完整卡片。 -->
 
   </div>
 
@@ -1300,7 +1236,7 @@ nav_order: 3
 
     <!-- ==================== 本科生 1 ==================== -->
 
-    <div class="ics-member-card">
+    <div class="ics-member-card ics-hover-card">
 
       <img
         src="{{ '/assets/img/group/Luhan_Wang.jpg' | relative_url }}"
@@ -1334,7 +1270,7 @@ nav_order: 3
 
     <!-- ==================== 本科生 2 ==================== -->
 
-    <div class="ics-member-card">
+    <div class="ics-member-card ics-hover-card">
 
       <img
         src="{{ '/assets/img/group/Yilin_Wang.jpeg' | relative_url }}"
@@ -1365,7 +1301,7 @@ nav_order: 3
 
     </div>
 
-    <!-- 增加本科生时，在本 .ics-members 内复制一个完整的 .ics-member-card。 -->
+    <!-- 新增本科生时，在本 .ics-members 内复制完整卡片。 -->
 
   </div>
 
@@ -1390,76 +1326,3 @@ nav_order: 3
 
 
 </div>
-
-
-
-<style>
-
-/* =========================================================
-   两个导航按钮：默认透明背景、紫色文字和描边
-   同时覆盖“研究方向”按钮原来的默认紫色填充
-   ========================================================= */
-
-.ics-page .ics-hero-actions .ics-hero-button {
-  background: transparent;
-  color: var(--ics-accent, #b509ac);
-  border: 1px solid var(--ics-accent, #b509ac);
-
-  box-shadow: none;
-  text-decoration: none;
-
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
-
-
-/* =========================================================
-   鼠标悬停：当前按钮变为紫色背景、白色文字
-   移开鼠标后自动恢复
-   ========================================================= */
-
-@media (hover: hover) and (pointer: fine) {
-
-  .ics-page .ics-hero-actions .ics-hero-button:hover {
-    background: var(--ics-accent, #b509ac);
-    color: #ffffff;
-    border-color: var(--ics-accent, #b509ac);
-
-    text-decoration: none;
-  }
-
-}
-
-
-/* 键盘操作：保留焦点边框，不保持紫色填充 */
-
-.ics-page .ics-hero-actions .ics-hero-button:focus-visible {
-  outline: 2px solid var(--ics-accent, #b509ac);
-  outline-offset: 4px;
-}
-
-
-/* 尊重系统的减少动态效果设置 */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .ics-page .ics-hero-actions .ics-hero-button {
-    transition: none;
-  }
-
-}
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
