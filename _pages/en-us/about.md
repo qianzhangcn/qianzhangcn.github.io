@@ -776,7 +776,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-note profile-hover-card">
     For the complete publication list, please visit the
-    <a href="{{ '/publications/' | relative_url }}">
+    <a href="{{ '/Publications/' | relative_url }}">
       <strong>Publications</strong>
     </a>
     page in the navigation menu.
