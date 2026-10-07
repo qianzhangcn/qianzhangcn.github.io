@@ -739,9 +739,16 @@ html[data-theme="dark"] .profile-page {
   <h2 class="profile-section-title">📖 代表性成果</h2>
 
   <div class="pub-note profile-hover-card">
-    完整论文列表请见顶部
-    <a href="{{ '/出版物/' | relative_url }}">
-      <strong><span class="en">出版物</span></strong>
+    完整论文列表请见
+    <a
+      href="{{ '/Publications/' | relative_url }}"
+      style="
+        color: var(--global-theme-color, #b509ac);
+        font-weight: 700;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      ">
+      出版物
     </a>
     页面。
   </div>
