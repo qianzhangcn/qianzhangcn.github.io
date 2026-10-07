@@ -418,7 +418,7 @@ nav_order: 3
 <div class="ics-hero">
 
   <img
-    src="/assets/img/ICS_Lab_LOGO.jpeg"
+    src="/assets/img/ICS_Lab_LOGO.png"
     class="ics-logo"
     alt="ICS Lab">
 
