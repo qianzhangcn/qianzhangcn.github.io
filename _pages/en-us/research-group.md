@@ -884,29 +884,44 @@ nav_order: 3
 <style>
 
 /* =========================================================
+   学生卡片：增加照片四周的留白
+   ========================================================= */
+
+.ics-page .ics-member-card {
+  box-sizing: border-box;
+
+  /* 上方 24px，左右 20px，底部由信息区域控制 */
+  padding: 24px 20px 0;
+}
+
+
+/* =========================================================
    学生照片：完整显示，不裁剪、不拉伸
-   同时适用于本科生和硕士研究生
    ========================================================= */
 
 .ics-page .ics-member-photo {
-  width: 100%;
-
-  /* 统一照片区域高度 */
-  height: 320px;
-
-  /* 取消原来的最大高度限制 */
-  max-height: none;
-
-  /* 关键修改：完整显示照片，不裁剪 */
-  object-fit: contain;
-
-  /* 照片在区域内居中 */
-  object-position: center center;
-
   display: block;
 
-  /* 留白区域与卡片背景一致 */
+  width: 100%;
+  height: 320px;
+  max-height: none;
+
+  margin: 0 auto;
+  padding: 0;
+
+  object-fit: contain;
+  object-position: center center;
+
   background: var(--global-card-bg-color, #ffffff);
+}
+
+
+/* =========================================================
+   姓名与身份信息：调整照片下方间距
+   ========================================================= */
+
+.ics-page .ics-member-info {
+  padding: 18px 0 24px;
 }
 
 
@@ -916,12 +931,13 @@ nav_order: 3
 
 @media screen and (max-width: 620px) {
 
+  .ics-page .ics-member-card {
+    padding: 20px 16px 0;
+  }
+
   .ics-page .ics-member-photo {
     height: 300px;
     max-height: none;
-
-    object-fit: contain;
-    object-position: center center;
   }
 
 }
