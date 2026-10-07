@@ -799,7 +799,7 @@ nav_order: 3
       </a>
 
       <a class="ics-hero-button" href="#ics-members">
-        团队成员
+        课题组成员
       </a>
 
     </nav>
