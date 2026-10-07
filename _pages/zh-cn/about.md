@@ -17,46 +17,59 @@ latest_posts:
 ---
 
 <style>
-
-/* =========================================================
-   Global
-   ========================================================= */
-
+/* ==================== 页面基础 ==================== */
 html,
 body {
   overflow-x: hidden;
 }
 
 .profile-page {
+  --profile-accent: var(--global-theme-color, #b509ac);
+  --profile-surface: var(--global-card-bg-color, #ffffff);
+  --profile-divider: var(--global-divider-color, #e6e6e6);
+  --profile-muted: var(--global-text-color-light, #888888);
+  --profile-hover-tint: rgba(181, 9, 172, 0.045);
+  --profile-hover-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.085),
+    0 5px 14px rgba(181, 9, 172, 0.12);
+
   max-width: 1120px;
   margin: 0 auto;
   line-height: 1.8;
 }
 
-/* 英文统一 Times New Roman */
+/* 跟随网站原有的深色主题。 */
+html[data-theme="dark"] .profile-page {
+  --profile-hover-tint: rgba(181, 9, 172, 0.10);
+  --profile-hover-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.30),
+    0 5px 18px rgba(181, 9, 172, 0.20);
+}
+
+.profile-page,
+.profile-page * {
+  box-sizing: border-box;
+}
+
+/* 英文统一 Times New Roman。 */
 .profile-page .en,
 .profile-page .en * {
   font-family: "Times New Roman", Times, serif !important;
 }
 
-
-/* =========================================================
-   Top Header
-   ========================================================= */
-
+/* ==================== 顶部个人信息 ==================== */
 .profile-top {
   display: grid;
   grid-template-columns: 190px 1fr 190px;
   gap: 34px;
   align-items: center;
-
   margin-top: 8px;
   margin-bottom: 26px;
-
   padding: 24px 0 18px;
 }
 
-.profile-photo-wrap {
+.profile-photo-wrap,
+.profile-logo-wrap {
   text-align: center;
 }
 
@@ -66,9 +79,8 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
-
   border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .profile-info {
@@ -89,10 +101,6 @@ body {
   font-weight: 600;
 }
 
-.profile-logo-wrap {
-  text-align: center;
-}
-
 .profile-logo {
   width: 175px;
   max-width: 100%;
@@ -101,13 +109,9 @@ body {
   margin: 0 auto;
 }
 
-
-/* =========================================================
-   Name & Welcome
-   ========================================================= */
-
+/* ==================== 姓名与欢迎语 ==================== */
 .profile-name {
-  margin: 4px 0 4px;
+  margin: 4px 0;
   font-size: 2.05rem;
   font-weight: 700;
 }
@@ -115,14 +119,10 @@ body {
 .profile-welcome {
   margin: 0 0 26px;
   font-size: 1rem;
-  color: var(--global-text-color-light);
+  color: var(--profile-muted);
 }
 
-
-/* =========================================================
-   Section
-   ========================================================= */
-
+/* ==================== 章节标题与正文 ==================== */
 .profile-section {
   margin: 44px 0;
 }
@@ -130,25 +130,19 @@ body {
 .profile-section-title {
   font-size: 1.62rem;
   font-weight: 700;
-
   margin-bottom: 22px;
   padding-bottom: 10px;
-
-  border-bottom: 2px solid var(--global-divider-color);
+  border-bottom: 2px solid var(--profile-divider);
 }
 
 .profile-section-title::before {
   content: "";
   display: inline-block;
-
   width: 5px;
   height: 1.12em;
-
   margin-right: 11px;
-
   border-radius: 4px;
-  background: var(--global-theme-color);
-
+  background: var(--profile-accent);
   vertical-align: -0.12em;
 }
 
@@ -156,34 +150,21 @@ body {
   text-align: justify;
   text-align-last: left;
   text-justify: inter-character;
-
   line-height: 1.85;
-
   margin-top: 0;
   margin-bottom: 1.25em;
 }
 
-
-/* =========================================================
-   Intro Card
-   ========================================================= */
-
+/* ==================== 基本信息卡片 ==================== */
 .profile-intro-card {
-  background: var(--global-card-bg-color);
-
-  border: 1px solid var(--global-divider-color);
+  background: var(--profile-surface);
+  border: 1px solid var(--profile-divider);
   border-radius: 14px;
-
   padding: 28px 30px;
-
-  box-shadow: 0 5px 18px rgba(0,0,0,0.045);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.045);
 }
 
-
-/* =========================================================
-   Timeline
-   ========================================================= */
-
+/* ==================== 学术背景 ==================== */
 .timeline {
   display: flex;
   flex-direction: column;
@@ -194,36 +175,34 @@ body {
   display: grid;
   grid-template-columns: 165px 1fr;
   gap: 24px;
-
   padding: 18px 20px;
-
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--profile-divider);
   border-radius: 12px;
+  background: var(--profile-surface);
+}
 
-  background: var(--global-card-bg-color);
+.timeline-item > div {
+  min-width: 0;
 }
 
 .timeline-date {
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
-  color: var(--global-theme-color);
+  color: var(--profile-accent);
 }
 
 .timeline-main {
   font-weight: 600;
+  transition: color 0.22s ease;
 }
 
 .timeline-sub {
   margin-top: 3px;
   font-size: 0.94rem;
-  color: var(--global-text-color-light);
+  color: var(--profile-muted);
 }
 
-
-/* =========================================================
-   Research Tags
-   ========================================================= */
-
+/* ==================== 研究方向标签 ==================== */
 .research-tags {
   display: flex;
   flex-wrap: wrap;
@@ -232,82 +211,57 @@ body {
 
 .research-tag {
   display: inline-block;
-
   padding: 7px 14px;
-
-  border: 1px solid var(--global-theme-color);
+  border: 1px solid var(--profile-accent);
   border-radius: 999px;
-
-  color: var(--global-theme-color);
-
+  color: var(--profile-accent);
   font-size: 0.94rem;
   font-weight: 600;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
-
-/* =========================================================
-   Service Cards
-   ========================================================= */
-
+/* ==================== 学术服务 ==================== */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
 
 .service-card {
   padding: 18px 20px;
-
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--profile-divider);
   border-radius: 12px;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
-
-/* =========================================================
-   Publications
-   ========================================================= */
-
+/* ==================== 论文 ==================== */
 .pub-note {
   margin-bottom: 20px;
-
   padding: 14px 18px;
-
-  border-left: 4px solid var(--global-theme-color);
-  background: var(--global-card-bg-color);
-
+  border-left: 4px solid var(--profile-accent);
   border-radius: 0 10px 10px 0;
+  background: var(--profile-surface);
 }
 
 .pub-item {
   margin-bottom: 20px;
-
   padding: 18px 20px;
-
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--profile-divider);
   border-radius: 12px;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
 .pub-index {
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
-  color: var(--global-theme-color);
+  color: var(--profile-accent);
 }
 
 .pub-text {
   line-height: 1.75;
 }
 
-
-/* =========================================================
-   Patent
-   ========================================================= */
-
+/* ==================== 专利 ==================== */
 .patent-list {
   display: flex;
   flex-direction: column;
@@ -316,71 +270,136 @@ body {
 
 .patent-item {
   padding: 16px 18px;
-
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--profile-divider);
   border-radius: 11px;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
-
-/* =========================================================
-   Awards
-   ========================================================= */
-
+/* ==================== 荣誉奖励 ==================== */
 .award-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px 18px;
 }
 
 .award-item {
   padding: 15px 17px;
-
-  border: 1px solid var(--global-divider-color);
+  border: 1px solid var(--profile-divider);
   border-radius: 11px;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
-
-/* =========================================================
-   Cooperation
-   ========================================================= */
-
+/* ==================== 招生与合作 ==================== */
 .coop-box {
   padding: 24px 28px;
-
-  border-left: 4px solid var(--global-theme-color);
+  border-left: 4px solid var(--profile-accent);
   border-radius: 0 12px 12px 0;
-
-  background: var(--global-card-bg-color);
+  background: var(--profile-surface);
 }
 
-
-/* =========================================================
-   Visitor Counter
-   ========================================================= */
-
+/* ==================== 访问量 ==================== */
 .visit-counter {
   text-align: center;
-
   margin-top: 48px;
   padding-top: 22px;
-
-  border-top: 1px solid var(--global-divider-color);
-
+  border-top: 1px solid var(--profile-divider);
   font-size: 0.9rem;
-  color: var(--global-text-color-light);
+  color: var(--profile-muted);
 }
 
-
 /* =========================================================
-   Responsive
+   统一卡片悬停效果
+   每张卡片单独添加 profile-hover-card，不绑定外层容器。
    ========================================================= */
+.profile-page .profile-hover-card {
+  position: relative;
+  z-index: 0;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
 
+.profile-page .research-tag {
+  position: relative;
+  z-index: 0;
+  transition:
+    transform 0.22s ease,
+    color 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+/* 扩展上浮后的底部命中区域，避免鼠标停在下边缘时闪动。 */
+.profile-page .profile-hover-card::after,
+.profile-page .research-tag::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 6px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* 使用键盘聚焦卡片内的真实链接时，也显示卡片强调效果。 */
+.profile-page .profile-hover-card:focus-within {
+  z-index: 1;
+  border-color: var(--profile-accent);
+  background-image: linear-gradient(
+    var(--profile-hover-tint),
+    var(--profile-hover-tint)
+  );
+  box-shadow: var(--profile-hover-shadow);
+}
+
+.profile-page a:focus-visible {
+  outline: 2px solid var(--profile-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* 对配有鼠标等悬停设备的终端启用，避免纯触屏设备停留在悬停状态。 */
+@media (any-hover: hover) {
+  .profile-page .profile-hover-card:hover {
+    z-index: 1;
+    transform: translateY(-4px);
+    border-color: var(--profile-accent);
+    background-image: linear-gradient(
+      var(--profile-hover-tint),
+      var(--profile-hover-tint)
+    );
+    box-shadow: var(--profile-hover-shadow);
+  }
+
+  .profile-page .timeline-item:hover .timeline-main {
+    color: var(--profile-accent);
+  }
+
+  /* 仅当前标签变成紫底白字，其他标签保持原样。 */
+  .profile-page .research-tag:hover {
+    z-index: 1;
+    transform: translateY(-3px);
+    color: #ffffff;
+    border-color: var(--profile-accent);
+    background-color: var(--profile-accent);
+    box-shadow: 0 7px 18px rgba(181, 9, 172, 0.24);
+  }
+
+  .profile-page .research-tag:hover * {
+    color: inherit;
+  }
+
+  .profile-page .profile-hover-card:hover::after,
+  .profile-page .research-tag:hover::after {
+    pointer-events: auto;
+  }
+}
+
+/* ==================== 响应式布局 ==================== */
 @media screen and (max-width: 900px) {
-
   .profile-top {
     grid-template-columns: 170px 1fr;
   }
@@ -397,16 +416,14 @@ body {
   .award-grid {
     grid-template-columns: 1fr;
   }
-
 }
 
 @media screen and (max-width: 650px) {
-
   .container,
   .container.mt-5 {
     width: 100% !important;
     max-width: 100% !important;
-
+    box-sizing: border-box;
     padding-left: 18px !important;
     padding-right: 18px !important;
   }
@@ -414,7 +431,6 @@ body {
   .profile-top {
     grid-template-columns: 1fr;
     gap: 18px;
-
     text-align: center;
   }
 
@@ -452,17 +468,31 @@ body {
     font-size: 1.4rem;
   }
 
+  .profile-page .profile-info,
+  .profile-page .profile-hover-card,
+  .profile-page .research-tag {
+    overflow-wrap: anywhere;
+  }
 }
 
-</style>
+/* 系统启用“减少动态效果”时，保留变色和阴影，取消位移动画。 */
+@media (prefers-reduced-motion: reduce) {
+  .profile-page .profile-hover-card,
+  .profile-page .research-tag,
+  .profile-page .timeline-main {
+    transition: none !important;
+  }
 
+  .profile-page .profile-hover-card:hover,
+  .profile-page .research-tag:hover {
+    transform: none !important;
+  }
+}
+</style>
 
 <div class="profile-page">
 
-
-<!-- =========================================================
-     顶部个人信息
-     ========================================================= -->
+<!-- 顶部个人信息 -->
 
 <div class="profile-top">
 
@@ -473,41 +503,39 @@ body {
       alt="Qian Zhang">
   </div>
 
-
   <div class="profile-info">
 
-      <div class="profile-info-row">
-        <span class="profile-info-label">学　　校：</span>
-        <span>东北大学秦皇岛分校</span>
-      </div>
-      
-      <div class="profile-info-row">
-        <span class="profile-info-label">学　　院：</span>
-        <span>计算机与通信工程学院</span>
-      </div>
-      
-      <div class="profile-info-row">
-        <span class="profile-info-label">职　　称：</span>
-        <span>副教授</span>
-      </div>
-      
-      <div class="profile-info-row">
-        <span class="profile-info-label">学　　历：</span>
-        <span>工学博士</span>
-      </div>
-      
-      <div class="profile-info-row">
-        <span class="profile-info-label">毕业院校：</span>
-        <span>山东大学</span>
-      </div>
-      
-      <div class="profile-info-row">
-        <span class="profile-info-label">邮　　箱：</span>
-        <span class="en">zq869054246@163.com</span>
-      </div>
+    <div class="profile-info-row">
+      <span class="profile-info-label">学　　校：</span>
+      <span>东北大学秦皇岛分校</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">学　　院：</span>
+      <span>计算机与通信工程学院</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">职　　称：</span>
+      <span>副教授</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">学　　历：</span>
+      <span>工学博士</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">毕业院校：</span>
+      <span>山东大学</span>
+    </div>
+
+    <div class="profile-info-row">
+      <span class="profile-info-label">邮　　箱：</span>
+      <span class="en">zq869054246@163.com</span>
+    </div>
 
   </div>
-
 
   <div class="profile-logo-wrap">
     <img
@@ -518,10 +546,7 @@ body {
 
 </div>
 
-
-<!-- =========================================================
-     姓名
-     ========================================================= -->
+<!-- 姓名 -->
 
 <h1 class="profile-name">张迁</h1>
 
@@ -530,16 +555,13 @@ body {
   （<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>）
 </p>
 
-
-<!-- =========================================================
-     基本信息
-     ========================================================= -->
+<!-- 基本信息 -->
 
 <section class="profile-section">
 
   <h2 class="profile-section-title">👨‍🏫 基本信息</h2>
 
-  <div class="profile-intro-card profile-text">
+  <div class="profile-intro-card profile-text profile-hover-card">
 
     <p>
       <strong>张迁</strong>，<strong>工学博士</strong>，<strong>副教授</strong>，
@@ -595,10 +617,7 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     学术背景
-     ========================================================= -->
+<!-- 学术背景 -->
 
 <section class="profile-section">
 
@@ -606,7 +625,7 @@ body {
 
   <div class="timeline">
 
-    <div class="timeline-item">
+    <div class="timeline-item profile-hover-card">
       <div class="timeline-date">2026.07 — 至今</div>
       <div>
         <div class="timeline-main">东北大学秦皇岛分校 · 计算机与通信工程学院</div>
@@ -614,7 +633,7 @@ body {
       </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item profile-hover-card">
       <div class="timeline-date">2024.11 — 2025.11</div>
       <div>
         <div class="timeline-main">新加坡南洋理工大学 · <span class="en">EEE</span></div>
@@ -626,7 +645,7 @@ body {
       </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item profile-hover-card">
       <div class="timeline-date">2021.09 — 2026.06</div>
       <div>
         <div class="timeline-main">山东大学 · 信息科学与工程学院</div>
@@ -638,10 +657,7 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     研究方向
-     ========================================================= -->
+<!-- 研究方向 -->
 
 <section class="profile-section">
 
@@ -681,10 +697,7 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     学术服务
-     ========================================================= -->
+<!-- 学术服务 -->
 
 <section class="profile-section">
 
@@ -692,23 +705,23 @@ body {
 
   <div class="service-grid">
 
-    <div class="service-card">
+    <div class="service-card profile-hover-card">
       《中国通信》（英文版）首届青年编委
     </div>
 
-    <div class="service-card">
+    <div class="service-card profile-hover-card">
       <span class="en">CSIG</span>交通视频专委会委员
     </div>
 
-    <div class="service-card">
+    <div class="service-card profile-hover-card">
       <span class="en">IEEE PIMRC 2026 TPC Chair</span>
     </div>
 
-    <div class="service-card">
+    <div class="service-card profile-hover-card">
       <span class="en">IEEE ICC / GLOBECOM / WCNC TPC Member</span>
     </div>
 
-    <div class="service-card" style="grid-column: 1 / -1;">
+    <div class="service-card profile-hover-card" style="grid-column: 1 / -1;">
       <span class="en">
         Reviewer for IEEE JSAC, TWC, TCOM, WCM, TIFS, TCCN, TVT,
         TITS, IOTJ, WCL, CL, etc.
@@ -719,16 +732,13 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     代表性成果
-     ========================================================= -->
+<!-- 代表性成果 -->
 
 <section class="profile-section">
 
   <h2 class="profile-section-title">📖 代表性成果</h2>
 
-  <div class="pub-note">
+  <div class="pub-note profile-hover-card">
     完整论文列表请见顶部
     <a href="{{ '/publications/' | relative_url }}">
       <strong><span class="en">Publications</span></strong>
@@ -736,11 +746,9 @@ body {
     页面。
   </div>
 
-
   <h3 style="margin-top: 28px;">论文</h3>
 
-
-  <div class="pub-item">
+  <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[1]</span>
       <strong>Qian Zhang</strong>, Zheng Dong, Yufei Zhao, Yao Ge,
@@ -755,8 +763,7 @@ body {
     </div>
   </div>
 
-
-  <div class="pub-item">
+  <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[2]</span>
       <strong>Qian Zhang</strong>, Ju Liu, Haoge Tang, Zheng Dong,
@@ -771,8 +778,7 @@ body {
     </div>
   </div>
 
-
-  <div class="pub-item">
+  <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[3]</span>
       <strong>Qian Zhang</strong>, Ju Liu, Yao Ge, Yufei Zhao,
@@ -787,8 +793,7 @@ body {
     </div>
   </div>
 
-
-  <div class="pub-item">
+  <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[4]</span>
       <strong>Qian Zhang</strong>, Ju Lui, Zhichao Gao, Ziyu Li,
@@ -803,8 +808,7 @@ body {
     </div>
   </div>
 
-
-  <div class="pub-item">
+  <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[5]</span>
       <strong>Qian Zhang</strong>, Mingjie Shao, Tong Zhang, Gaojie Chen,
@@ -821,33 +825,32 @@ body {
     </div>
   </div>
 
-
   <h3 style="margin-top: 34px;">专利</h3>
 
   <div class="patent-list">
 
-    <div class="patent-item">
+    <div class="patent-item profile-hover-card">
       <strong>[1]</strong>
       孙福辉；张迁；王晓燕；邵明杰；刘琚；
       RIS辅助的MIMO系统的和速率优化方法及装置。
       （发明专利，授权号：<span class="en">CN117176214B</span>）
     </div>
 
-    <div class="patent-item">
+    <div class="patent-item profile-hover-card">
       <strong>[2]</strong>
       刘琚；程学军；张迁；罗广惠；焦钰辉；
       一种实际智能超表面辅助RSMA系统波束成形方法。
       （发明专利，公开号：<span class="en">CN120110450A</span>）
     </div>
 
-    <div class="patent-item">
+    <div class="patent-item profile-hover-card">
       <strong>[3]</strong>
       刘琚；程学军；罗广惠；张迁；董郑；
       一种超对角智能超表面辅助NOMA系统波束成形方法。
       （发明专利，公开号：<span class="en">CN119051703A</span>）
     </div>
 
-    <div class="patent-item">
+    <div class="patent-item profile-hover-card">
       <strong>[4]</strong>
       刘琚；彭志颖；王祥丞；张迁；高智超；李紫宇；
       一种多服务器MEC-D2D系统联合任务卸载与资源分配方法。
@@ -858,10 +861,7 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     荣誉奖励
-     ========================================================= -->
+<!-- 荣誉奖励 -->
 
 <section class="profile-section">
 
@@ -869,27 +869,47 @@ body {
 
   <div class="award-grid">
 
-    <div class="award-item">推荐免试攻读研究生资格（2020）</div>
+    <div class="award-item profile-hover-card">
+      推荐免试攻读研究生资格（2020）
+    </div>
 
-    <div class="award-item">本科国家奖学金（2020，学院排名第一）</div>
+    <div class="award-item profile-hover-card">
+      本科国家奖学金（2020，学院排名第一）
+    </div>
 
-    <div class="award-item">国家励志奖学金（2018、2019）</div>
+    <div class="award-item profile-hover-card">
+      国家励志奖学金（2018、2019）
+    </div>
 
-    <div class="award-item">博士国家奖学金（2024、2025）</div>
+    <div class="award-item profile-hover-card">
+      博士国家奖学金（2024、2025）
+    </div>
 
-    <div class="award-item">山东省优秀毕业生（2021）</div>
+    <div class="award-item profile-hover-card">
+      山东省优秀毕业生（2021）
+    </div>
 
-    <div class="award-item">山东大学优秀毕业生（2026）</div>
+    <div class="award-item profile-hover-card">
+      山东大学优秀毕业生（2026）
+    </div>
 
-    <div class="award-item">山东大学学术之星（2026，学院唯一）</div>
+    <div class="award-item profile-hover-card">
+      山东大学学术之星（2026，学院唯一）
+    </div>
 
-    <div class="award-item">山东大学研究生优秀成果奖（2026，学院唯一）</div>
+    <div class="award-item profile-hover-card">
+      山东大学研究生优秀成果奖（2026，学院唯一）
+    </div>
 
-    <div class="award-item">博士中期考核优秀奖（排名第一）</div>
+    <div class="award-item profile-hover-card">
+      博士中期考核优秀奖（排名第一）
+    </div>
 
-    <div class="award-item">本科一等学业奖学金（四年专业唯一）</div>
+    <div class="award-item profile-hover-card">
+      本科一等学业奖学金（四年专业唯一）
+    </div>
 
-    <div class="award-item">
+    <div class="award-item profile-hover-card">
       博士优秀生源奖学金、新生一等奖学金
     </div>
 
@@ -897,16 +917,13 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     招生与合作
-     ========================================================= -->
+<!-- 招生与合作 -->
 
 <section class="profile-section">
 
   <h2 class="profile-section-title">🤝 招生与合作</h2>
 
-  <div class="coop-box profile-text">
+  <div class="coop-box profile-text profile-hover-card">
 
     <p>
       长期与新加坡南洋理工大学、山东大学、电子科技大学、
@@ -928,10 +945,7 @@ body {
 
 </section>
 
-
-<!-- =========================================================
-     访问量
-     ========================================================= -->
+<!-- 访问量 -->
 
 <div class="visit-counter">
 
@@ -945,11 +959,9 @@ body {
 
 </div>
 
-
 <script
   src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
   defer>
 </script>
-
 
 </div>
