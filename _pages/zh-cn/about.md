@@ -740,8 +740,8 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-note profile-hover-card">
     完整论文列表请见顶部
-    <a href="{{ '/publications/' | relative_url }}">
-      <strong><span class="en">Publications</span></strong>
+    <a href="{{ '/出版物/' | relative_url }}">
+      <strong><span class="en">出版物</span></strong>
     </a>
     页面。
   </div>
