@@ -673,7 +673,7 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/chengxuejun.png"
+      src="/assets/img/group/chengxuejun.jpg"
       class="ics-visitor-photo"
       alt="Xuejun Cheng">
 
@@ -765,7 +765,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          Class of 2026 · Current
+          Class of 2026 · Vacant
         </div>
 
         <div class="ics-member-status">
@@ -777,66 +777,7 @@ nav_order: 3
     </div>
 
 
-    <!-- ==================== Master's Student 2 ==================== -->
-
-    <div class="ics-member-card">
-
-      <img
-        src="/assets/img/group/master-02.jpg"
-        class="ics-member-photo"
-        alt="Vacant">
-
-      <div class="ics-member-info">
-
-        <div class="ics-member-name">
-          Vacant
-        </div>
-
-        <div class="ics-member-role">
-          Master's Student
-        </div>
-
-        <div class="ics-member-status">
-          Class of 2026 · Current
-        </div>
-
-        <div class="ics-member-status">
-          Professional Master's Program
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ==================== Master's Student 3 ==================== -->
-
-    <div class="ics-member-card">
-
-      <img
-        src="/assets/img/group/master-03.jpg"
-        class="ics-member-photo"
-        alt="Vacant">
-
-      <div class="ics-member-info">
-
-        <div class="ics-member-name">
-          Vacant
-        </div>
-
-        <div class="ics-member-role">
-          Master's Student
-        </div>
-
-        <div class="ics-member-status">
-          Class of 2025 · Current
-        </div>
-
-        <div class="ics-member-status">
-          Academic Master's Program
-        </div>
-
-      </div>
+   
 
     </div>
 
@@ -862,7 +803,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/undergraduate-01.jpg"
+        src="/assets/img/group/Luhan_Wang.jpg"
         class="ics-member-photo"
         alt="Luhan Wang">
 
@@ -894,7 +835,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/undergraduate-02.jpg"
+        src="/assets/img/group/Yilin_Wang.jpg"
         class="ics-member-photo"
         alt="Yilin Wang">
 
