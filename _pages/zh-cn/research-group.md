@@ -679,7 +679,7 @@ nav_order: 3
   <div class="ics-visitor">
 
     <img
-      src="/assets/img/group/chengxuejun.png"
+      src="/assets/img/group/chengxuejun.jpg"
       class="ics-visitor-photo"
       alt="程学军">
 
@@ -810,84 +810,24 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2026级 · 在读
+          2026级 · 待招录
         </div>
 
         <div class="ics-member-status">
-          学术型硕士
+          学术型/专业型硕士
         </div>
 
       </div>
 
     </div>
 
-
-    <!-- ==================== 硕士生 2 ==================== -->
-
-    <div class="ics-member-card">
-
-      <img
-        src="/assets/img/group/master-02.jpg"
-        class="ics-member-photo"
-        alt="空缺">
-
-      <div class="ics-member-info">
-
-        <div class="ics-member-name">
-          空缺
-        </div>
-
-        <div class="ics-member-role">
-          硕士研究生
-        </div>
-
-        <div class="ics-member-status">
-          2026级 · 在读
-        </div>
-
-        <div class="ics-member-status">
-          专业型硕士
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ==================== 硕士生 3 ==================== -->
-
-    <div class="ics-member-card">
-
-      <img
-        src="/assets/img/group/master-03.jpg"
-        class="ics-member-photo"
-        alt="空缺">
-
-      <div class="ics-member-info">
-
-        <div class="ics-member-name">
-          空缺
-        </div>
-
-        <div class="ics-member-role">
-          硕士研究生
-        </div>
-
-        <div class="ics-member-status">
-          2025级 · 在读
-        </div>
-
-        <div class="ics-member-status">
-          学术型硕士
-        </div>
-
-      </div>
+    
 
     </div>
 
 
     <!--
-    如果有第 4 位硕士生，直接复制一个 .ics-member-card 即可。
+    如果有第 2 位硕士生，直接复制一个 .ics-member-card 即可。
     -->
 
 
@@ -944,7 +884,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/undergraduate-02.jpg"
+        src="/assets/img/group/Yilin_Wang.jpg"
         class="ics-member-photo"
         alt="王奕霖">
 
