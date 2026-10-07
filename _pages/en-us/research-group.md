@@ -830,7 +830,7 @@ nav_order: 3
     <div class="ics-member-card">
 
       <img
-        src="/assets/img/group/Yilin_Wang.jpg"
+        src="/assets/img/group/Yilin_Wang.jpeg"
         class="ics-member-photo"
         alt="Yilin Wang">
 
