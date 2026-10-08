@@ -472,7 +472,7 @@ Deyu Lin,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>,
 2026.
 <span class="paper-info">(JCR Q1, IF = 10.7)</span>
-<a href="https://ieeexplore.ieee.org/document/11720371">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11723250">Full Paper</a>
 </li>
 
 
