@@ -895,6 +895,26 @@ nav_order: 3
       </div>
     </div>
 
+    <!-- Collaborator 5 -->
+    <div class="ics-visitor ics-hover-card">
+      <img
+        src="{{ '/assets/img/group/Peilin_Ren.jpg' | relative_url }}"
+        class="ics-visitor-photo"
+        alt="Peilin Ren"
+        loading="lazy"
+        decoding="async">
+
+      <div>
+        <div class="ics-visitor-name">Peilin Ren</div>
+        <div class="ics-visitor-role">
+          Research Collaborator · Shandong Normal University
+        </div>
+        <p class="ics-visitor-desc">
+          Peilin Ren graduated with a master's degree from Shandong Normal University in 2024 and currently plans to pursue a doctoral degree. His main research areas include covert communication, intelligent metasurfaces, near-field communication, and integrated sensing.
+        </p>
+      </div>
+    </div>
+
     <!--
       To add a collaborator, copy a complete card and retain the
       ics-hover-card class to preserve the shared hover effect.
