@@ -1213,6 +1213,35 @@ nav_order: 3
 
   </div>
 
+   <!-- ==================== 合作学者 5 ==================== -->
+
+  <div class="ics-visitor ics-hover-card">
+
+    <img
+      src="{{ '/assets/img/group/Peilin_Ren.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="任沛霖"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        任沛霖
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 山东师范大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        2024年硕士毕业于山东师范大学，目前拟继续攻读博士学位，主要研究方向包括隐蔽通信、智能超表面、近场通信与通感一体化。
+      </p>
+
+    </div>
+
+  </div>
+
   <!--
     新增合作学者时复制完整卡片。
     请保留 class 中的 ics-hover-card，以保持统一悬停效果。
