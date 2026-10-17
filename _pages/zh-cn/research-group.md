@@ -1376,7 +1376,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2026级 · 在读 · 东北大学
+          2025级 · 在读 · 东北大学
         </div>
 
         <div class="ics-member-status">
