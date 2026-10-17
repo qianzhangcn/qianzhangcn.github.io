@@ -1389,6 +1389,39 @@ nav_order: 3
 
     </div>
 
+    <!-- ==================== 本科生 3 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
+        src="{{ '/assets/img/group/Liwen_Liang_.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="梁力文"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          梁力文
+        </div>
+
+        <div class="ics-member-role">
+          本科生
+        </div>
+
+        <div class="ics-member-status">
+          2025级 · 在读
+        </div>
+
+        <div class="ics-member-status">
+          本科科研成员
+        </div>
+
+      </div>
+
+    </div>
+
     <!-- 新增本科生时，在本 .ics-members 内复制完整卡片。 -->
 
   </div>
