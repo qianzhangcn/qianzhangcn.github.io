@@ -953,6 +953,38 @@ nav_order: 3
     </div>
   </section>
 
+  <!-- Co-Supervised Graduate students -->
+  <section
+    class="ics-section"
+    id="ics-masters"
+    aria-labelledby="ics-masters-title">
+
+    <h2 class="ics-section-title" id="ics-masters-title">Master's Students</h2>
+
+    <div class="ics-members">
+      <!-- Vacant Master's Position -->
+      <div class="ics-member-card ics-hover-card">
+        <img
+          src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
+          class="ics-member-photo"
+          alt="Vacant master's student position, not yet filled"
+          loading="lazy"
+          decoding="async">
+
+        <div class="ics-member-info">
+          <div class="ics-member-name">Vacant</div>
+          <div class="ics-member-role">Co-Supervised Master</div>
+          <div class="ics-member-status">2026 Intake · Position Unfilled</div>
+          <div class="ics-member-status">
+            Academic / Professional Master's Programs
+          </div>
+        </div>
+      </div>
+
+      <!-- Add new master's student cards inside this .ics-members container. -->
+    </div>
+  </section>
+
   <!-- Undergraduate Students -->
   <section
     class="ics-section"
