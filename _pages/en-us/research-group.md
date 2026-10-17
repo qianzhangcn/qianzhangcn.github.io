@@ -988,7 +988,22 @@ nav_order: 3
         <div class="ics-member-status">Research: Integrated Sensing and Communication</div>
       </div>
     </div>
-     <!-- Student 1 -->
+     <!-- Student 2 -->
+     <div class="ics-member-card ics-hover-card">
+      <img
+        src="{{ '/assets/img/group/Ruifeng_Xue.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="Ruifeng Xue"
+        loading="lazy"
+        decoding="async">
+      <div class="ics-member-info">
+        <div class="ics-member-name">Ruifeng Xue</div>
+        <div class="ics-member-role">Master's Student</div>
+        <div class="ics-member-status">2026 Cohort · Enrolled · Northeastern University</div>
+        <div class="ics-member-status">Research: Wireless communication and Edge side large model</div>
+      </div>
+    </div>
+     <!-- Student 3 -->
      <div class="ics-member-card ics-hover-card">
       <img
         src="{{ '/assets/img/group/Shiyao_Guo.jpg' | relative_url }}"
@@ -1003,7 +1018,7 @@ nav_order: 3
         <div class="ics-member-status">Research: Intelligent Metasurface and Integrated Sensing and Communication</div>
       </div>
     </div>
-    <!-- Student 2 -->
+    <!-- Student 4 -->
     <div class="ics-member-card ics-hover-card">
       <img
         src="{{ '/assets/img/group/Junyi_Li.jpg' | relative_url }}"
