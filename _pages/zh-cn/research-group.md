@@ -1353,7 +1353,39 @@ nav_order: 3
       </div>
       
     </div>
- 
+
+ <!-- ==================== 协助指导硕士生 2 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
+        src="{{ '/assets/img/group/Yingying_Du.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="协助指导硕士研究生名"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          杜莹莹
+        </div>
+
+        <div class="ics-member-role">
+          硕士研究生
+        </div>
+
+        <div class="ics-member-status">
+          2026级 · 在读 · 东北大学
+        </div>
+
+        <div class="ics-member-status">
+          研究方向：通信感知一体化
+        </div>
+
+      </div>
+      
+    </div>
       
     <!-- 新增硕士生时，在本 .ics-members 内复制完整卡片。 -->
 
