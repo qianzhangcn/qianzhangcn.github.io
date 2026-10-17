@@ -1352,8 +1352,41 @@ nav_order: 3
       </div>
       
     </div>
-    
+
 <!-- ==================== 协助指导硕士生 2 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
+        src="{{ '/assets/img/group/Shiyao_Guo.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="协助指导硕士研究生名"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          郭士耀
+        </div>
+
+        <div class="ics-member-role">
+          硕士研究生
+        </div>
+
+        <div class="ics-member-status">
+          2025级 · 在读 · 山东大学
+        </div>
+
+        <div class="ics-member-status">
+          研究方向：智能超表面、通感一体化
+        </div>
+
+      </div>
+      
+    </div>
+    
+<!-- ==================== 协助指导硕士生 3 ==================== -->
 
     <div class="ics-member-card ics-hover-card">
 
