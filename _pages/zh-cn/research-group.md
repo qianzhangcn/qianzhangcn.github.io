@@ -1394,7 +1394,7 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
-        src="{{ '/assets/img/group/Liwen_Liang_.jpg' | relative_url }}"
+        src="{{ '/assets/img/group/Liwen_Liang.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="梁力文"
         loading="lazy"
