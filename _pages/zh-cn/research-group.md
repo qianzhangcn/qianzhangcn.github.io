@@ -1305,6 +1305,62 @@ nav_order: 3
 
 </section>
 
+<!-- =========================================================
+     协助指导硕士研究生
+     ========================================================= -->
+
+<section
+  class="ics-section"
+  id="ics-masters"
+  aria-labelledby="ics-masters-title">
+
+  <h2 class="ics-section-title" id="ics-masters-title">
+    协助指导研究生
+  </h2>
+
+  <div class="ics-members">
+
+
+    <!-- ==================== 硕士生空缺 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
+        src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="硕士研究生名额空缺，尚未招录"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          空缺
+        </div>
+
+        <div class="ics-member-role">
+          硕士研究生
+        </div>
+
+        <div class="ics-member-status">
+          2026级 · 待招录
+        </div>
+
+        <div class="ics-member-status">
+          学术型/专业型硕士
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 新增硕士生时，在本 .ics-members 内复制完整卡片。 -->
+
+  </div>
+
+</section>
+
+
 
 <!-- =========================================================
      本科生
