@@ -8,36 +8,40 @@ nav_order: 3
 ---
 
 <style>
-/* Page styles: scoped to this page only. */
+
+/* =========================================================
+   Page container
+   ========================================================= */
+
 .ics-page {
   --ics-accent: var(--global-theme-color, #b509ac);
   --ics-text: var(--global-text-color, #222222);
   --ics-muted: var(--global-text-color-light, #6b7280);
   --ics-border: var(--global-divider-color, #e5e7eb);
   --ics-surface: var(--global-card-bg-color, var(--global-bg-color, #ffffff));
+
   --ics-shadow: 0 3px 12px rgba(0, 0, 0, 0.025);
+
   --ics-hover-shadow:
     0 14px 32px rgba(0, 0, 0, 0.12),
     0 0 0 1px var(--ics-accent);
+
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   padding-bottom: 40px;
+
   color: var(--ics-text);
   line-height: 1.8;
   overflow-wrap: break-word;
   isolation: isolate;
 }
 
-/* Use Times New Roman throughout the English page. */
+/* Typography */
+
 .ics-page,
 .ics-page * {
   box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif !important;
-}
-
-.ics-page .en,
-.ics-page .en * {
   font-family: "Times New Roman", Times, serif !important;
 }
 
@@ -56,29 +60,42 @@ nav_order: 3
   outline-offset: 4px;
 }
 
-/* Shared card styles for collaborators, students, and research areas. */
+
+/* =========================================================
+   Shared card styles
+   ========================================================= */
+
 .ics-page .ics-hover-card {
   position: relative;
   z-index: 0;
   min-width: 0;
+
   border: 1px solid var(--ics-border);
   background: var(--ics-surface);
   box-shadow: var(--ics-shadow);
+
   transform: none;
+
   transition:
     transform 0.22s ease,
     border-color 0.22s ease,
     box-shadow 0.22s ease;
 }
 
-/* Hero: text on the left and logo on the right. */
+
+/* =========================================================
+   Hero section
+   ========================================================= */
+
 .ics-page .ics-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   align-items: center;
   gap: 36px;
+
   margin: 8px 0 40px;
   padding: 32px;
+
   border-radius: 18px;
 }
 
@@ -90,8 +107,10 @@ nav_order: 3
   display: inline-block;
   margin-bottom: 12px;
   padding: 3px 13px;
+
   border: 1px solid var(--ics-accent);
   border-radius: 999px;
+
   color: var(--ics-accent);
   font-size: 0.96rem;
   font-weight: 700;
@@ -103,6 +122,13 @@ nav_order: 3
   font-size: clamp(1.7rem, 2.8vw, 2.15rem);
   font-weight: 700;
   line-height: 1.4;
+}
+
+.ics-page .ics-hero-subtitle {
+  margin: 0 0 16px;
+  color: var(--ics-muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
 
 .ics-page .ics-hero-lead {
@@ -121,8 +147,10 @@ nav_order: 3
 .ics-page .ics-hero-tag {
   display: inline-block;
   padding: 4px 11px;
+
   border: 1px solid var(--ics-border);
   border-radius: 7px;
+
   font-size: 0.88rem;
   line-height: 1.6;
 }
@@ -132,9 +160,11 @@ nav_order: 3
   align-items: center;
   justify-content: center;
   justify-self: end;
+
   width: 100%;
   max-width: 300px;
   padding: 10px;
+
   border-radius: 14px;
   background: #ffffff;
 }
@@ -148,7 +178,11 @@ nav_order: 3
   object-fit: contain;
 }
 
-/* Hero buttons: outlined by default; filled only on hover. */
+
+/* =========================================================
+   Hero navigation buttons
+   ========================================================= */
+
 .ics-page .ics-hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -160,28 +194,36 @@ nav_order: 3
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   min-height: 42px;
   padding: 7px 20px;
+
   border: 1px solid var(--ics-accent);
   border-radius: 8px;
+
   background: transparent;
   color: var(--ics-accent);
+
   font-size: 0.94rem;
   font-weight: 700;
+
   text-decoration: none;
   box-shadow: none;
   cursor: pointer;
+
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
     box-shadow 0.2s ease;
 }
 
-/* General sections. */
+
+/* =========================================================
+   General sections
+   ========================================================= */
+
 .ics-page .ics-section {
   margin: 42px 0 0;
-
-  /* Keep anchored section headings below the site navigation. */
   scroll-margin-top: 100px;
 }
 
@@ -189,7 +231,9 @@ nav_order: 3
   position: relative;
   margin: 0 0 22px;
   padding: 0 0 12px 17px;
+
   border-bottom: 2px solid var(--ics-border);
+
   font-size: 1.55rem;
   font-weight: 700;
   line-height: 1.45;
@@ -200,8 +244,10 @@ nav_order: 3
   position: absolute;
   top: 0.16em;
   left: 0;
+
   width: 5px;
   height: 1.05em;
+
   border-radius: 4px;
   background: var(--ics-accent);
 }
@@ -223,7 +269,11 @@ nav_order: 3
   margin-bottom: 0;
 }
 
-/* ICS core values. */
+
+/* =========================================================
+   ICS core values
+   ========================================================= */
+
 .ics-page .ics-values {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -257,10 +307,15 @@ nav_order: 3
   line-height: 1.8;
 }
 
-/* Mission and objectives. */
+
+/* =========================================================
+   Mission and goals
+   ========================================================= */
+
 .ics-page .ics-mission {
   margin-bottom: 22px;
   padding: 23px 27px;
+
   border-left: 4px solid var(--ics-accent);
   border-radius: 0 13px 13px 0;
 }
@@ -272,7 +327,11 @@ nav_order: 3
   line-height: 1.9;
 }
 
-/* Research areas. */
+
+/* =========================================================
+   Research areas
+   ========================================================= */
+
 .ics-page .ics-research-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -290,20 +349,26 @@ nav_order: 3
   font-weight: 700;
 }
 
-.ics-page .ics-research-detail {
+.ics-page .ics-research-en {
   color: var(--ics-muted);
   font-size: 0.95rem;
   line-height: 1.65;
 }
 
-/* Collaborators: the entire card responds to hover. */
+
+/* =========================================================
+   Collaborator cards
+   ========================================================= */
+
 .ics-page .ics-visitor {
   display: grid;
   grid-template-columns: 160px minmax(0, 1fr);
   align-items: center;
   gap: 28px;
+
   margin-bottom: 24px;
   padding: 24px;
+
   border-radius: 15px;
 }
 
@@ -316,8 +381,10 @@ nav_order: 3
   width: 160px;
   max-width: 100%;
   height: 195px;
+
   margin: 0 auto;
   border-radius: 10px;
+
   object-fit: contain;
   object-position: center;
 }
@@ -343,7 +410,11 @@ nav_order: 3
   text-align: justify;
 }
 
-/* Student cards: consistent spacing and uncropped photographs. */
+
+/* =========================================================
+   Student cards
+   ========================================================= */
+
 .ics-page .ics-members {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -352,8 +423,6 @@ nav_order: 3
 }
 
 .ics-page .ics-member-card {
-
-  /* Leave 24px above photographs and 20px on either side. */
   padding: 24px 20px 0;
   overflow: hidden;
   border-radius: 15px;
@@ -365,12 +434,13 @@ nav_order: 3
   width: 100%;
   height: 320px;
   max-height: none;
+
   margin: 0 auto;
   padding: 0;
 
-  /* Display the complete photograph without cropping or stretching. */
   object-fit: contain;
   object-position: center;
+
   background: var(--ics-surface);
 }
 
@@ -387,10 +457,13 @@ nav_order: 3
 .ics-page .ics-member-role {
   display: inline-block;
   max-width: 100%;
+
   margin: 4px 0 9px;
   padding: 3px 12px;
+
   border: 1px solid var(--ics-accent);
   border-radius: 20px;
+
   color: var(--ics-accent);
   font-size: 0.87rem;
   font-weight: 700;
@@ -403,38 +476,37 @@ nav_order: 3
   line-height: 1.75;
 }
 
-/* Page ending. */
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
 .ics-page .ics-ending {
   margin: 54px 0 0;
   padding: 28px 15px 8px;
+
   border-top: 1px solid var(--ics-border);
   text-align: center;
 }
 
-.ics-page .ics-ending-main {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.ics-page .ics-ending-subtitle {
+.ics-page .ics-ending-en {
   margin-top: 5px;
   color: var(--ics-muted);
 }
 
-/* Shared hover effects: highlight the entire hovered card. */
+
+/* =========================================================
+   Hover effects
+   ========================================================= */
+
 @media (any-hover: hover) {
   .ics-page .ics-hover-card:hover {
     z-index: 2;
-
-    /* Lift the card slightly without changing neighboring layouts. */
     transform: translateY(-5px);
-
-    /* Accent-colored border and a prominent shadow. */
     border-color: var(--ics-accent);
     box-shadow: var(--ics-hover-shadow);
   }
 
-  /* Fill only the button currently under the pointer. */
   .ics-page .ics-hero-actions .ics-hero-button:hover {
     background: var(--ics-accent);
     color: #ffffff;
@@ -442,10 +514,13 @@ nav_order: 3
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
     text-decoration: none;
   }
-
 }
 
-/* Tablet layout. */
+
+/* =========================================================
+   Tablet layout
+   ========================================================= */
+
 @media screen and (max-width: 900px) {
   .ics-page .ics-hero {
     grid-template-columns: minmax(0, 1fr) 230px;
@@ -464,10 +539,13 @@ nav_order: 3
   .ics-page .ics-research-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-
 }
 
-/* Narrow screens: stack the hero content vertically. */
+
+/* =========================================================
+   Mobile hero layout
+   ========================================================= */
+
 @media screen and (max-width: 760px) {
   .ics-page .ics-hero {
     grid-template-columns: minmax(0, 1fr);
@@ -495,10 +573,13 @@ nav_order: 3
   .ics-page .ics-values {
     grid-template-columns: minmax(0, 1fr);
   }
-
 }
 
-/* Mobile layout. */
+
+/* =========================================================
+   Small-screen layout
+   ========================================================= */
+
 @media screen and (max-width: 620px) {
   .ics-page .ics-hero {
     padding: 22px 18px;
@@ -508,6 +589,10 @@ nav_order: 3
 
   .ics-page .ics-hero-title {
     font-size: 1.65rem;
+  }
+
+  .ics-page .ics-hero-subtitle {
+    font-size: 0.95rem;
   }
 
   .ics-page .ics-hero-lead {
@@ -565,10 +650,13 @@ nav_order: 3
   .ics-page .ics-ending {
     margin-top: 40px;
   }
-
 }
 
-/* Reduced motion: keep borders and shadows, but disable movement. */
+
+/* =========================================================
+   Reduced-motion accessibility
+   ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
   .ics-page .ics-hover-card,
   .ics-page .ics-hero-actions .ics-hero-button {
@@ -578,487 +666,42 @@ nav_order: 3
   .ics-page .ics-hover-card:hover {
     transform: none;
   }
-
 }
+
 </style>
+
 
 <div class="ics-page" lang="en">
 
-  <!-- Hero -->
-  <section
-    class="ics-hero ics-hover-card"
-    aria-labelledby="ics-hero-title">
 
-    <div class="ics-hero-text">
-      <div class="ics-hero-badge en">ICS Lab</div>
+<!-- =========================================================
+     Hero section
+     ========================================================= -->
 
-      <h2 class="ics-hero-title" id="ics-hero-title">
-        Intelligent Cooperative Systems Laboratory
-      </h2>
+<section
+  class="ics-hero ics-hover-card"
+  aria-labelledby="ics-hero-title">
 
-      <p class="ics-hero-lead">
-        With intelligent cooperation at its core, the lab explores the deep
-        integration of communication, sensing, and control for future intelligent
-        wireless networks and unmanned systems.
-      </p>
+  <div class="ics-hero-text">
 
-      <div class="ics-hero-tags" aria-label="Research themes">
-        <span class="ics-hero-tag">
-          Integrated Communication, Sensing and Control
-        </span>
-        <span class="ics-hero-tag">Intelligent Metasurfaces</span>
-        <span class="ics-hero-tag">UAV Communications</span>
-        <span class="ics-hero-tag">AI-Empowered Communications</span>
-      </div>
-
-      <nav class="ics-hero-actions" aria-label="Research group page navigation">
-        <a class="ics-hero-button" href="#ics-research">Research Areas</a>
-        <a class="ics-hero-button" href="#ics-members">Group Members</a>
-      </nav>
+    <div class="ics-hero-badge">
+      ICS Lab
     </div>
 
-    <div class="ics-hero-logo-wrap">
-      <img
-        src="{{ '/assets/img/ICS_Lab_LOGO.png' | relative_url }}"
-        class="ics-logo"
-        alt="ICS Lab — Intelligent Cooperative Systems Laboratory logo"
-        decoding="async">
-    </div>
-  </section>
-
-  <!-- About the Lab -->
-  <section
-    class="ics-section"
-    id="ics-about"
-    aria-labelledby="ics-about-title">
-
-    <h2 class="ics-section-title" id="ics-about-title">About the Lab</h2>
-
-    <div class="ics-intro-box ics-hover-card">
-      <p class="ics-text">
-        <span class="en">ICS Lab (Intelligent Cooperative Systems Laboratory)</span>
-        focuses on the deep integration of communication, sensing, and control
-        in future intelligent wireless systems. We investigate fundamental theory,
-        key algorithms, and system applications to address intelligent information
-        acquisition, reliable connectivity, and autonomous cooperation in complex,
-        dynamic environments.
-      </p>
-
-      <p class="ics-text">
-        With intelligent cooperation as our central theme, we use communication
-        to establish efficient and reliable information connections, sensing to
-        understand wireless environments, target states, and system states, and
-        intelligent control to enable autonomous decision-making and cooperative
-        behavior in networks and unmanned systems. Together, we explore
-        <span class="en">Integrated Communication, Sensing and Control Systems</span>
-        for future intelligent wireless networks and unmanned systems.
-      </p>
-    </div>
-  </section>
-
-  <!-- The Meaning of ICS -->
-  <section
-    class="ics-section"
-    id="ics-values"
-    aria-labelledby="ics-values-title">
-
-    <h2 class="ics-section-title" id="ics-values-title">What Is ICS?</h2>
-
-    <p class="ics-text">
-      <span class="en">ICS</span> represents not only our focus on intelligent
-      cooperative systems and the integration of communication, sensing, and
-      control, but also the research principles we share:
-      <span class="en">Innovation, Collaboration, and Synergy</span>.
-    </p>
-
-    <div class="ics-values">
-      <div class="ics-value-card ics-hover-card">
-        <div class="ics-value-letter en">I</div>
-        <div class="ics-value-title en">Innovation</div>
-        <div class="ics-value-desc">
-          We pursue original research at the forefront of our disciplines and
-          address key scientific questions, encouraging new questions, new
-          theories, and new methods.
-        </div>
-      </div>
-
-      <div class="ics-value-card ics-hover-card">
-        <div class="ics-value-letter en">C</div>
-        <div class="ics-value-title en">Collaboration</div>
-        <div class="ics-value-desc">
-          We value teamwork, open communication, and mutual support, advancing
-          research through in-depth discussion and complementary strengths.
-        </div>
-      </div>
-
-      <div class="ics-value-card ics-hover-card">
-        <div class="ics-value-letter en">S</div>
-        <div class="ics-value-title en">Synergy</div>
-        <div class="ics-value-desc">
-          We foster cooperation across members and research areas, strengthening
-          our capabilities and supporting continuous growth through shared
-          exploration.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission and Objectives -->
-  <section
-    class="ics-section"
-    id="ics-mission"
-    aria-labelledby="ics-mission-title">
-
-    <h2 class="ics-section-title" id="ics-mission-title">Mission and Objectives</h2>
-
-    <div class="ics-mission ics-hover-card">
-      <p class="ics-mission-main">
-        Centered on intelligent cooperation, we connect through communication,
-        understand through sensing, and act through intelligent control to
-        jointly explore future intelligent systems that deeply integrate
-        communication, sensing, and control.
-      </p>
-    </div>
-
-    <p class="ics-text">
-      We place equal emphasis on problem-driven research and frontier exploration,
-      combining fundamental theory, algorithm design, and practical applications.
-      By addressing key challenges in future wireless networks, low-altitude
-      intelligent networks, unmanned systems, and intelligent cooperative systems,
-      we aim to establish a comprehensive research framework spanning theoretical
-      modeling, algorithm design, and system validation.
-    </p>
-
-    <p class="ics-text">
-      In mentoring our members, we emphasize independent thinking, research
-      innovation, teamwork, and lifelong learning. We encourage continued
-      exploration in an open, rigorous, and mutually supportive research
-      environment, helping members develop research directions and capabilities
-      with long-term growth potential.
-    </p>
-  </section>
-
-  <!-- Core Research Areas -->
-  <section
-    class="ics-section"
-    id="ics-research"
-    aria-labelledby="ics-research-title">
-
-    <h2 class="ics-section-title" id="ics-research-title">Core Research Areas</h2>
-
-    <div class="ics-research-grid">
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          Integrated Sensing and Communication
-        </div>
-        <div class="ics-research-detail en">ISAC</div>
-      </div>
-
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          Integrated Communication, Sensing and Control
-        </div>
-      </div>
-
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          UAV Communications and Low-Altitude Intelligent Networks
-        </div>
-      </div>
-
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          Intelligent Cooperation among Unmanned Systems
-        </div>
-        <div class="ics-research-detail en">
-          Intelligent Cooperation for Multi-UAV Systems
-        </div>
-      </div>
-
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          Intelligent Metasurfaces and Reconfigurable Wireless Environments
-        </div>
-        <div class="ics-research-detail en">RIS / SIM</div>
-      </div>
-
-      <div class="ics-research-item ics-hover-card">
-        <div class="ics-research-title">
-          Artificial Intelligence for Wireless Communications
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Research Collaborators -->
-  <section
-    class="ics-section"
-    id="ics-members"
-    aria-labelledby="ics-members-title">
-
-    <h2 class="ics-section-title" id="ics-members-title">Research Collaborators</h2>
-
-    <!-- Collaborator 1 -->
-    <div class="ics-visitor ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/Hui_Wang.jpg' | relative_url }}"
-        class="ics-visitor-photo"
-        alt="Hui Wang"
-        loading="lazy"
-        decoding="async">
-
-      <div>
-        <div class="ics-visitor-name">Hui Wang</div>
-        <div class="ics-visitor-role">
-          Research Collaborator · Zhejiang University
-        </div>
-        <p class="ics-visitor-desc">
-          Hui Wang is a postdoctoral researcher at Liangzhu Laboratory,
-          Zhejiang University, and received a Ph.D. from Shandong University
-          in 2025. Research interests include brain–computer interfaces,
-          language decoding, large-scale EEG models, and graph neural networks.
-          Wang has published several papers in journals including
-          <em>Expert Systems with Applications</em> and
-          <em>IEEE Transactions on Affective Computing</em>.
-        </p>
-      </div>
-    </div>
-
-    <!-- Collaborator 2 -->
-    <div class="ics-visitor ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
-        class="ics-visitor-photo"
-        alt="Yunxiao Li"
-        loading="lazy"
-        decoding="async">
-
-      <div>
-        <div class="ics-visitor-name">Yunxiao Li</div>
-        <div class="ics-visitor-role">
-          Research Collaborator · Shandong University
-        </div>
-        <p class="ics-visitor-desc">
-          Yunxiao Li is a Ph.D. student at Shandong University. Research interests
-          include integrated sensing and communication, fluid antennas,
-          UAV trajectory optimization, and physical-layer security.
-        </p>
-      </div>
-    </div>
-
-    <!-- Collaborator 3 -->
-    <div class="ics-visitor ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/chengxuejun.jpg' | relative_url }}"
-        class="ics-visitor-photo"
-        alt="Xuejun Cheng"
-        loading="lazy"
-        decoding="async">
-
-      <div>
-        <div class="ics-visitor-name">
-          Xuejun Cheng
-          (<a href="https://scholar.google.com/citations?user=anxnepIAAAAJ&amp;hl=en">Google Scholar</a>)
-        </div>
-        <div class="ics-visitor-role">
-          Research Collaborator · Shandong University
-        </div>
-        <p class="ics-visitor-desc">
-          Xuejun Cheng is a Ph.D. student at Shandong University and a
-          government-sponsored visiting Ph.D. student at the National University
-          of Singapore under a joint doctoral training program. Research
-          interests include beamforming for intelligent metasurfaces,
-          integrated sensing and communication, and multiple access technologies.
-        </p>
-      </div>
-    </div>
-
-    <!-- Collaborator 4 -->
-    <div class="ics-visitor ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/wangmaoyuan.png' | relative_url }}"
-        class="ics-visitor-photo"
-        alt="Maoyuan Wang"
-        loading="lazy"
-        decoding="async">
-
-      <div>
-        <div class="ics-visitor-name">Maoyuan Wang</div>
-        <div class="ics-visitor-role">
-          Research Collaborator · Shandong University
-        </div>
-        <p class="ics-visitor-desc">
-          Maoyuan Wang is a master's student at Shandong University. Research
-          interests include flexible intelligent metasurfaces, integrated
-          sensing and communication, and deep reinforcement learning.
-        </p>
-      </div>
-    </div>
-
-    <!-- Collaborator 5 -->
-    <div class="ics-visitor ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/Peilin_Ren.jpg' | relative_url }}"
-        class="ics-visitor-photo"
-        alt="Peilin Ren"
-        loading="lazy"
-        decoding="async">
-
-      <div>
-        <div class="ics-visitor-name">Peilin Ren</div>
-        <div class="ics-visitor-role">
-          Research Collaborator · Shandong Normal University
-        </div>
-        <p class="ics-visitor-desc">
-          Peilin Ren graduated with a master's degree from Shandong Normal University in 2024 and currently plans to pursue a doctoral degree. His main research areas include covert communication, intelligent metasurfaces, near-field communication, and integrated sensing.
-        </p>
-      </div>
-    </div>
-
-    <!--
-      To add a collaborator, copy a complete card and retain the
-      ics-hover-card class to preserve the shared hover effect.
-    -->
-  </section>
-
-  <!-- Master's Students -->
-  <section
-    class="ics-section"
-    id="ics-masters"
-    aria-labelledby="ics-masters-title">
-
-    <h2 class="ics-section-title" id="ics-masters-title">Master's Students</h2>
-
-    <div class="ics-members">
-      <!-- Vacant Master's Position -->
-      <div class="ics-member-card ics-hover-card">
-        <img
-          src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
-          class="ics-member-photo"
-          alt="Vacant master's student position, not yet filled"
-          loading="lazy"
-          decoding="async">
-
-        <div class="ics-member-info">
-          <div class="ics-member-name">Vacant</div>
-          <div class="ics-member-role">Master's Student</div>
-          <div class="ics-member-status">2026 Intake · Position Unfilled</div>
-          <div class="ics-member-status">
-            Academic / Professional Master's Programs
-          </div>
-        </div>
-      </div>
-
-      <!-- Add new master's student cards inside this .ics-members container. -->
-    </div>
-  </section>
-
-  <!-- Co-Supervised Graduate students -->
-  <section
-    class="ics-section"
-    id="ics-masters"
-    aria-labelledby="ics-masters-title">
-
-    <h2 class="ics-section-title" id="ics-masters-title">Master's Students</h2>
-
-    <div class="ics-members">
-      <!-- Vacant Master's Position -->
-      <div class="ics-member-card ics-hover-card">
-        <img
-          src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
-          class="ics-member-photo"
-          alt="Vacant master's student position, not yet filled"
-          loading="lazy"
-          decoding="async">
-
-        <div class="ics-member-info">
-          <div class="ics-member-name">Vacant</div>
-          <div class="ics-member-role">Co-Supervised Master</div>
-          <div class="ics-member-status">2026 Intake · Position Unfilled</div>
-          <div class="ics-member-status">
-            Academic / Professional Master's Programs
-          </div>
-        </div>
-      </div>
-
-      <!-- Add new master's student cards inside this .ics-members container. -->
-    </div>
-  </section>
-
-  <!-- Undergraduate Students -->
-  <section
-    class="ics-section"
-    id="ics-undergraduates"
-    aria-labelledby="ics-undergraduates-title">
-
-    <h2 class="ics-section-title" id="ics-undergraduates-title">
-      Undergraduate Students
+    <h2 class="ics-hero-title" id="ics-hero-title">
+      Intelligent Cooperative Systems Laboratory
     </h2>
 
-    <div class="ics-members">
-      <!-- Undergraduate Student 1 -->
-      <div class="ics-member-card ics-hover-card">
-        <img
-          src="{{ '/assets/img/group/Luhan_Wang.jpg' | relative_url }}"
-          class="ics-member-photo"
-          alt="Luhan Wang"
-          loading="lazy"
-          decoding="async">
+    <p class="ics-hero-subtitle">
+      Intelligent Cooperative Systems Laboratory
+    </p>
 
-        <div class="ics-member-info">
-          <div class="ics-member-name">Luhan Wang</div>
-          <div class="ics-member-role">Undergraduate Student</div>
-          <div class="ics-member-status">2025 Cohort · Enrolled</div>
-          <div class="ics-member-status">Undergraduate Research Member</div>
-        </div>
-      </div>
+    <p class="ics-hero-lead">
+      Centered on intelligent cooperation, we investigate the deep integration
+      of communication, sensing, and control, with a focus on future intelligent
+      wireless networks and unmanned systems.
+    </p>
 
-      <!-- Undergraduate Student 2 -->
-      <div class="ics-member-card ics-hover-card">
-        <img
-          src="{{ '/assets/img/group/Yilin_Wang.png' | relative_url }}"
-          class="ics-member-photo"
-          alt="Yilin Wang"
-          loading="lazy"
-          decoding="async">
-
-        <div class="ics-member-info">
-          <div class="ics-member-name">Yilin Wang</div>
-          <div class="ics-member-role">Undergraduate Student</div>
-          <div class="ics-member-status">2026 Cohort · Enrolled</div>
-          <div class="ics-member-status">Undergraduate Research Member</div>
-        </div>
-      </div>
-
-      <!-- Undergraduate Student 3 -->
-      <div class="ics-member-card ics-hover-card">
-        <img
-          src="{{ '/assets/img/group/Liwen_Liang.jpg' | relative_url }}"
-          class="ics-member-photo"
-          alt="Liwen Liang"
-          loading="lazy"
-          decoding="async">
-
-        <div class="ics-member-info">
-          <div class="ics-member-name">Liwen Liang</div>
-          <div class="ics-member-role">Undergraduate Student</div>
-          <div class="ics-member-status">2025 Cohort · Enrolled</div>
-          <div class="ics-member-status">Undergraduate Research Member</div>
-        </div>
-      </div>
-
-      <!-- Add new undergraduate cards inside this .ics-members container. -->
-    </div>
-  </section>
-
-  <!-- Page Ending -->
-  <div class="ics-ending">
-    <div class="ics-ending-main">
-      Innovation · Collaboration · Growing Together
-    </div>
-    <div class="ics-ending-subtitle en">
-      Innovation · Collaboration · Synergy
-    </div>
-  </div>
-
-</div>
+    <div class="ics-hero-tags" aria-label="Research topics">
+      <span class="ics-hero-tag">Integrated Communication, Sensing, and Control</span>
+      <span class="ics-hero-tag">Reconfigurable Intelligent Sur
