@@ -998,6 +998,23 @@ nav_order: 3
         </div>
       </div>
 
+      <!-- Undergraduate Student 3 -->
+      <div class="ics-member-card ics-hover-card">
+        <img
+          src="{{ '/assets/img/group/Liwen_Liang.jpg' | relative_url }}"
+          class="ics-member-photo"
+          alt="Liwen Liang"
+          loading="lazy"
+          decoding="async">
+
+        <div class="ics-member-info">
+          <div class="ics-member-name">Liwen Liang</div>
+          <div class="ics-member-role">Undergraduate Student</div>
+          <div class="ics-member-status">2025 Cohort · Enrolled</div>
+          <div class="ics-member-status">Undergraduate Research Member</div>
+        </div>
+      </div>
+
       <!-- Add new undergraduate cards inside this .ics-members container. -->
     </div>
   </section>
