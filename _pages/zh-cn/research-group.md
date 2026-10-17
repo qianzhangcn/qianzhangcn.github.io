@@ -1358,6 +1358,39 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
+        src="{{ '/assets/img/group/Ruifeng_Xue.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="协助指导硕士研究生名"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          薛瑞丰
+        </div>
+
+        <div class="ics-member-role">
+          硕士研究生
+        </div>
+
+        <div class="ics-member-status">
+          2026级 · 在读 · 东北大学
+        </div>
+
+        <div class="ics-member-status">
+          研究方向：无线通信、边缘侧大模型
+        </div>
+
+      </div>
+      
+    </div>
+
+<!-- ==================== 协助指导硕士生 3 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
         src="{{ '/assets/img/group/Shiyao_Guo.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="协助指导硕士研究生名"
@@ -1386,7 +1419,7 @@ nav_order: 3
       
     </div>
     
-<!-- ==================== 协助指导硕士生 3 ==================== -->
+<!-- ==================== 协助指导硕士生 4 ==================== -->
 
     <div class="ics-member-card ics-hover-card">
 
