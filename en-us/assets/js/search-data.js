@@ -27,19 +27,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/en-us/Publications/";
           },
-        },{id: "nav-课题组",
-          title: "课题组",
-          description: "",
-          section: "Navigation menu",
-          handler: () => {
-            window.location.href = "/en-us/research-group/";
-          },
         },{id: "nav-research-group",
           title: "Research Group",
           description: "Intelligent Cooperative Systems Laboratory (ICS Lab)",
           section: "Navigation menu",
           handler: () => {
-            window.location.href = "/en-us/research-group-en/";
+            window.location.href = "/en-us/research-group/";
           },
         },{id: "post-a-post-with-plotly-js",
         
