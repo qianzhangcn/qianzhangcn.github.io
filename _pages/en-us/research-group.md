@@ -1,7 +1,6 @@
-
 ---
 layout: page
-title: "Research Group"
+title: Research Group
 permalink: /research-group-en/
 description: "Intelligent Cooperative Systems Laboratory (ICS Lab)"
 nav: true
