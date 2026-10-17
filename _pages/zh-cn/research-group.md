@@ -1280,7 +1280,7 @@ nav_order: 3
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          空缺
+          有名额
         </div>
 
         <div class="ics-member-role">
