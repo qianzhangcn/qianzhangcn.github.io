@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research Group
-permalink: /research-group-en/
+permalink: /research-group/
 description: "Intelligent Cooperative Systems Laboratory (ICS Lab)"
 nav: true
 nav_order: 3
