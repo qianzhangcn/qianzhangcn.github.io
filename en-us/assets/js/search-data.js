@@ -34,6 +34,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/en-us/research-group/";
           },
+        },{id: "nav-research-group",
+          title: "Research Group",
+          description: "Intelligent Cooperative Systems Laboratory (ICS Lab)",
+          section: "Navigation menu",
+          handler: () => {
+            window.location.href = "/en-us/research-group-en/";
+          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
