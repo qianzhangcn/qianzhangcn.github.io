@@ -974,6 +974,21 @@ nav_order: 3
   </h2>
   <div class="ics-members">
     <!-- Student 1 -->
+     <div class="ics-member-card ics-hover-card">
+      <img
+        src="{{ '/assets/img/group/Yingying_Du.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="Yingying Du"
+        loading="lazy"
+        decoding="async">
+      <div class="ics-member-info">
+        <div class="ics-member-name">Yingying Du</div>
+        <div class="ics-member-role">Master's Student</div>
+        <div class="ics-member-status">2026 Cohort · Enrolled · Northeastern University</div>
+        <div class="ics-member-status">Research: Integrated Sensing and Communication</div>
+      </div>
+    </div>
+    <!-- Student 2 -->
     <div class="ics-member-card ics-hover-card">
       <img
         src="{{ '/assets/img/group/Junyi_Li.jpg' | relative_url }}"
@@ -986,21 +1001,6 @@ nav_order: 3
         <div class="ics-member-role">Master's Student</div>
         <div class="ics-member-status">2026 Cohort · Enrolled · Shandong University</div>
         <div class="ics-member-status">Research: Sparse Bayesian Learning and AFDM</div>
-      </div>
-    </div>
-    <!-- Student 2 -->
-    <div class="ics-member-card ics-hover-card">
-      <img
-        src="{{ '/assets/img/group/Yingying_Du.png' | relative_url }}"
-        class="ics-member-photo"
-        alt="Yingying Du"
-        loading="lazy"
-        decoding="async">
-      <div class="ics-member-info">
-        <div class="ics-member-name">Yingying Du</div>
-        <div class="ics-member-role">Master's Student</div>
-        <div class="ics-member-status">2026 Cohort · Enrolled · Northeastern University</div>
-        <div class="ics-member-status">Research: Integrated Sensing and Communication</div>
       </div>
     </div>
     <!-- Duplicate an entire .ics-member-card to add a student. -->
