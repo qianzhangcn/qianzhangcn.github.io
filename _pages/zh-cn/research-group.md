@@ -1206,6 +1206,7 @@ nav_order: 3
 
       <p class="ics-visitor-desc">
         山东大学在读硕士研究生，
+        </strong> 获硕士国家奖学金 <strong>，
         主要研究方向包括柔性智能超表面、通信感知一体化与深度强化学习。
       </p>
 
