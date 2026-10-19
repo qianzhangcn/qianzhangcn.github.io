@@ -1088,6 +1088,21 @@ nav_order: 3
         <div class="ics-member-status">Undergraduate Research Member</div>
       </div>
     </div>
+     <!-- Undergraduate Student 4 -->
+    <div class="ics-member-card ics-hover-card">
+      <img
+        src="{{ '/assets/img/group/Yenan.Zhang.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="Yenan Zhang"
+        loading="lazy"
+        decoding="async">
+      <div class="ics-member-info">
+        <div class="ics-member-name">Yenan Zhang</div>
+        <div class="ics-member-role">Undergraduate Student</div>
+        <div class="ics-member-status">2026 Intake · Enrolled</div>
+        <div class="ics-member-status">Undergraduate Research Member</div>
+      </div>
+    </div>
     <!-- Duplicate an entire .ics-member-card to add an undergraduate student. -->
   </div>
 </section>
