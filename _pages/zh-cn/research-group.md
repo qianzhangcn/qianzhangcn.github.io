@@ -1578,6 +1578,39 @@ nav_order: 3
 
     </div>
 
+    <!-- ==================== 本科生 4 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
+        src="{{ '/assets/img/group/Yenan_Zhang.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="张烨楠"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          张烨楠
+        </div>
+
+        <div class="ics-member-role">
+          本科生
+        </div>
+
+        <div class="ics-member-status">
+          2026级 · 在读 · 东北大学
+        </div>
+
+        <div class="ics-member-status">
+          本科科研成员
+        </div>
+
+      </div>
+
+    </div>
+
     <!-- 新增本科生时，在本 .ics-members 内复制完整卡片。 -->
 
   </div>
