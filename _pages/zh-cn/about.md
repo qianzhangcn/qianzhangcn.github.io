@@ -566,7 +566,9 @@ html[data-theme="dark"] .profile-page {
     <p>
       <strong>张迁</strong>，<strong>工学博士</strong>，<strong>副教授</strong>，
       <strong>硕士生导师</strong>，<span class="en">IEEE Member</span>，
-      中国通信学会会员，<span class="en">CSIG</span>交通视频专委会委员。
+      中国通信学会会员，<span class="en">CSIG</span>交通视频专委会委员，
+      学院科研团队“智能网联与先进计算技术实验室”成员，
+      河北省海洋感知网络与数据处理重点实验室成员。
       2026年6月于山东大学获得工学博士学位（直博），师从刘琚教授（二级），
       合作导师董郑教授；2024年受<strong>国家留学基金委资助</strong>赴新加坡南洋理工大学
       <span class="en">EEE</span>学院联合培养，
