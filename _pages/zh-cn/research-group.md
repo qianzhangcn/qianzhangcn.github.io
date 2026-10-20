@@ -1496,15 +1496,15 @@ nav_order: 3
         </div>
 
         <div class="ics-member-role">
-          本科生 · 通信工程
+          本科生
         </div>
 
         <div class="ics-member-status">
-          2025级 · 在读 · 东北大学
+          2025级 · 在读
         </div>
 
         <div class="ics-member-status">
-          本科科研成员
+          东北大学 · 通信工程
         </div>
 
       </div>
@@ -1530,15 +1530,15 @@ nav_order: 3
         </div>
 
         <div class="ics-member-role">
-          本科生 · 通信工程
+          本科生
         </div>
 
         <div class="ics-member-status">
-          2026级 · 在读 · 东北大学
+          2026级 · 在读
         </div>
 
         <div class="ics-member-status">
-          本科科研成员
+          东北大学 · 通信工程
         </div>
 
       </div>
@@ -1563,15 +1563,15 @@ nav_order: 3
         </div>
 
         <div class="ics-member-role">
-          本科生 · 通信工程
+          本科生
         </div>
 
         <div class="ics-member-status">
-          2025级 · 在读 · 东北大学
+          2025级 · 在读
         </div>
 
         <div class="ics-member-status">
-          本科科研成员
+          东北大学 · 通信工程
         </div>
 
       </div>
@@ -1596,15 +1596,15 @@ nav_order: 3
         </div>
 
         <div class="ics-member-role">
-          本科生 · 通信工程
+          本科生
         </div>
 
         <div class="ics-member-status">
-          2026级 · 在读 · 东北大学
+          2026级 · 在读
         </div>
 
         <div class="ics-member-status">
-          本科科研成员
+          东北大学 · 通信工程
         </div>
 
       </div>
@@ -1629,15 +1629,15 @@ nav_order: 3
         </div>
 
         <div class="ics-member-role">
-          本科生 · 控制工程
+          本科生
         </div>
 
         <div class="ics-member-status">
-          2024级 · 在读 · 青岛大学
+          2024级 · 在读
         </div>
 
         <div class="ics-member-status">
-          本科科研成员
+          青岛大学 · 控制工程
         </div>
 
       </div>
