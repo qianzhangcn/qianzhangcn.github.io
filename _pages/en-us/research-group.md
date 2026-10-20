@@ -1091,7 +1091,7 @@ nav_order: 3
      <!-- Undergraduate Student 4 -->
     <div class="ics-member-card ics-hover-card">
       <img
-        src="{{ '/assets/img/group/Yenan.Zhang.png' | relative_url }}"
+        src="{{ '/assets/img/group/Yenan_Zhang.png' | relative_url }}"
         class="ics-member-photo"
         alt="Yenan Zhang"
         loading="lazy"
@@ -1100,6 +1100,21 @@ nav_order: 3
         <div class="ics-member-name">Yenan Zhang</div>
         <div class="ics-member-role">Undergraduate Student</div>
         <div class="ics-member-status">2026 Intake · Enrolled</div>
+        <div class="ics-member-status">Undergraduate Research Member</div>
+      </div>
+    </div>
+     <!-- Undergraduate Student 5 -->
+    <div class="ics-member-card ics-hover-card">
+      <img
+        src="{{ '/assets/img/group/Yiming_Xu.png' | relative_url }}"
+        class="ics-member-photo"
+        alt="Yiming Xu"
+        loading="lazy"
+        decoding="async">
+      <div class="ics-member-info">
+        <div class="ics-member-name">Yiming Xu</div>
+        <div class="ics-member-role">Undergraduate Student</div>
+        <div class="ics-member-status">2024 Intake · Enrolled</div>
         <div class="ics-member-status">Undergraduate Research Member</div>
       </div>
     </div>
