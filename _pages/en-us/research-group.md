@@ -1140,7 +1140,7 @@ nav_order: 3
      <!-- Undergraduate Student 5 -->
     <div class="ics-member-card ics-hover-card">
       <img
-        src="{{ '/assets/img/group/Yiming_Xu.png' | relative_url }}"
+        src="{{ '/assets/img/group/Yiming_Xu.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="Yiming Xu"
         loading="lazy"
