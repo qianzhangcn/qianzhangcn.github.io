@@ -858,6 +858,23 @@ nav_order: 3
   <!-- Research Collaborator 2 -->
   <div class="ics-visitor ics-hover-card">
     <img
+      src="{{ '/assets/img/group/Jinyuan_Liu.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="Jinyuan Liu"
+      loading="lazy"
+      decoding="async">
+    <div>
+      <div class="ics-visitor-name">Jinyuan Liu</div>
+      <div class="ics-visitor-role">Research Collaborator · Nanyang Technological University </div>
+      <p class="ics-visitor-desc">
+        Jinyuan Liu received the B.S. degree from the University of Electronic Science and Technology of China, the M.S. degree from Imperial College London, U.K., and the Ph.D. degree from Nanyang Technological University, Singapore. His research interests include fluid antenna systems (FAS), rate-splitting multiple access (RSMA), and wireless communication system performance analysis.
+      </p>
+    </div>
+  </div>
+
+  <!-- Research Collaborator 3 -->
+  <div class="ics-visitor ics-hover-card">
+    <img
       src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
       class="ics-visitor-photo"
       alt="Yunxiao Li"
@@ -874,7 +891,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 3 -->
+  <!-- Research Collaborator 4 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/chengxuejun.jpg' | relative_url }}"
@@ -898,7 +915,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 4 -->
+  <!-- Research Collaborator 5 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/wangmaoyuan.png' | relative_url }}"
@@ -917,7 +934,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 5 -->
+  <!-- Research Collaborator 6 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/Peilin_Ren.jpg' | relative_url }}"
