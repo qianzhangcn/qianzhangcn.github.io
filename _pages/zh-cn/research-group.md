@@ -1156,6 +1156,35 @@ nav_order: 3
   <div class="ics-visitor ics-hover-card">
 
     <img
+      src="{{ '/assets/img/group/Yufei_Chen.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="陈宇飞"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        陈宇飞
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 西安电子科技大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        西安电子科技大学博士，主要从事无线通信与信号处理领域研究，相关研究方向包括消息传递算法、多用户检测与编码、超大规模 MIMO 技术等。
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== 合作学者 4 ==================== -->
+
+  <div class="ics-visitor ics-hover-card">
+
+    <img
       src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
       class="ics-visitor-photo"
       alt="李云潇"
@@ -1181,7 +1210,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 4 ==================== -->
+  <!-- ==================== 合作学者 5 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
@@ -1212,7 +1241,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 5 ==================== -->
+  <!-- ==================== 合作学者 6 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
@@ -1242,7 +1271,7 @@ nav_order: 3
 
   </div>
 
-   <!-- ==================== 合作学者 6 ==================== -->
+   <!-- ==================== 合作学者 7 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
