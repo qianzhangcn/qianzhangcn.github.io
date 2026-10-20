@@ -1080,7 +1080,7 @@ nav_order: 3
 
 
 <!-- =========================================================
-     合作学者
+     青年学者
      ========================================================= -->
 
 <section
@@ -1089,7 +1089,7 @@ nav_order: 3
   aria-labelledby="ics-members-title">
 
   <h2 class="ics-section-title" id="ics-members-title">
-    合作学者
+    青年学者
   </h2>
 
   <!-- ==================== 合作学者 1 ==================== -->
@@ -1127,6 +1127,35 @@ nav_order: 3
   <div class="ics-visitor ics-hover-card">
 
     <img
+      src="{{ '/assets/img/group/Jinyuan_Liu.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="刘晋源"
+      loading="lazy"
+      decoding="async">
+
+    <div>
+
+      <div class="ics-visitor-name">
+        刘晋源
+      </div>
+
+      <div class="ics-visitor-role">
+        合作学者 · 新加坡南洋理工大学
+      </div>
+
+      <p class="ics-visitor-desc">
+        电子科技大学学士、帝国理工大学硕士、南洋理工大学博士，主要研究方向包括流态天线、RSMA、以及系统性能分析。
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- ==================== 合作学者 3 ==================== -->
+
+  <div class="ics-visitor ics-hover-card">
+
+    <img
       src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
       class="ics-visitor-photo"
       alt="李云潇"
@@ -1144,7 +1173,7 @@ nav_order: 3
       </div>
 
       <p class="ics-visitor-desc">
-        山东大学在读博士生，主要研究方向包括通信感知一体化、流体天线、无人机轨迹优化、以及物理层安全。
+        山东大学在读博士生，主要研究方向包括通信感知一体化、流态天线、无人机轨迹优化、以及物理层安全。
       </p>
 
     </div>
@@ -1152,7 +1181,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 3 ==================== -->
+  <!-- ==================== 合作学者 4 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
@@ -1183,7 +1212,7 @@ nav_order: 3
   </div>
 
 
-  <!-- ==================== 合作学者 4 ==================== -->
+  <!-- ==================== 合作学者 5 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
@@ -1213,7 +1242,7 @@ nav_order: 3
 
   </div>
 
-   <!-- ==================== 合作学者 5 ==================== -->
+   <!-- ==================== 合作学者 6 ==================== -->
 
   <div class="ics-visitor ics-hover-card">
 
