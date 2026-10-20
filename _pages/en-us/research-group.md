@@ -875,6 +875,23 @@ nav_order: 3
   <!-- Research Collaborator 3 -->
   <div class="ics-visitor ics-hover-card">
     <img
+      src="{{ '/assets/img/group/Yufei_Chen.jpg' | relative_url }}"
+      class="ics-visitor-photo"
+      alt="Yufei Chen"
+      loading="lazy"
+      decoding="async">
+    <div>
+      <div class="ics-visitor-name">Yufei Chen</div>
+      <div class="ics-visitor-role">Research Collaborator · Xidian University </div>
+      <p class="ics-visitor-desc">
+        Yufei Chen received the Ph.D. degree from Xidian University, China, and was a government-sponsored joint Ph.D. student at Nanyang Technological University, Singapore. His research focuses on wireless communications and signal processing, with particular interests in message-passing algorithms, multiuser detection and coding, and extremely large-scale multiple-input multiple-output (XL-MIMO) technologies.
+      </p>
+    </div>
+  </div>
+
+  <!-- Research Collaborator 4 -->
+  <div class="ics-visitor ics-hover-card">
+    <img
       src="{{ '/assets/img/group/Yunxiao_Li.png' | relative_url }}"
       class="ics-visitor-photo"
       alt="Yunxiao Li"
@@ -891,7 +908,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 4 -->
+  <!-- Research Collaborator 5 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/chengxuejun.jpg' | relative_url }}"
@@ -915,7 +932,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 5 -->
+  <!-- Research Collaborator 6 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/wangmaoyuan.png' | relative_url }}"
@@ -934,7 +951,7 @@ nav_order: 3
     </div>
   </div>
 
-  <!-- Research Collaborator 6 -->
+  <!-- Research Collaborator 7 -->
   <div class="ics-visitor ics-hover-card">
     <img
       src="{{ '/assets/img/group/Peilin_Ren.jpg' | relative_url }}"
