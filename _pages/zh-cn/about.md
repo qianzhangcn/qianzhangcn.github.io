@@ -954,7 +954,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- 访问量与访客数：使用原版不蒜子 -->
+<!-- 访问量与访客数：使用原来的 busuanzi.cc 统计来源 -->
 <div
   style="
     text-align: center;
@@ -966,42 +966,44 @@ html[data-theme="dark"] .profile-page {
 >
   <span style="display: inline-block;">
     👁️ 本站总访问量：
-    <span id="busuanzi_value_site_pv">加载中...</span> 次
+    <span id="busuanzi_site_pv">加载中...</span> 次
   </span>
 
   <span style="margin: 0 10px;">|</span>
 
   <span style="display: inline-block;">
     👤 本站总访客数：
-    <span id="busuanzi_value_site_uv">加载中...</span> 人
+    <span id="busuanzi_site_uv">加载中...</span> 人
   </span>
 </div>
 
-<!-- 统计脚本：同一页面只引入一次 -->
+<!-- 原统计脚本：同一页面只保留这一份统计脚本 -->
 <script
-  async
-  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
-></script>
-
-<!-- 超时提示：只改善显示，不修改真实统计数字 -->
-<script>
-  window.setTimeout(function () {
-    var counterIds = [
-      "busuanzi_value_site_pv",
-      "busuanzi_value_site_uv"
-    ];
-
-    counterIds.forEach(function (id) {
-      var element = document.getElementById(id);
-
-      if (
-        element &&
-        element.textContent.trim() === "加载中..."
-      ) {
-        element.textContent = "暂不可用";
-      }
-    });
-  }, 15000);
+  src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
+  defer>
 </script>
 
+<!-- 超时提示：不修改统计数字，也不切换统计服务 -->
+<script>
+  (function () {
+    window.setTimeout(function () {
+      var counterIds = [
+        "busuanzi_site_pv",
+        "busuanzi_site_uv"
+      ];
+
+      counterIds.forEach(function (id) {
+        var element = document.getElementById(id);
+
+        if (
+          element &&
+          element.textContent.trim() === "加载中..."
+        ) {
+          element.textContent = "暂不可用";
+          element.title = "统计服务暂时未返回数据，请稍后刷新页面。";
+        }
+      });
+    }, 15000);
+  })();
+</script>
 </div>
