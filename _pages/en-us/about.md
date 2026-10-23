@@ -993,22 +993,54 @@ html[data-theme="dark"] .profile-page {
 </section>
 
 <!-- Visitor Counter -->
+<!-- 访问量与访客数：使用原版不蒜子 -->
+<div
+  style="
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.75;
+  "
+>
+  <span style="display: inline-block;">
+    👁️ Total Page Views:
+    <span id="busuanzi_value_site_pv">Loading...</span> 次
+  </span>
 
-<div class="visit-counter">
+  <span style="margin: 0 10px;">|</span>
 
-  👁️ Total Page Views:
-  <span id="busuanzi_site_pv">Loading...</span>
-
-  &nbsp;&nbsp;|&nbsp;&nbsp;
-
-  👤 Total Visitors:
-  <span id="busuanzi_site_uv">Loading...</span>
-
+  <span style="display: inline-block;">
+    👤 Total Visitors:
+    <span id="busuanzi_value_site_uv">Loading...</span> 人
+  </span>
 </div>
 
+<!-- 统计脚本：同一页面只引入一次 -->
 <script
-  src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
-  defer>
+  async
+  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
+
+<!-- 超时提示：只改善显示，不修改真实统计数字 -->
+<script>
+  window.setTimeout(function () {
+    var counterIds = [
+      "busuanzi_value_site_pv",
+      "busuanzi_value_site_uv"
+    ];
+
+    counterIds.forEach(function (id) {
+      var element = document.getElementById(id);
+
+      if (
+        element &&
+        element.textContent.trim() === "Loading..."
+      ) {
+        element.textContent = "No recive";
+      }
+    });
+  }, 15000);
 </script>
 
 </div>
