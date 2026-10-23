@@ -307,6 +307,25 @@ html[data-theme="dark"] .profile-page {
   color: var(--profile-muted);
 }
 
+#site-visit-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+#site-visit-counter .visit-counter-item {
+  white-space: nowrap;
+}
+
+#site-visit-counter .visit-counter-number {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 /* =========================================================
    统一卡片悬停效果
    每张卡片单独添加 profile-hover-card，不绑定外层容器。
@@ -361,7 +380,7 @@ html[data-theme="dark"] .profile-page {
   border-radius: 3px;
 }
 
-/* 对配有鼠标等悬停设备的终端启用，避免纯触屏设备停留在悬停状态。 */
+/* 对配有鼠标等悬停设备的终端启用。 */
 @media (any-hover: hover) {
   .profile-page .profile-hover-card:hover {
     z-index: 1;
@@ -378,7 +397,6 @@ html[data-theme="dark"] .profile-page {
     color: var(--profile-accent);
   }
 
-  /* 仅当前标签变成紫底白字，其他标签保持原样。 */
   .profile-page .research-tag:hover {
     z-index: 1;
     transform: translateY(-3px);
@@ -475,7 +493,7 @@ html[data-theme="dark"] .profile-page {
   }
 }
 
-/* 系统启用“减少动态效果”时，保留变色和阴影，取消位移动画。 */
+/* 系统启用“减少动态效果”时，取消位移动画。 */
 @media (prefers-reduced-motion: reduce) {
   .profile-page .profile-hover-card,
   .profile-page .research-tag,
@@ -954,57 +972,61 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- 访问统计：旧累计 + 新服务新增 -->
-<div
-  style="
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    line-height: 1.8;
-    opacity: 0.75;
-  "
->
-  <span style="display: inline-block;">
-    👁️ <span id="visit-pv-label">访问量</span>：
-    <span id="visit-pv-total">加载中...</span> 次
+<!-- ==================== 访问统计 ==================== -->
+
+<div id="site-visit-counter" class="visit-counter" aria-live="polite">
+
+  <span id="visit-pv-item" class="visit-counter-item">
+    👁️ <span id="visit-pv-label">访问量（切换后）</span>：
+    <span id="visit-pv-total" class="visit-counter-number">加载中...</span> 次
   </span>
 
-  <span style="margin: 0 10px;">|</span>
-
-  <span style="display: inline-block;">
-    👤 <span id="visit-uv-label">访客数</span>：
-    <span id="visit-uv-total">加载中...</span>
+  <span id="visit-uv-item" class="visit-counter-item">
+    👤 <span id="visit-uv-label">访客数（切换后）</span>：
+    <span id="visit-uv-total" class="visit-counter-number">加载中...</span>
     <span id="visit-uv-unit">人</span>
   </span>
 
-  <div
-    id="visit-counter-note"
-    style="margin-top: 5px; font-size: 12px;"
-  ></div>
 </div>
 
-<!-- 新服务返回的原始数字，不直接显示 -->
-<div id="busuanzi-raw-values" style="display: none;" aria-hidden="true">
+<!-- 新服务返回的原始数字，不直接显示，也不要在这里填写历史数。 -->
+<div id="busuanzi-raw-values" hidden aria-hidden="true">
   <span id="busuanzi_value_site_pv"></span>
   <span id="busuanzi_value_site_uv"></span>
 </div>
 
 <script>
 (function () {
-  /* ========= 这里填写准确的旧数据 ========= */
-
-  const OLD_PV = null; // 原来的总访问次数
-  const OLD_UV = null; // 原来的总访客数
+  /*
+   * ==================== 历史数据设置 ====================
+   *
+   * OLD_PV：更换统计服务前的准确总访问次数。
+   * OLD_UV：更换统计服务前的准确总访客数。
+   *
+   * 将下方对应的 null 替换成真实数字即可。
+   * 不知道的项目保留 null，该项目只显示切换后的统计。
+   * 两项分别生效，不要求同时填写。
+   *
+   * 注意：你提供的主页代码没有保存旧数字。
+   * 这段代码不能自动读取或恢复旧服务器上的历史数据。
+   */
+  const OLD_PV = null;
+  const OLD_UV = null;
 
   /*
-   * 接续基准：
-   * 旧累计未包含新服务的记录时，保持 0。
-   * 如果两边存在重叠统计，需要核对后填写对应基准。
+   * ==================== 接续基准设置 ====================
+   *
+   * 如果上面的历史数字记录于启用新服务之前，保持 0。
+   *
+   * 如果历史数字已经包含新服务的一部分记录，
+   * 这里填写已被包含的那部分新计数，避免重复相加。
+   *
+   * 不要把当前页面显示的新计数直接填成基准。
    */
   const NEW_PV_BASELINE = 0;
   const NEW_UV_BASELINE = 0;
 
-  /* ========= 以下通常不需要修改 ========= */
+  /* ==================== 以下无需修改 ==================== */
 
   const byId = function (id) {
     return document.getElementById(id);
@@ -1014,89 +1036,104 @@ html[data-theme="dark"] .profile-page {
     return Number.isSafeInteger(value) && value >= 0;
   };
 
-  const hasHistory = isCount(OLD_PV) && isCount(OLD_UV);
-  const pvOutput = byId("visit-pv-total");
-  const uvOutput = byId("visit-uv-total");
-  const note = byId("visit-counter-note");
-
+  let timedOut = false;
   let timeoutId;
 
-  byId("visit-pv-label").textContent =
-    hasHistory ? "本站累计访问量" : "新统计访问量";
+  function renderMetric(key, oldCount, baseline) {
+    const hasHistory = isCount(oldCount);
+    const isPV = key === "pv";
 
-  byId("visit-uv-label").textContent =
-    hasHistory ? "本站累计访客" : "新统计访客数";
+    const output = byId("visit-" + key + "-total");
+    const item = byId("visit-" + key + "-item");
+    const label = byId("visit-" + key + "-label");
 
-  byId("visit-uv-unit").textContent =
-    hasHistory ? "人次" : "人";
+    label.textContent = isPV
+      ? (hasHistory ? "累计访问量" : "访问量（切换后）")
+      : (hasHistory ? "累计访客" : "访客数（切换后）");
 
-  function readCount(id) {
-    const text = byId(id).textContent.trim().replace(/,/g, "");
-
-    if (!/^\d+$/.test(text)) {
-      return null;
+    if (!isPV) {
+      byId("visit-uv-unit").textContent = hasHistory ? "人次" : "人";
     }
 
-    const value = Number(text);
-    return isCount(value) ? value : null;
-  }
+    item.title = hasHistory
+      ? (
+          isPV
+            ? "历史访问量与新统计中尚未计入历史的部分相加。"
+            : "历史与新统计分段累计，访客未跨服务去重。"
+        )
+      : "仅包含切换后的统计，尚未包含此前的历史记录。";
 
-  function showError(message) {
-    pvOutput.textContent = "暂不可用";
-    uvOutput.textContent = "暂不可用";
-    note.textContent = message;
-    window.clearTimeout(timeoutId);
-  }
+    if (
+      (oldCount !== null && !hasHistory) ||
+      (hasHistory && !isCount(baseline))
+    ) {
+      output.textContent = "配置有误";
+      item.title =
+        "历史数请填写非负整数或 null；接续基准请填写非负整数。";
+      return true;
+    }
 
-  function updateDisplay() {
-    const rawPV = readCount("busuanzi_value_site_pv");
-    const rawUV = readCount("busuanzi_value_site_uv");
+    const text = byId("busuanzi_value_site_" + key)
+      .textContent
+      .trim()
+      .replace(/,/g, "");
 
-    if (rawPV === null || rawUV === null) {
+    if (!/^\d+$/.test(text)) {
+      output.textContent = timedOut ? "暂不可用" : "加载中...";
       return false;
     }
 
-    if (
-      !isCount(NEW_PV_BASELINE) ||
-      !isCount(NEW_UV_BASELINE)
-    ) {
-      showError("接续基准需要填写为非负整数。");
-      return true;
-    }
+    const rawCount = Number(text);
 
     if (
-      hasHistory &&
-      (rawPV < NEW_PV_BASELINE || rawUV < NEW_UV_BASELINE)
+      !isCount(rawCount) ||
+      (hasHistory && rawCount < baseline)
     ) {
-      showError("新计数低于接续基准，请核查基准或统计服务。");
+      output.textContent = "待核对";
+      item.title = "返回的计数异常，或小于设置的接续基准。";
       return true;
     }
 
-    // 始终根据原始值计算，避免重复累加历史数字。
-    const totalPV = hasHistory
-      ? OLD_PV + rawPV - NEW_PV_BASELINE
-      : rawPV;
+    /*
+     * 每次从新服务的原始值重新计算，
+     * 不把当前显示数字再次累加，避免重复增加。
+     */
+    const total = hasHistory
+      ? oldCount + (rawCount - baseline)
+      : rawCount;
 
-    const totalUV = hasHistory
-      ? OLD_UV + rawUV - NEW_UV_BASELINE
-      : rawUV;
-
-    if (!isCount(totalPV) || !isCount(totalUV)) {
-      showError("累计结果异常，请检查历史数字和接续基准。");
+    if (!isCount(total)) {
+      output.textContent = "待核对";
+      item.title = "累计结果超出有效范围，请检查设置。";
       return true;
     }
 
-    pvOutput.textContent = totalPV.toLocaleString("zh-CN");
-    uvOutput.textContent = totalUV.toLocaleString("zh-CN");
-
-    note.textContent = hasHistory
-      ? "历史与新统计分段累计；访客未跨服务去重。"
-      : "当前仅显示新服务统计，历史累计尚未补入。";
-
-    window.clearTimeout(timeoutId);
+    output.textContent = total.toLocaleString("zh-CN");
     return true;
   }
 
+  function updateDisplay() {
+    const pvReady = renderMetric(
+      "pv",
+      OLD_PV,
+      NEW_PV_BASELINE
+    );
+
+    const uvReady = renderMetric(
+      "uv",
+      OLD_UV,
+      NEW_UV_BASELINE
+    );
+
+    if (pvReady && uvReady) {
+      window.clearTimeout(timeoutId);
+    }
+  }
+
+  /*
+   * 仅观察隐藏的原始计数。
+   * 超时后仍保留观察，数据稍后返回时自动恢复显示。
+   */
   const observer = new MutationObserver(updateDisplay);
 
   observer.observe(byId("busuanzi-raw-values"), {
@@ -1106,20 +1143,18 @@ html[data-theme="dark"] .profile-page {
   });
 
   timeoutId = window.setTimeout(function () {
-    if (!updateDisplay()) {
-      showError("统计服务暂时未返回数据，请稍后刷新页面。");
-    }
+    timedOut = true;
+    updateDisplay();
   }, 15000);
 
   updateDisplay();
 })();
 </script>
 
-<!-- 同一页面只保留这一份统计脚本 -->
+<!-- 同一页面仅保留这一份统计脚本。 -->
 <script
   async
   src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
 ></script>
-
 
 </div>
