@@ -954,7 +954,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- 访问量与访客数：使用原来的 busuanzi.cc 统计来源 -->
+<!-- 访问统计：旧累计 + 新服务新增 -->
 <div
   style="
     text-align: center;
@@ -965,45 +965,161 @@ html[data-theme="dark"] .profile-page {
   "
 >
   <span style="display: inline-block;">
-    👁️ 本站总访问量：
-    <span id="busuanzi_site_pv">加载中...</span> 次
+    👁️ <span id="visit-pv-label">访问量</span>：
+    <span id="visit-pv-total">加载中...</span> 次
   </span>
 
   <span style="margin: 0 10px;">|</span>
 
   <span style="display: inline-block;">
-    👤 本站总访客数：
-    <span id="busuanzi_site_uv">加载中...</span> 人
+    👤 <span id="visit-uv-label">访客数</span>：
+    <span id="visit-uv-total">加载中...</span>
+    <span id="visit-uv-unit">人</span>
   </span>
+
+  <div
+    id="visit-counter-note"
+    style="margin-top: 5px; font-size: 12px;"
+  ></div>
 </div>
 
-<!-- 原统计脚本：同一页面只保留这一份统计脚本 -->
-<script
-  src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"
-  defer>
-</script>
+<!-- 新服务返回的原始数字，不直接显示 -->
+<div id="busuanzi-raw-values" style="display: none;" aria-hidden="true">
+  <span id="busuanzi_value_site_pv"></span>
+  <span id="busuanzi_value_site_uv"></span>
+</div>
 
-<!-- 超时提示：不修改统计数字，也不切换统计服务 -->
 <script>
-  (function () {
-    window.setTimeout(function () {
-      var counterIds = [
-        "busuanzi_site_pv",
-        "busuanzi_site_uv"
-      ];
+(function () {
+  /* ========= 这里填写准确的旧数据 ========= */
 
-      counterIds.forEach(function (id) {
-        var element = document.getElementById(id);
+  const OLD_PV = null; // 原来的总访问次数
+  const OLD_UV = null; // 原来的总访客数
 
-        if (
-          element &&
-          element.textContent.trim() === "加载中..."
-        ) {
-          element.textContent = "暂不可用";
-          element.title = "统计服务暂时未返回数据，请稍后刷新页面。";
-        }
-      });
-    }, 15000);
-  })();
+  /*
+   * 接续基准：
+   * 旧累计未包含新服务的记录时，保持 0。
+   * 如果两边存在重叠统计，需要核对后填写对应基准。
+   */
+  const NEW_PV_BASELINE = 0;
+  const NEW_UV_BASELINE = 0;
+
+  /* ========= 以下通常不需要修改 ========= */
+
+  const byId = function (id) {
+    return document.getElementById(id);
+  };
+
+  const isCount = function (value) {
+    return Number.isSafeInteger(value) && value >= 0;
+  };
+
+  const hasHistory = isCount(OLD_PV) && isCount(OLD_UV);
+  const pvOutput = byId("visit-pv-total");
+  const uvOutput = byId("visit-uv-total");
+  const note = byId("visit-counter-note");
+
+  let timeoutId;
+
+  byId("visit-pv-label").textContent =
+    hasHistory ? "本站累计访问量" : "新统计访问量";
+
+  byId("visit-uv-label").textContent =
+    hasHistory ? "本站累计访客" : "新统计访客数";
+
+  byId("visit-uv-unit").textContent =
+    hasHistory ? "人次" : "人";
+
+  function readCount(id) {
+    const text = byId(id).textContent.trim().replace(/,/g, "");
+
+    if (!/^\d+$/.test(text)) {
+      return null;
+    }
+
+    const value = Number(text);
+    return isCount(value) ? value : null;
+  }
+
+  function showError(message) {
+    pvOutput.textContent = "暂不可用";
+    uvOutput.textContent = "暂不可用";
+    note.textContent = message;
+    window.clearTimeout(timeoutId);
+  }
+
+  function updateDisplay() {
+    const rawPV = readCount("busuanzi_value_site_pv");
+    const rawUV = readCount("busuanzi_value_site_uv");
+
+    if (rawPV === null || rawUV === null) {
+      return false;
+    }
+
+    if (
+      !isCount(NEW_PV_BASELINE) ||
+      !isCount(NEW_UV_BASELINE)
+    ) {
+      showError("接续基准需要填写为非负整数。");
+      return true;
+    }
+
+    if (
+      hasHistory &&
+      (rawPV < NEW_PV_BASELINE || rawUV < NEW_UV_BASELINE)
+    ) {
+      showError("新计数低于接续基准，请核查基准或统计服务。");
+      return true;
+    }
+
+    // 始终根据原始值计算，避免重复累加历史数字。
+    const totalPV = hasHistory
+      ? OLD_PV + rawPV - NEW_PV_BASELINE
+      : rawPV;
+
+    const totalUV = hasHistory
+      ? OLD_UV + rawUV - NEW_UV_BASELINE
+      : rawUV;
+
+    if (!isCount(totalPV) || !isCount(totalUV)) {
+      showError("累计结果异常，请检查历史数字和接续基准。");
+      return true;
+    }
+
+    pvOutput.textContent = totalPV.toLocaleString("zh-CN");
+    uvOutput.textContent = totalUV.toLocaleString("zh-CN");
+
+    note.textContent = hasHistory
+      ? "历史与新统计分段累计；访客未跨服务去重。"
+      : "当前仅显示新服务统计，历史累计尚未补入。";
+
+    window.clearTimeout(timeoutId);
+    return true;
+  }
+
+  const observer = new MutationObserver(updateDisplay);
+
+  observer.observe(byId("busuanzi-raw-values"), {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+
+  timeoutId = window.setTimeout(function () {
+    if (!updateDisplay()) {
+      showError("统计服务暂时未返回数据，请稍后刷新页面。");
+    }
+  }, 15000);
+
+  updateDisplay();
+})();
 </script>
+
+<!-- 同一页面只保留这一份统计脚本 -->
+<script
+  async
+  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
+
+
 </div>
