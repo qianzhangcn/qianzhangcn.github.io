@@ -307,25 +307,6 @@ html[data-theme="dark"] .profile-page {
   color: var(--profile-muted);
 }
 
-#site-visit-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-#site-visit-counter .visit-counter-item {
-  white-space: nowrap;
-}
-
-#site-visit-counter .visit-counter-number {
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-}
-
 /* =========================================================
    统一卡片悬停效果
    每张卡片单独添加 profile-hover-card，不绑定外层容器。
@@ -380,7 +361,7 @@ html[data-theme="dark"] .profile-page {
   border-radius: 3px;
 }
 
-/* 对配有鼠标等悬停设备的终端启用。 */
+/* 对配有鼠标等悬停设备的终端启用，避免纯触屏设备停留在悬停状态。 */
 @media (any-hover: hover) {
   .profile-page .profile-hover-card:hover {
     z-index: 1;
@@ -397,6 +378,7 @@ html[data-theme="dark"] .profile-page {
     color: var(--profile-accent);
   }
 
+  /* 仅当前标签变成紫底白字，其他标签保持原样。 */
   .profile-page .research-tag:hover {
     z-index: 1;
     transform: translateY(-3px);
@@ -493,7 +475,7 @@ html[data-theme="dark"] .profile-page {
   }
 }
 
-/* 系统启用“减少动态效果”时，取消位移动画。 */
+/* 系统启用“减少动态效果”时，保留变色和阴影，取消位移动画。 */
 @media (prefers-reduced-motion: reduce) {
   .profile-page .profile-hover-card,
   .profile-page .research-tag,
@@ -974,22 +956,44 @@ html[data-theme="dark"] .profile-page {
 
 <!-- ==================== 访问统计 ==================== -->
 
+<style>
+  #site-visit-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  #site-visit-counter .visit-counter-item {
+    white-space: nowrap;
+  }
+
+  #site-visit-counter .visit-counter-number {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+</style>
+
 <div id="site-visit-counter" class="visit-counter" aria-live="polite">
 
   <span id="visit-pv-item" class="visit-counter-item">
-    👁️ <span id="visit-pv-label">访问量（切换后）</span>：
-    <span id="visit-pv-total" class="visit-counter-number">加载中...</span> 次
+    👁️ <span id="visit-pv-label">本站访问量</span>：
+    <span id="visit-pv-total" class="visit-counter-number">加载中...</span>
+    次
   </span>
 
   <span id="visit-uv-item" class="visit-counter-item">
-    👤 <span id="visit-uv-label">访客数（切换后）</span>：
+    👤 <span id="visit-uv-label">本站访客数</span>：
     <span id="visit-uv-total" class="visit-counter-number">加载中...</span>
-    <span id="visit-uv-unit">人</span>
+    <span id="visit-uv-unit">人次</span>
   </span>
 
 </div>
 
-<!-- 新服务返回的原始数字，不直接显示，也不要在这里填写历史数。 -->
+<!-- 新服务返回的原始计数，独立保存，不直接显示。 -->
 <div id="busuanzi-raw-values" hidden aria-hidden="true">
   <span id="busuanzi_value_site_pv"></span>
   <span id="busuanzi_value_site_uv"></span>
@@ -998,30 +1002,23 @@ html[data-theme="dark"] .profile-page {
 <script>
 (function () {
   /*
-   * ==================== 历史数据设置 ====================
+   * ==================== 已填写的历史数据 ====================
    *
-   * OLD_PV：更换统计服务前的准确总访问次数。
-   * OLD_UV：更换统计服务前的准确总访客数。
+   * 历史访问次数：1425
+   * 历史访客数：420
    *
-   * 将下方对应的 null 替换成真实数字即可。
-   * 不知道的项目保留 null，该项目只显示切换后的统计。
-   * 两项分别生效，不要求同时填写。
+   * 页面显示：
+   * 访问量 = 1425 + 新服务访问次数
+   * 访客数 = 420 + 新服务访客数
    *
-   * 注意：你提供的主页代码没有保存旧数字。
-   * 这段代码不能自动读取或恢复旧服务器上的历史数据。
+   * 历史值作为固定基数，每次更新不会重复累加。
    */
-  const OLD_PV = null;
-  const OLD_UV = null;
+  const OLD_PV = 1425;
+  const OLD_UV = 420;
 
   /*
-   * ==================== 接续基准设置 ====================
-   *
-   * 如果上面的历史数字记录于启用新服务之前，保持 0。
-   *
-   * 如果历史数字已经包含新服务的一部分记录，
-   * 这里填写已被包含的那部分新计数，避免重复相加。
-   *
-   * 不要把当前页面显示的新计数直接填成基准。
+   * 上面的历史数据按启用新服务前的累计值处理。
+   * 因此新服务的全部记录都需要加入，以下基准保持 0。
    */
   const NEW_PV_BASELINE = 0;
   const NEW_UV_BASELINE = 0;
@@ -1045,14 +1042,18 @@ html[data-theme="dark"] .profile-page {
 
     const output = byId("visit-" + key + "-total");
     const item = byId("visit-" + key + "-item");
-    const label = byId("visit-" + key + "-label");
 
-    label.textContent = isPV
-      ? (hasHistory ? "累计访问量" : "访问量（切换后）")
-      : (hasHistory ? "累计访客" : "访客数（切换后）");
+    byId("visit-" + key + "-label").textContent = isPV
+      ? "本站访问量"
+      : "本站访客数";
 
     if (!isPV) {
-      byId("visit-uv-unit").textContent = hasHistory ? "人次" : "人";
+      /*
+       * 历史与新服务之间无法对重复访客去重，
+       * 合并后按“人次”累计展示。
+       */
+      byId("visit-uv-unit").textContent =
+        hasHistory ? "人次" : "人";
     }
 
     item.title = hasHistory
@@ -1061,7 +1062,7 @@ html[data-theme="dark"] .profile-page {
             ? "历史访问量与新统计中尚未计入历史的部分相加。"
             : "历史与新统计分段累计，访客未跨服务去重。"
         )
-      : "仅包含切换后的统计，尚未包含此前的历史记录。";
+      : "当前显示新服务的统计，历史数字尚未补入。";
 
     if (
       (oldCount !== null && !hasHistory) ||
@@ -1090,13 +1091,14 @@ html[data-theme="dark"] .profile-page {
       (hasHistory && rawCount < baseline)
     ) {
       output.textContent = "待核对";
-      item.title = "返回的计数异常，或小于设置的接续基准。";
+      item.title =
+        "返回的计数异常，或小于设置的接续基准。";
       return true;
     }
 
     /*
-     * 每次从新服务的原始值重新计算，
-     * 不把当前显示数字再次累加，避免重复增加。
+     * 始终用固定历史值和新服务原始计数计算，
+     * 不对当前显示的合计再次加上历史值。
      */
     const total = hasHistory
       ? oldCount + (rawCount - baseline)
@@ -1131,8 +1133,8 @@ html[data-theme="dark"] .profile-page {
   }
 
   /*
-   * 仅观察隐藏的原始计数。
-   * 超时后仍保留观察，数据稍后返回时自动恢复显示。
+   * 仅监听隐藏的原始计数，避免显示更新触发重复累加。
+   * 超时后继续监听，数据稍后返回时自动恢复显示。
    */
   const observer = new MutationObserver(updateDisplay);
 
