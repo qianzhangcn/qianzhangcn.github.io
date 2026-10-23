@@ -972,7 +972,7 @@ html[data-theme="dark"] .profile-page {
   }
 
   #site-visit-counter .visit-counter-number {
-    font-weight: 600;
+    font-weight: 400;
     font-variant-numeric: tabular-nums;
   }
 </style>
