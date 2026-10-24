@@ -1674,6 +1674,39 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
+        src="{{ '/assets/img/group/Linrui_Wei.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="魏琳瑞"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          魏琳瑞
+        </div>
+
+        <div class="ics-member-role">
+          本科生
+        </div>
+
+        <div class="ics-member-status">
+          2025级 · 在读
+        </div>
+
+        <div class="ics-member-status">
+         东北大学 · 电子信息工程
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ==================== 本科生 6 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
         src="{{ '/assets/img/group/Yiming_Xu.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="许一鸣"
