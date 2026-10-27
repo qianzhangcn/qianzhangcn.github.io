@@ -1707,6 +1707,39 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
+        src="{{ '/assets/img/group/Haoyu_Zhao.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="赵浩宇"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          赵浩宇
+        </div>
+
+        <div class="ics-member-role">
+          本科生
+        </div>
+
+        <div class="ics-member-status">
+          2026级 · 在读
+        </div>
+
+        <div class="ics-member-status">
+         东北大学 · 数学
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ==================== 本科生 7 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
         src="{{ '/assets/img/group/Yiming_Xu.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="许一鸣"
