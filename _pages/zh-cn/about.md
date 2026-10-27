@@ -879,47 +879,47 @@ html[data-theme="dark"] .profile-page {
   <div class="award-grid">
 
     <div class="award-item profile-hover-card">
-      推荐免试攻读研究生资格（2020）
+      <strong>推荐免试攻读研究生资格（2020）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      本科国家奖学金（2020，学院排名第一）
+      <strong>本科国家奖学金（2020，学院排名第一）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      国家励志奖学金（2018、2019）
+      <strong>国家励志奖学金（2018、2019）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      博士国家奖学金（2024、2025）
+      <strong>博士国家奖学金（2024、2025）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      山东省优秀毕业生（2021）
+      <strong>山东省优秀毕业生（2021）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      山东大学优秀毕业生（2026）
+      <strong>山东大学优秀毕业生（2026）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      山东大学学术之星（2026，学院唯一）
+      <strong>山东大学学术之星（2026，学院唯一）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      山东大学研究生优秀成果奖（2026，学院唯一）
+      <strong>山东大学研究生优秀成果奖（2026，学院唯一）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      博士中期考核优秀奖（排名第一）
+      <strong>博士中期考核优秀奖（排名第一）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      本科一等学业奖学金（四年专业唯一）
+      <strong>本科一等学业奖学金（四年专业唯一）</strong>
     </div>
 
     <div class="award-item profile-hover-card">
-      博士优秀生源奖学金、新生一等奖学金
+      <strong>博士优秀生源奖学金、新生一等奖学金</strong>
     </div>
 
   </div>
@@ -941,7 +941,7 @@ html[data-theme="dark"] .profile-page {
 
     <p>
       欢迎对无线通信、智能超表面、通感一体化、
-      人工智能通信优化等方向感兴趣的本科生、硕士生及博士生联系交流。
+      人工智能通信优化等方向感兴趣的本科和拟攻读硕士研究生的同学联系交流。
     </p>
 
     <p>
