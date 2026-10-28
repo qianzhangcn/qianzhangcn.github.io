@@ -462,6 +462,15 @@ nav_order: 2
 <span class="paper-info">(JCR Q1, IF = 10.3, Under Review)</span>
 </li>
 
+<li>
+<span class="author-name">Qian Zhang</span>,
+<span class="etal">et al.</span>,
+"Joint beamforming and antenna position optimization for fluid antenna-aided ISAC systems,"
+<span class="journal-name">China Communications</span>,
+2026.
+<span class="paper-info">(JCR Q1, IF = 3, Under Review)</span>
+</li>
+
 
 <li>
 Yufei Zhao*,
