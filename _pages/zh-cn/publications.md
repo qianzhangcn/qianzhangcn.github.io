@@ -488,7 +488,7 @@ nav_order: 2
 <li>
 Xuejun Cheng, Yuhui Jiao, 
 <span class="author-name">Qian Zhang*</span>,
-<span class="etal">et al.</span>,
+Jiancheng An, Maoyuan Wang, Runlai Wang, and Ju Liu*,
 "Cramér-Rao bound minimization for discrete SIM-aided ISAC systems,"
 <span class="journal-name">IEEE Internet of Things Journal</span>,
 2026.
