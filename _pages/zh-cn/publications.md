@@ -492,7 +492,7 @@ Xuejun Cheng, Yuhui Jiao,
 "Cramér-Rao bound minimization for discrete SIM-aided ISAC systems,"
 <span class="journal-name">IEEE Internet of Things Journal</span>,
 2026.
-<span class="paper-info">(JCR Q1, IF = 8.7)</span>
+<span class="paper-info">(JCR Q1, IF = 8.7, 接收)</span>
 </li>
 
 
