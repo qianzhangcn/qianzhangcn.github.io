@@ -593,7 +593,7 @@ html[data-theme="dark"] .profile-page {
       and artificial intelligence algorithms for wireless communications and sensing.
       He has published more than 30 research papers in leading journals such as
       IEEE TWC and IEEE TCOM, and major conferences such as IEEE ICC and IEEE ICASSP,
-      including <strong>18 papers as first author, co-first author,
+      including <strong>19 papers as first author, co-first author,
       or corresponding author</strong>.
       Two of his first-authored papers have been recognized as
       <strong>🏆 ESI Highly Cited Papers</strong>.
