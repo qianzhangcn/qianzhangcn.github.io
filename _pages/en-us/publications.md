@@ -471,6 +471,15 @@ nav_order: 2
 <span class="paper-info">(JCR Q1, IF = 3, Under Review)</span>
 </li>
 
+<li>
+Xuejun Cheng, Yuhui Jiao, 
+<span class="author-name">Qian Zhang*</span>,
+<span class="etal">et al.</span>,
+"Cramér-Rao bound minimization for discrete SIM-aided ISAC systems,"
+<span class="journal-name">IEEE Internet of Things Journal</span>,
+2026.
+<span class="paper-info">(JCR Q1, IF = 8.7, Accepted)</span>
+</li>
 
 <li>
 Yufei Zhao*,
