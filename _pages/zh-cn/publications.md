@@ -485,6 +485,16 @@ nav_order: 2
 <span class="paper-info">(JCR Q1, IF = 3, 二审)</span>
 </li>
 
+<li>
+Xuejun Cheng, Yuhui Jiao, 
+<span class="author-name">Qian Zhang*</span>,
+<span class="etal">et al.</span>,
+"Cramér-Rao bound minimization for discrete SIM-aided ISAC systems,"
+<span class="journal-name">IEEE Internet of Things Journal</span>,
+2026.
+<span class="paper-info">(JCR Q1, IF = 8.7)</span>
+</li>
+
 
 <li>
 Yufei Zhao*,
@@ -505,7 +515,7 @@ vol. 25, pp. 24587-24602, 2026.
 "RIS-assisted multiuser NOMA networks with imperfect CSI under transceiver hardware impairments,"
 <span class="journal-name">IEEE Internet of Things Journal</span>,
 2026.
-<span class="paper-info">(JCR Q1, IF = 8.33)</span>
+<span class="paper-info">(JCR Q1, IF = 8.7)</span>
 <a href="https://ieeexplore.ieee.org/document/11720371">Full Paper</a>
 </li>
 
@@ -741,17 +751,6 @@ Haoyang Shi,
 "Skin-inspired minimalist stacked intelligent meta-surfaces: from concept to prototype,"
 <span class="journal-name">IEEE Communications Magazine</span>.
 <span class="paper-info">(JCR Q1, IF = 8.3, Submitted)</span>
-</li>
-
-
-<li>
-Xuejun Cheng,
-<span class="author-name">Qian Zhang</span>,
-<span class="etal">et al.</span>,
-"Crem'er-Rao bound minimization for discrete SIM-aided ISAC systems,"
-<span class="journal-name">IEEE Internet of Things Journal</span>,
-2026.
-<span class="paper-info">(主要指导人, JCR Q1, IF = 8.33, 大修)</span>
 </li>
 
 
