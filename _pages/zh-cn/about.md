@@ -638,7 +638,7 @@ html[data-theme="dark"] .profile-page {
     <div class="timeline-item profile-hover-card">
       <div class="timeline-date">2024.11 — 2025.11</div>
       <div>
-        <div class="timeline-main">新加坡南洋理工大学 · <span class="en">EEE</span></div>
+        <div class="timeline-main">新加坡南洋理工大学 · 电气与电子工程学院</span></div>
         <div class="timeline-sub">
           联合培养博士 · 导师：
           <span class="en">Yong Liang Guan</span>（副校长）、
