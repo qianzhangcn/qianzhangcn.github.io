@@ -1740,6 +1740,39 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
+        src="{{ '/assets/img/group/Xinyi_Zhou.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="周欣意"
+        loading="lazy"
+        decoding="async">
+
+      <div class="ics-member-info">
+
+        <div class="ics-member-name">
+          周欣意
+        </div>
+
+        <div class="ics-member-role">
+          本科生
+        </div>
+
+        <div class="ics-member-status">
+          2025级 · 在读
+        </div>
+
+        <div class="ics-member-status">
+          山东大学 · 通信工程
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ==================== 本科生 8 ==================== -->
+
+    <div class="ics-member-card ics-hover-card">
+
+      <img
         src="{{ '/assets/img/group/Yiming_Xu.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="许一鸣"
