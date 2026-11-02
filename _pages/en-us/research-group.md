@@ -1170,6 +1170,21 @@ nav_order: 3
      <!-- Undergraduate Student 7 -->
     <div class="ics-member-card ics-hover-card">
       <img
+        src="{{ '/assets/img/group/Xinyi_Zhou.jpg' | relative_url }}"
+        class="ics-member-photo"
+        alt="Xinyi Zhou"
+        loading="lazy"
+        decoding="async">
+      <div class="ics-member-info">
+        <div class="ics-member-name">Xinyi Zhou</div>
+        <div class="ics-member-role">Undergraduate Student</div>
+        <div class="ics-member-status">2025 Intake · Enrolled</div>
+        <div class="ics-member-status">Undergraduate Research Member</div>
+      </div>
+    </div>
+     <!-- Undergraduate Student 7 -->
+    <div class="ics-member-card ics-hover-card">
+      <img
         src="{{ '/assets/img/group/Yiming_Xu.jpg' | relative_url }}"
         class="ics-member-photo"
         alt="Yiming Xu"
