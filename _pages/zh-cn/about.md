@@ -586,9 +586,8 @@ html[data-theme="dark"] .profile-page {
       <strong>第一/共一/通讯作者论文19篇</strong>。
       2篇论文入选<strong>🏆 ESI高被引论文</strong>（一作），
       1篇论文位列<strong><span class="en">IEEE CL</span>年度最受欢迎论文 TOP 2</strong>（一作），
-      4篇论文分别位列
-      <strong><span class="en">IEEE TVT</span>、<span class="en">WCL</span>、<span class="en">CL</span>月度最受欢迎论文 TOP 50</strong>
-      （1篇一作、2篇共一、1篇第二）。
+      5篇论文分别位列
+      <strong><span class="en">IEEE TVT</span>、<span class="en">WCL</span>、<span class="en">CL</span>、<span class="en">IEEE Network</span>月度最受欢迎论文 TOP 50</strong>。
       授权专利3项。
     </p>
 
