@@ -661,7 +661,7 @@ Yuhui Jiao†,
 <span class="journal-name">IEEE Wireless Communications Letters</span>,
 2026.
 <span class="paper-info">(共一, 主要指导人, JCR Q1, IF = 5.5)</span>
-<a href="https://ieeexplore.ieee.org/abstract/document/11614485">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11664122">Full Paper</a>
 </li>
 
 
