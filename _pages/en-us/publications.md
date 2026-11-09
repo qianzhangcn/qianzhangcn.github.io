@@ -479,6 +479,7 @@ Xuejun Cheng, Yuhui Jiao,
 <span class="journal-name">IEEE Internet of Things Journal</span>,
 2026.
 <span class="paper-info">(JCR Q1, IF = 8.7, Accepted)</span>
+   <a href="https://ieeexplore.ieee.org/document/11775481">Full Paper</a>
 </li>
 
 <li>
