@@ -482,7 +482,7 @@ nav_order: 2
 "Joint beamforming and antenna position optimization for fluid antenna-aided ISAC systems,"
 <span class="journal-name">China Communications</span>,
 2026.
-<span class="paper-info">(JCR Q1, IF = 3, 二审)</span>
+<span class="paper-info">(JCR Q1, IF = 3, 接收)</span>
 </li>
 
 <li>
