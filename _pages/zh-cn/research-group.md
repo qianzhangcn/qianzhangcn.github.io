@@ -1329,16 +1329,16 @@ nav_order: 3
     <div class="ics-member-card ics-hover-card">
 
       <img
-        src="{{ '/assets/img/group/Master_Vacant.png' | relative_url }}"
+        src="{{ '/assets/img/group/Zhiting_Chen.jpg' | relative_url }}"
         class="ics-member-photo"
-        alt="硕士研究生名额空缺，尚未招录"
+        alt="陈芝霆"
         loading="lazy"
         decoding="async">
 
       <div class="ics-member-info">
 
         <div class="ics-member-name">
-          有名额
+          陈芝霆
         </div>
 
         <div class="ics-member-role">
@@ -1346,11 +1346,11 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2026级 · 待招录
+          2026级 · 专业型硕士
         </div>
 
         <div class="ics-member-status">
-          学术型/专业型硕士
+          数字孪生、UAV-ISAC
         </div>
 
       </div>
