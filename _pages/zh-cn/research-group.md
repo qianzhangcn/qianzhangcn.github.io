@@ -457,7 +457,7 @@ nav_order: 3
 
 .ics-page .ics-members {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: stretch;
   gap: 25px;
 }
@@ -1321,7 +1321,7 @@ nav_order: 3
     硕士研究生
   </h2>
 
-  <div class="ics-members">
+  <div class="ics-members ics-members-five">
 
 
     <!-- ==================== 硕士生空缺 ==================== -->
@@ -1376,7 +1376,7 @@ nav_order: 3
     协助指导研究生
   </h2>
 
-  <div class="ics-members">
+  <div class="ics-members ics-members-five">
 
 <!-- ==================== 协助指导硕士生 1 ==================== -->
 
@@ -1533,7 +1533,7 @@ nav_order: 3
     本科生
   </h2>
 
-  <div class="ics-members">
+  <div class="ics-members ics-members-five">
 
 
     <!-- ==================== 本科生 1 ==================== -->
