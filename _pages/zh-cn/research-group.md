@@ -477,7 +477,7 @@ nav_order: 3
   flex-direction: column;
   min-width: 0;
   height: 100%;
-  padding: 10px 12px 10px;
+  padding: 2px 12px 10px;
   overflow: hidden;
   border-radius: 15px;
   text-align: center;
@@ -729,7 +729,7 @@ nav_order: 3
   }
 
   .ics-page .ics-member-card {
-    padding: 10px 16px 10px;
+    padding: 2px 16px 10px;
   }
 
   .ics-page .ics-member-photo {
@@ -1429,7 +1429,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          研究方向：通信感知一体化
+          通信感知一体化
         </div>
 
       </div>
@@ -1462,7 +1462,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          研究方向：无线通信、边缘侧大模型
+          无线通信、边缘侧大模型
         </div>
 
       </div>
@@ -1495,7 +1495,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          研究方向：智能超表面、通感一体化
+          智能超表面、通感一体化
         </div>
 
       </div>
@@ -1528,7 +1528,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          研究方向：稀疏贝叶斯、AFDM
+          稀疏贝叶斯、AFDM
         </div>
 
       </div>
