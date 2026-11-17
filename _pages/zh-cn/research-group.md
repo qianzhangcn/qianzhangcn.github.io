@@ -452,55 +452,64 @@ nav_order: 3
 
 
 /* =========================================================
-   学生卡片：三列基础布局，指定区域五列布局
+   学生卡片：保留留白、完整照片和统一图片区域高度
+   ========================================================= */
+
+/* =========================================================
+   学生卡片：统一五列布局、照片底部对齐、卡片高度紧凑
    ========================================================= */
 
 .ics-page .ics-members {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 25px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
 }
 
-/* 协助指导研究生和本科生：桌面端每行五人 */
+/* 三个学生区域均采用相同的五列布局 */
 .ics-page .ics-members-five {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: start;
 }
 
+/* 卡片外框 */
 .ics-page .ics-member-card {
-  padding: 8px 12px 8px;
-  height: auto;
-  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  padding: 10px 12px 10px;
   overflow: hidden;
   border-radius: 15px;
   text-align: center;
 }
 
-/* 基础布局保留原来的 320px 图片区域 */
+/* 统一照片显示区域高度，并将照片底部对齐 */
 .ics-page .ics-member-photo {
   display: block;
+  flex: 0 0 230px;
   width: 100%;
-  height: 320px;
-  max-height: none;
+  height: 230px;
+  max-height: 230px;
   margin: 0 auto;
   padding: 0;
+
+  /* 保持照片原始比例，完整显示，不裁剪 */
   object-fit: contain;
-  object-position: center;
-  background: var(--ics-surface);
+  object-position: center bottom;
+
+  background: transparent;
 }
 
-/* 五列布局取消 320px 固定空白区；照片按原比例显示 */
-.ics-page .ics-members-five .ics-member-photo {
-  height: auto;
-}
-
+/* 个人信息区域：统一照片与姓名之间的间距 */
 .ics-page .ics-member-info {
-  padding: 18px 0 8px;
+  flex: 1 0 auto;
+  padding: 10px 0 2px;
 }
+
 
 .ics-page .ics-member-name {
   margin: 0 0 5px;
+
   font-size: 1.18rem;
   font-weight: 700;
 }
@@ -508,10 +517,13 @@ nav_order: 3
 .ics-page .ics-member-role {
   display: inline-block;
   max-width: 100%;
+
   margin: 4px 0 9px;
   padding: 3px 12px;
+
   border: 1px solid var(--ics-accent);
   border-radius: 20px;
+
   color: var(--ics-accent);
   font-size: 0.87rem;
   font-weight: 700;
@@ -519,6 +531,7 @@ nav_order: 3
 
 .ics-page .ics-member-status {
   margin: 3px 0;
+
   color: var(--ics-muted);
   font-size: 0.93rem;
   line-height: 1.75;
@@ -704,26 +717,26 @@ nav_order: 3
     text-align: center;
   }
 
-  .ics-page .ics-members,
-  .ics-page .ics-members-five {
+  .ics-page .ics-members {
     grid-template-columns: minmax(0, 1fr);
-
     width: 100%;
     max-width: 380px;
     margin: 0 auto;
   }
 
+  .ics-page .ics-members-five {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .ics-page .ics-member-card {
-    padding: 20px 16px 0;
+    padding: 10px 16px 10px;
   }
 
   .ics-page .ics-member-photo {
-    height: 300px;
-    max-height: none;
-  }
-
-  .ics-page .ics-members-five .ics-member-photo {
-    height: auto;
+    flex-basis: 230px;
+    height: 230px;
+    max-height: 230px;
+    object-position: center bottom;
   }
 
   .ics-page .ics-ending {
@@ -749,6 +762,7 @@ nav_order: 3
   }
 
 }
+
 
 </style>
 
@@ -1332,7 +1346,7 @@ nav_order: 3
     硕士研究生
   </h2>
 
-  <div class="ics-members">
+  <div class="ics-members ics-members-five">
 
 
     <!-- ==================== 硕士生空缺 ==================== -->
