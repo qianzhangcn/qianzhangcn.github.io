@@ -464,7 +464,7 @@ nav_order: 3
 
 .ics-page .ics-member-card {
   /* 照片上方留白 24px，左右留白 20px */
-  padding: 24px 20px 0;
+  padding: 8px 20px 0;
 
   overflow: hidden;
   border-radius: 15px;
@@ -488,13 +488,8 @@ nav_order: 3
   background: var(--ics-surface);
 }
 
-   /* 仅压缩五列布局的卡片高度，不改变照片尺寸 */
-.ics-page .ics-members-five .ics-member-photo {
-  margin-bottom: -70px;
-}
-
 .ics-page .ics-member-info {
-  padding: 18px 0 24px;
+  padding: 18px 0 8px;
 }
 
 .ics-page .ics-member-name {
@@ -746,23 +741,19 @@ nav_order: 3
 
 /* =========================================================
    学生卡片：仅缩小外框高度，不改变照片尺寸
-   ========================================================= */
-
 .ics-page .ics-members-five {
   align-items: start;
 }
-
 .ics-page .ics-members-five .ics-member-card {
   height: auto !important;
   min-height: 0 !important;
   padding: 12px 12px 8px !important;
 }
-
 .ics-page .ics-members-five .ics-member-info {
   padding: 8px 0 10px !important;
   margin: 0;
 }
-
+========================================================= */
    
 </style>
 
