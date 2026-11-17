@@ -488,6 +488,11 @@ nav_order: 3
   background: var(--ics-surface);
 }
 
+   /* 仅压缩五列布局的卡片高度，不改变照片尺寸 */
+.ics-page .ics-members-five .ics-member-photo {
+  margin-bottom: -70px;
+}
+
 .ics-page .ics-member-info {
   padding: 18px 0 24px;
 }
@@ -1366,7 +1371,7 @@ nav_order: 3
         </div>
 
         <div class="ics-member-status">
-          2026级 · 专业型硕士
+          2027级 · 专业型硕士
         </div>
 
         <div class="ics-member-status">
