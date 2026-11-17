@@ -458,7 +458,7 @@ nav_order: 3
 .ics-page .ics-members {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: stretch;
+  align-items: start;
   gap: 25px;
 }
 
@@ -739,21 +739,6 @@ nav_order: 3
 
 }
 
-/* =========================================================
-   学生卡片：仅缩小外框高度，不改变照片尺寸
-.ics-page .ics-members-five {
-  align-items: start;
-}
-.ics-page .ics-members-five .ics-member-card {
-  height: auto !important;
-  min-height: 0 !important;
-  padding: 12px 12px 8px !important;
-}
-.ics-page .ics-members-five .ics-member-info {
-  padding: 8px 0 10px !important;
-  margin: 0;
-}
-========================================================= */
    
 </style>
 
