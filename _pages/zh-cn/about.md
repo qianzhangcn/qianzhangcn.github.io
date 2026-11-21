@@ -759,6 +759,19 @@ html[data-theme="dark"] .profile-page {
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[1]</span>
+      <strong>Qian Zhang</strong>, Yufei Zhao, Jiancheng An, Zheng Dong, Yong Liang Guan, Ju Liu, and Chau Yuen,
+      “Hierarchical Sub-Array Beam Training for Flexible Intelligent Metasurface-Enabled Hybrid Near-Far-Field Multiuser Communications,”
+      <strong><em>IEEE Journal on Selected Areas in Communications</em></strong>,
+      2026.
+    </div>
+    <div style="margin-top: 6px;">
+      <strong>SCI, JCR Q1, IF = 16.8</strong>
+    </div>
+  </div>
+
+  <div class="pub-item profile-hover-card">
+    <div class="pub-text en">
+      <span class="pub-index">[1]</span>
       <strong>Qian Zhang</strong>, Zheng Dong, Yufei Zhao, Yao Ge,
       Yong Liang Guan, Ju Liu, and Chau Yuen,
       “Multi-resolution codebook design and multiuser interference management
