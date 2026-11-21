@@ -257,8 +257,20 @@ html[data-theme="dark"] .profile-page {
   color: var(--profile-accent);
 }
 
+/* ==================== 代表性论文 ==================== */
 .pub-text {
   line-height: 1.75;
+}
+
+/* 代表性论文中，突出显示本人姓名及期刊名称 */
+.profile-page .pub-text.en strong {
+  font-weight: 700 !important;
+}
+
+/* 期刊名称同时保持粗体和斜体 */
+.profile-page .pub-text.en strong em {
+  font-weight: 700 !important;
+  font-style: italic !important;
 }
 
 /* ==================== 专利 ==================== */
