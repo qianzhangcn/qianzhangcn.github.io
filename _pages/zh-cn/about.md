@@ -579,11 +579,11 @@ html[data-theme="dark"] .profile-page {
     <p>
       目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。
       在通信领域顶级期刊
-      <span class="en">IEEE TWC</span>、<span class="en">TCOM</span>
+      <span class="en">IEEE JSAC</span>、<span class="en">TWC</span>、<span class="en">TCOM</span>
       和顶级会议
       <span class="en">IEEE ICC</span>、<span class="en">ICASSP</span>
       等发表学术论文30余篇，其中
-      <strong>第一/共一/通讯作者论文20篇</strong>。
+      <strong>第一/共一/通讯作者论文21篇</strong>。
       2篇论文入选<strong>🏆 ESI高被引论文</strong>（一作），
       1篇论文位列<strong><span class="en">IEEE CL</span>年度最受欢迎论文 TOP 2</strong>（一作），
       5篇论文分别位列
