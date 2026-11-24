@@ -1,4 +1,3 @@
-
 ---
 page_id: about
 layout: about
@@ -39,7 +38,7 @@ body {
   line-height: 1.8;
 }
 
-/* 跟随网站原有的深色主题 */
+/* 跟随网站原有的深色主题。 */
 html[data-theme="dark"] .profile-page {
   --profile-hover-tint: rgba(181, 9, 172, 0.10);
   --profile-hover-shadow:
@@ -52,7 +51,7 @@ html[data-theme="dark"] .profile-page {
   box-sizing: border-box;
 }
 
-/* 英文统一 Times New Roman */
+/* 英文统一 Times New Roman。 */
 .profile-page .en,
 .profile-page .en * {
   font-family: "Times New Roman", Times, serif !important;
@@ -235,71 +234,6 @@ html[data-theme="dark"] .profile-page {
   background: var(--profile-surface);
 }
 
-/* ==================== 科研与教学项目 ==================== */
-.project-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.project-card {
-  width: 100%;
-  padding: 22px 26px;
-  border: 1px solid var(--profile-divider);
-  border-radius: 12px;
-  background: var(--profile-surface);
-}
-
-.project-card-title {
-  font-size: 1.18rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--profile-divider);
-}
-
-.project-card-title::before {
-  content: "";
-  display: inline-block;
-  width: 4px;
-  height: 1.05em;
-  margin-right: 10px;
-  border-radius: 3px;
-  background: var(--profile-accent);
-  vertical-align: -0.1em;
-}
-
-.project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.project-item {
-  position: relative;
-  padding-left: 18px;
-  line-height: 1.8;
-}
-
-.project-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--profile-accent);
-}
-
-.project-role {
-  display: block;
-  margin-top: 2px;
-  font-size: 0.91rem;
-  color: var(--profile-muted);
-}
-
 /* ==================== 论文 ==================== */
 .pub-note {
   margin-bottom: 20px;
@@ -387,7 +321,7 @@ html[data-theme="dark"] .profile-page {
 
 /* =========================================================
    统一卡片悬停效果
-   每张卡片单独添加 profile-hover-card
+   每张卡片单独添加 profile-hover-card，不绑定外层容器。
    ========================================================= */
 .profile-page .profile-hover-card {
   position: relative;
@@ -409,7 +343,7 @@ html[data-theme="dark"] .profile-page {
     box-shadow 0.22s ease;
 }
 
-/* 扩展上浮后的底部命中区域 */
+/* 扩展上浮后的底部命中区域，避免鼠标停在下边缘时闪动。 */
 .profile-page .profile-hover-card::after,
 .profile-page .research-tag::after {
   content: "";
@@ -422,7 +356,7 @@ html[data-theme="dark"] .profile-page {
   pointer-events: none;
 }
 
-/* 键盘聚焦 */
+/* 使用键盘聚焦卡片内的真实链接时，也显示卡片强调效果。 */
 .profile-page .profile-hover-card:focus-within {
   z-index: 1;
   border-color: var(--profile-accent);
@@ -439,7 +373,7 @@ html[data-theme="dark"] .profile-page {
   border-radius: 3px;
 }
 
-/* 鼠标悬停效果 */
+/* 对配有鼠标等悬停设备的终端启用，避免纯触屏设备停留在悬停状态。 */
 @media (any-hover: hover) {
   .profile-page .profile-hover-card:hover {
     z-index: 1;
@@ -456,7 +390,7 @@ html[data-theme="dark"] .profile-page {
     color: var(--profile-accent);
   }
 
-  /* 当前标签变成紫底白字 */
+  /* 仅当前标签变成紫底白字，其他标签保持原样。 */
   .profile-page .research-tag:hover {
     z-index: 1;
     transform: translateY(-3px);
@@ -546,10 +480,6 @@ html[data-theme="dark"] .profile-page {
     font-size: 1.4rem;
   }
 
-  .project-card {
-    padding: 19px 18px;
-  }
-
   .profile-page .profile-info,
   .profile-page .profile-hover-card,
   .profile-page .research-tag {
@@ -557,7 +487,7 @@ html[data-theme="dark"] .profile-page {
   }
 }
 
-/* 减少动态效果 */
+/* 系统启用“减少动态效果”时，保留变色和阴影，取消位移动画。 */
 @media (prefers-reduced-motion: reduce) {
   .profile-page .profile-hover-card,
   .profile-page .research-tag,
@@ -574,7 +504,7 @@ html[data-theme="dark"] .profile-page {
 
 <div class="profile-page">
 
-<!-- ==================== 顶部个人信息 ==================== -->
+<!-- 顶部个人信息 -->
 
 <div class="profile-top">
 
@@ -628,7 +558,7 @@ html[data-theme="dark"] .profile-page {
 
 </div>
 
-<!-- ==================== 姓名 ==================== -->
+<!-- 姓名 -->
 
 <h1 class="profile-name">张迁</h1>
 
@@ -637,7 +567,7 @@ html[data-theme="dark"] .profile-page {
   （<a href="https://scholar.google.com/citations?user=hs8KAR4AAAAJ&hl=zh-CN">谷歌学术主页</a>）
 </p>
 
-<!-- ==================== 基本信息 ==================== -->
+<!-- 基本信息 -->
 
 <section class="profile-section">
 
@@ -659,7 +589,7 @@ html[data-theme="dark"] .profile-page {
     </p>
 
     <p>
-      目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域的相关研究。
+      目前主要从事智能超表面、凸优化理论、人工智能算法在无线通信和感知领域应用的相关研究。
       在通信领域顶级期刊
       <span class="en">IEEE JSAC</span>、<span class="en">TWC</span>、<span class="en">TCOM</span>
       和顶级会议
@@ -688,7 +618,7 @@ html[data-theme="dark"] .profile-page {
 
     <p>
       作为核心成员参与国家重点研发计划项目、国家自然科学基金面上项目、
-      山东省重点研发计划（重大科技创新工程）项目等多项国家级省级重点项目。
+      山东省重点研发计划（重大科技示范工程）项目等多项国家级省级重点项目。
       曾获优秀博士/学士毕业论文、山东省/山东大学优秀毕业生、
       <strong>博士国家奖学金2次</strong>、<strong>本科国家奖学金</strong>、
       2026年<strong>山东大学学术之星（学院唯一）</strong>、
@@ -700,7 +630,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 学术背景 ==================== -->
+<!-- 学术背景 -->
 
 <section class="profile-section">
 
@@ -719,7 +649,7 @@ html[data-theme="dark"] .profile-page {
     <div class="timeline-item profile-hover-card">
       <div class="timeline-date">2024.11 — 2025.11</div>
       <div>
-        <div class="timeline-main">新加坡南洋理工大学 · 电气与电子工程学院</div>
+        <div class="timeline-main">新加坡南洋理工大学 · 电气与电子工程学院</span></div>
         <div class="timeline-sub">
           联合培养博士 · 导师：
           <span class="en">Yong Liang Guan</span>（副校长）、
@@ -740,7 +670,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 研究方向 ==================== -->
+<!-- 研究方向 -->
 
 <section class="profile-section">
 
@@ -749,15 +679,15 @@ html[data-theme="dark"] .profile-page {
   <div class="research-tags">
 
     <span class="research-tag">
-      超大规模阵列通信 XL-MIMO
+      超大规模阵列通信XL-MIMO
     </span>
 
     <span class="research-tag">
-      智能超表面 IMS
+      智能超表面IMS
     </span>
 
     <span class="research-tag">
-      通感一体化 ISAC
+      通感一体化ISAC
     </span>
 
     <span class="research-tag">
@@ -780,7 +710,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 学术服务 ==================== -->
+<!-- 学术服务 -->
 
 <section class="profile-section">
 
@@ -815,73 +745,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 项目经历 ==================== -->
-
-<section class="profile-section">
-
-  <h2 class="profile-section-title">📁 项目经历</h2>
-
-  <div class="project-grid">
-
-    <!-- 科研项目 -->
-
-    <div class="project-card profile-hover-card">
-
-      <h3 class="project-card-title">🔬 科研项目</h3>
-
-      <div class="project-list">
-
-        <div class="project-item">
-          主持东北大学引进人才科研启动基金
-          <span class="project-role">项目负责人</span>
-        </div>
-
-        <div class="project-item">
-          国家重点研发计划项目
-          <span class="project-role">项目参与人</span>
-        </div>
-
-        <div class="project-item">
-          国家自然科学基金面上项目
-          <span class="project-role">项目参与人</span>
-        </div>
-
-        <div class="project-item">
-          山东省重点研发计划（重大科技创新工程）项目
-          <span class="project-role">项目参与人</span>
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- 教学项目 -->
-
-    <div class="project-card profile-hover-card">
-
-      <h3 class="project-card-title">🎓 教学项目</h3>
-
-      <div class="project-list">
-
-        <div class="project-item">
-          大学生创新创业训练计划项目
-          <span class="project-role">指导教师</span>
-        </div>
-
-        <div class="project-item">
-          河北省教育科学“十五五”规划课题
-          <span class="project-role">项目参与人（排名第四）</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ==================== 代表性成果 ==================== -->
+<!-- 代表性成果 -->
 
 <section class="profile-section">
 
@@ -965,7 +829,7 @@ html[data-theme="dark"] .profile-page {
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
       <span class="pub-index">[4]</span>
-      <strong>Qian Zhang</strong>, Ju Liu, Zhichao Gao, Ziyu Li,
+      <strong>Qian Zhang</strong>, Ju Lui, Zhichao Gao, Ziyu Li,
       Zhiying Peng, Zheng Dong, and Hongji Xu,
       “Robust beamforming design for RIS-aided NOMA secure networks
       with transceiver hardware impairments,”
@@ -993,8 +857,6 @@ html[data-theme="dark"] .profile-page {
       </strong>
     </div>
   </div>
-
-  <!-- 专利 -->
 
   <h3 style="margin-top: 34px;">专利</h3>
 
@@ -1032,7 +894,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 荣誉奖励 ==================== -->
+<!-- 荣誉奖励 -->
 
 <section class="profile-section">
 
@@ -1088,7 +950,7 @@ html[data-theme="dark"] .profile-page {
 
 </section>
 
-<!-- ==================== 招生与合作 ==================== -->
+<!-- 招生与合作 -->
 
 <section class="profile-section">
 
@@ -1103,8 +965,7 @@ html[data-theme="dark"] .profile-page {
 
     <p>
       欢迎对无线通信、智能超表面、通感一体化、
-      人工智能通信优化等方向感兴趣的
-      <strong>本科和拟攻读硕士研究生的同学</strong>联系交流。
+      人工智能通信优化等方向感兴趣的<strong>本科和拟攻读硕士研究生的同学</strong>联系交流。
     </p>
 
     <p>
@@ -1120,24 +981,24 @@ html[data-theme="dark"] .profile-page {
 <!-- ==================== 访问统计 ==================== -->
 
 <style>
-#site-visit-counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  font-size: 14px;
-  line-height: 1.8;
-}
+  #site-visit-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
 
-#site-visit-counter .visit-counter-item {
-  white-space: nowrap;
-}
+  #site-visit-counter .visit-counter-item {
+    white-space: nowrap;
+  }
 
-#site-visit-counter .visit-counter-number {
-  font-weight: 400;
-  font-variant-numeric: tabular-nums;
-}
+  #site-visit-counter .visit-counter-number {
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
 </style>
 
 <div id="site-visit-counter" class="visit-counter" aria-live="polite">
@@ -1156,8 +1017,7 @@ html[data-theme="dark"] .profile-page {
 
 </div>
 
-<!-- 新服务返回的原始计数，独立保存，不直接显示 -->
-
+<!-- 新服务返回的原始计数，独立保存，不直接显示。 -->
 <div id="busuanzi-raw-values" hidden aria-hidden="true">
   <span id="busuanzi_value_site_pv"></span>
   <span id="busuanzi_value_site_uv"></span>
@@ -1165,7 +1025,6 @@ html[data-theme="dark"] .profile-page {
 
 <script>
 (function () {
-
   /*
    * ==================== 已填写的历史数据 ====================
    *
@@ -1175,16 +1034,16 @@ html[data-theme="dark"] .profile-page {
    * 页面显示：
    * 访问量 = 1425 + 新服务访问次数
    * 访客数 = 420 + 新服务访客数
+   *
+   * 历史值作为固定基数，每次更新不会重复累加。
    */
-
   const OLD_PV = 1425;
   const OLD_UV = 420;
 
   /*
-   * 历史数据按启用新服务前的累计值处理。
-   * 新服务全部记录需要加入。
+   * 上面的历史数据按启用新服务前的累计值处理。
+   * 因此新服务的全部记录都需要加入，以下基准保持 0。
    */
-
   const NEW_PV_BASELINE = 0;
   const NEW_UV_BASELINE = 0;
 
@@ -1202,7 +1061,6 @@ html[data-theme="dark"] .profile-page {
   let timeoutId;
 
   function renderMetric(key, oldCount, baseline) {
-
     const hasHistory = isCount(oldCount);
     const isPV = key === "pv";
 
@@ -1218,7 +1076,6 @@ html[data-theme="dark"] .profile-page {
        * 历史与新服务之间无法对重复访客去重，
        * 合并后按“人次”累计展示。
        */
-
       byId("visit-uv-unit").textContent =
         hasHistory ? "人次" : "人";
     }
@@ -1267,7 +1124,6 @@ html[data-theme="dark"] .profile-page {
      * 始终用固定历史值和新服务原始计数计算，
      * 不对当前显示的合计再次加上历史值。
      */
-
     const total = hasHistory
       ? oldCount + (rawCount - baseline)
       : rawCount;
@@ -1283,7 +1139,6 @@ html[data-theme="dark"] .profile-page {
   }
 
   function updateDisplay() {
-
     const pvReady = renderMetric(
       "pv",
       OLD_PV,
@@ -1302,10 +1157,9 @@ html[data-theme="dark"] .profile-page {
   }
 
   /*
-   * 仅监听隐藏的原始计数，
-   * 避免显示更新触发重复累加。
+   * 仅监听隐藏的原始计数，避免显示更新触发重复累加。
+   * 超时后继续监听，数据稍后返回时自动恢复显示。
    */
-
   const observer = new MutationObserver(updateDisplay);
 
   observer.observe(byId("busuanzi-raw-values"), {
@@ -1320,15 +1174,13 @@ html[data-theme="dark"] .profile-page {
   }, 15000);
 
   updateDisplay();
-
 })();
 </script>
 
-<!-- 同一页面仅保留这一份统计脚本 -->
-
+<!-- 同一页面仅保留这一份统计脚本。 -->
 <script
   async
-  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+  src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
 
 </div>
