@@ -783,7 +783,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
-      <span class="pub-index">[1]</span>
+      <span class="pub-index">[2]</span>
       <strong>Qian Zhang</strong>, Zheng Dong, Yufei Zhao, Yao Ge,
       Yong Liang Guan, Ju Liu, and Chau Yuen,
       “Multi-resolution codebook design and multiuser interference management
@@ -798,7 +798,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
-      <span class="pub-index">[2]</span>
+      <span class="pub-index">[3]</span>
       <strong>Qian Zhang</strong>, Ju Liu, Haoge Tang, Zheng Dong,
       and Yonghui Li,
       “Practical RIS-aided multiuser communications with imperfect CSI:
@@ -813,7 +813,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
-      <span class="pub-index">[3]</span>
+      <span class="pub-index">[4]</span>
       <strong>Qian Zhang</strong>, Ju Liu, Yao Ge, Yufei Zhao,
       Wali Ullah Khan, Zheng Dong, Yong Liang Guan, Chau Yuen,
       “Two-stage coded-sliding beam training and QoS-constrained sum-rate maximization
@@ -828,7 +828,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
-      <span class="pub-index">[4]</span>
+      <span class="pub-index">[5]</span>
       <strong>Qian Zhang</strong>, Ju Lui, Zhichao Gao, Ziyu Li,
       Zhiying Peng, Zheng Dong, and Hongji Xu,
       “Robust beamforming design for RIS-aided NOMA secure networks
@@ -843,7 +843,7 @@ html[data-theme="dark"] .profile-page {
 
   <div class="pub-item profile-hover-card">
     <div class="pub-text en">
-      <span class="pub-index">[5]</span>
+      <span class="pub-index">[6]</span>
       <strong>Qian Zhang</strong>, Mingjie Shao, Tong Zhang, Gaojie Chen,
       Ju Liu and Pak Chung Ching,
       “An efficient sum-rate maximization algorithm for fluid antenna-assisted ISAC system,”
