@@ -470,15 +470,6 @@ nav_order: 2
 <li>
 <span class="author-name">Qian Zhang</span>,
 <span class="etal">et al.</span>,
-"RIS-aided covert communications with discrete phase control, element control failures, and element activation states,"
-<span class="journal-name">IEEE Transactions on Wireless Communications</span>,
-2026.
-<span class="paper-info">(JCR Q1, IF = 10.3, 在审)</span>
-</li>
-
-<li>
-<span class="author-name">Qian Zhang</span>,
-<span class="etal">et al.</span>,
 "Joint beamforming and antenna position optimization for fluid antenna-aided ISAC systems,"
 <span class="journal-name">China Communications</span>,
 2026.
