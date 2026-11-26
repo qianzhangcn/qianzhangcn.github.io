@@ -464,6 +464,7 @@ nav_order: 2
 <span class="journal-name">IEEE Journal on Selected Areas in Communications</span>,
 2026.
 <span class="paper-info">(JCR Q1, IF = 16.8, 接收)</span>
+<a href="https://arxiv.org/abs/2611.28539">Full Paper</a>
 </li>
 
 
