@@ -498,7 +498,8 @@ Deyu Lin,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>,
 vol. 25, pp. 24587-24602, 2026.
 <span class="paper-info">(JCR Q1, IF = 10.7)</span>
-<a href="https://ieeexplore.ieee.org/document/11723250">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11723250">IEEE</a>
+<a href="https://arxiv.org/abs/2512.19702">ArXiv</a>
 </li>
 
 
@@ -509,7 +510,8 @@ vol. 25, pp. 24587-24602, 2026.
 <span class="journal-name">IEEE Internet of Things Journal</span>,
 2026.
 <span class="paper-info">(JCR Q1, IF = 8.7)</span>
-<a href="https://ieeexplore.ieee.org/document/11720371">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11720371">IEEE</a>
+<a href="https://arxiv.org/abs/2512.19702">ArXiv</a>
 </li>
 
 
@@ -521,7 +523,9 @@ Zheng Dong,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>,
 vol. 25, pp. 2826-2842, 2026.
 <span class="paper-info">(JCR Q1, IF = 10.7, 🏆 ESI高被引)</span>
-<a href="https://doi.org/10.1109/TWC.2025.3599514">Full Paper</a>
+<a href="https://doi.org/10.1109/TWC.2025.3599514">IEEE</a>
+<a href="https://arxiv.org/abs/2508.18582">ArXiv</a>
+
 </li>
 
 
@@ -533,7 +537,7 @@ Ju Liu,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>,
 vol. 23, no. 10, pp. 15245-15260, Oct. 2024.
 <span class="paper-info">(JCR Q1, IF = 10.7)</span>
-<a href="https://doi.org/10.1109/TWC.2024.3427695">Full Paper</a>
+<a href="https://doi.org/10.1109/TWC.2024.3427695">IEEE</a>
 </li>
 
 
@@ -545,7 +549,8 @@ Ju Liu,
 <span class="journal-name">IEEE Transactions on Wireless Communications</span>,
 vol. 25, pp. 12162-12179, 2026.
 <span class="paper-info">(JCR Q1, IF = 10.7)</span>
-<a href="https://doi.org/10.1109/TWC.2026.3661858">Full Paper</a>
+<a href="https://doi.org/10.1109/TWC.2026.3661858">IEEE</a>
+<a href="https://arxiv.org/abs/2602.02131">ArXiv</a>
 </li>
 
 
@@ -557,7 +562,7 @@ Ju Liu,
 <span class="journal-name">IEEE Transactions on Communications</span>,
 vol. 71, no. 6, pp. 3637-3649, Jun. 2023.
 <span class="paper-info">(JCR Q1, IF = 8.3)</span>
-<a href="https://doi.org/10.1109/TCOMM.2023.3251345">Full Paper</a>
+<a href="https://doi.org/10.1109/TCOMM.2023.3251345">IEEE</a>
 </li>
 
 
@@ -569,7 +574,7 @@ Zhengfeng Du,
 <span class="journal-name">IEEE Transactions on Vehicular Technology</span>,
 vol. 74, no. 12, pp. 19795-19800, Dec. 2025.
 <span class="paper-info">(JCR Q1, IF = 7.1)</span>
-<a href="https://doi.org/10.1109/TVT.2025.3584064">Full Paper</a>
+<a href="https://doi.org/10.1109/TVT.2025.3584064">IEEE</a>
 </li>
 
 
@@ -581,7 +586,8 @@ Yufei Zhao,
 <span class="journal-name">IEEE Transactions on Vehicular Technology</span>,
 2025.
 <span class="paper-info">(JCR Q1, IF = 7.1)</span>
-<a href="https://doi.org/10.1109/TVT.2026.3701078">Full Paper</a>
+<a href="https://doi.org/10.1109/TVT.2026.3701078">IEEE</a>
+<a href="https://arxiv.org/pdf/2601.16455">ArXiv</a>
 </li>
 
 
@@ -593,7 +599,8 @@ Mingjie Shao,
 <span class="journal-name">IEEE Communications Letters</span>,
 vol. 29, no. 1, pp. 200-204, Jan. 2025.
 <span class="paper-info">(JCR Q2, IF = 4.4, 🏆 ESI高被引, 年度最受欢迎论文TOP2)</span>
-<a href="https://doi.org/10.1109/LCOMM.2024.3510334">Full Paper</a>
+<a href="https://doi.org/10.1109/LCOMM.2024.3510334">IEEE</a>
+<a href="https://arxiv.org/pdf/2405.06516">ArXiv</a>
 </li>
 
 
@@ -605,7 +612,7 @@ Guanghui Luo†,
 <span class="journal-name">IEEE Wireless Communications Letters</span>,
 vol. 14, no. 1, pp. 118-122, Jan. 2025.
 <span class="paper-info">(JCR Q1, IF = 5.5)</span>
-<a href="https://doi.org/10.1109/LWC.2024.3489718">Full Paper</a>
+<a href="https://doi.org/10.1109/LWC.2024.3489718">IEEE</a>
 </li>
 
 
@@ -614,11 +621,12 @@ Xuejun Cheng†,
 <span class="author-name">Qian Zhang</span>†,
 Yunnuo Xu,
 <span class="etal">et al.</span>,
-"Robust beamforming for non-ideal RIS enabled rate-splitting multiple access systems,"
+"Robust beamforming for practical RIS-aided RSMA systems with imperfect SIC under transceiver hardware impairments,"
 <span class="journal-name">IEEE Transactions on Vehicular Technology</span>,
 2025.
 <span class="paper-info">(共一, 主要指导人, JCR Q1, IF = 7.1)</span>
-<a href="https://doi.org/10.1109/TVT.2026.3677351">Full Paper</a>
+<a href="https://doi.org/10.1109/TVT.2026.3677351">IEEE</a>
+<a href="https://arxiv.org/pdf/2603.18840">ArXiv</a>
 </li>
 
 
@@ -626,11 +634,12 @@ Yunnuo Xu,
 Maoyuan Wang†,
 <span class="author-name">Qian Zhang</span>†,
 <span class="etal">et al.</span>,
-"DRL-Based Antenna Position Optimization for MA-Assisted OTFS System Under Imperfect CSI,"
+"DRL-based antenna position optimization for MA-assisted OTFS system under imperfect CSI,"
 <span class="journal-name">IEEE Communications Letters</span>,
 vol. 30, pp. 1905-1909, 2026.
 <span class="paper-info">(共一, 主要指导人, JCR Q2, IF = 4.4, 最受欢迎论文TOP 50)</span>
-<a href="https://doi.org/10.1109/LCOMM.2026.3688633">Full Paper</a>
+<a href="https://doi.org/10.1109/LCOMM.2026.3688633">IEEE</a>
+<a href="https://arxiv.org/abs/2604.23611">ArXiv</a>
 </li>
 
 
@@ -642,7 +651,8 @@ Yunxiao Li†,
 <span class="journal-name">IEEE Wireless Communications Letters</span>,
 2026.
 <span class="paper-info">(共一，主要指导人, JCR Q1, IF = 5.5)</span>
-<a href="https://doi.org/10.1109/LWC.2026.3672225">Full Paper</a>
+<a href="https://doi.org/10.1109/LWC.2026.3672225">IEEE</a>
+<a href="https://arxiv.org/pdf/2602.23241v1">ArXiv</a>
 </li>
 
 
@@ -650,11 +660,12 @@ Yunxiao Li†,
 Yuhui Jiao†,
 <span class="author-name">Qian Zhang</span>†,
 <span class="etal">et al.</span>,
-"Joint Power Allocation and Phase-Shift Design for Beyond-Diagonal Stacked Intelligent Metasurfaces-Aided ISAC Systems,"
+"Joint power allocation and phase-shift design for beyond-diagonal stacked intelligent metasurfaces-aided ISAC systems,"
 <span class="journal-name">IEEE Wireless Communications Letters</span>,
 2026.
 <span class="paper-info">(共一, 主要指导人, JCR Q1, IF = 5.5)</span>
-<a href="https://ieeexplore.ieee.org/document/11664122">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11664122">IEEE</a>
+<a href="https://arxiv.org/pdf/2608.18713">ArXiv</a>
 </li>
 
 
@@ -662,11 +673,12 @@ Yuhui Jiao†,
 Xuejun Cheng,
 <span class="author-name">Qian Zhang</span>,
 <span class="etal">et al.</span>,
-"Joint Beamforming and Phase Shifts Design for RIS-Enabled RSMA-ISAC Systems,"
+"Joint beamforming and phase shifts eesign for RIS-enabled RSMA-ISAC systems,"
 <span class="journal-name">IEEE Wireless Communications Letters</span>,
 2026.
 <span class="paper-info">(主要指导人, JCR Q1, IF = 5.5)</span>
-<a href="https://doi.org/10.1109/LWC.2026.3725182">Full Paper</a>
+<a href="https://doi.org/10.1109/LWC.2026.3725182">IEEE</a>
+<a href="https://arxiv.org/abs/2608.18458">ArXiv</a>
 </li>
 
 
@@ -675,10 +687,11 @@ Maoyuan Wang,
 <span class="author-name">Qian Zhang</span>,
 Jiancheng An,
 <span class="etal">et al.</span>,
-"DRL-Based Joint Beamforming and Surface Shape Optimization for Flexible Intelligent Metasurface-Aided ISAC Systems,"
+"DRL-based joint beamforming and surface shape optimization for flexible intelligent metasurface-aided ISAC systems,"
 <span class="journal-name">IEEE Wireless Communications Letters</span>.
 <span class="paper-info">(主要指导人, JCR Q1, IF = 5.5)</span>
-<a href="https://doi.org/10.1109/LWC.2026.3709756">Full Paper</a>
+<a href="https://doi.org/10.1109/LWC.2026.3709756">IEEE</a>
+<a href="https://arxiv.org/abs/2607.00951">ArXiv</a>
 </li>
 
 
@@ -691,7 +704,7 @@ Ju Liu,
 <span class="journal-name">IEEE Communications Letters</span>,
 vol. 28, no. 6, pp. 1432-1436, Jun. 2024.
 <span class="paper-info">(JCR Q2, IF = 4.4)</span>
-<a href="https://doi.org/10.1109/LCOMM.2024.3387095">Full Paper</a>
+<a href="https://doi.org/10.1109/LCOMM.2024.3387095">IEEE</a>
 </li>
 
 
@@ -700,11 +713,11 @@ Ziyu Li,
 Lina Zheng,
 <span class="author-name">Qian Zhang</span>,
 <span class="etal">et al.</span>,
-"GNSS Jamming Attacks Recognition Based on Dual GCN With Adaptive Weight Learning,"
+"GNSS jamming attacks recognition based on dual GCN with adaptive weight learning,"
 <span class="journal-name">IEEE Sensors Journal</span>,
 vol. 25, no. 13, pp. 26152-26168, 1 Jul., 2025.
 <span class="paper-info">(JCR Q1, IF = 4.5)</span>
-<a href="https://doi.org/10.1109/JSEN.2025.3571189">Full Paper</a>
+<a href="https://doi.org/10.1109/JSEN.2025.3571189">IEEE</a>
 </li>
 
 
@@ -718,7 +731,7 @@ Hui Wang,
 <span class="journal-name">IEEE Transaction on Instrumentation and Measurement</span>,
 2025.
 <span class="paper-info">(JCR Q1, IF = 5.9)</span>
-<a href="https://doi.org/10.1109/TIM.2025.3644543">Full Paper</a>
+<a href="https://doi.org/10.1109/TIM.2025.3644543">IEEE</a>
 </li>
 
 
@@ -732,7 +745,7 @@ Hong Niu,
 <span class="journal-name">IEEE Network</span>,
 2025.
 <span class="paper-info">(JCR Q1, IF = 6.3)</span>
-<a href="https://doi.org/10.1109/MNET.2026.3685501">Full Paper</a>
+<a href="https://doi.org/10.1109/MNET.2026.3685501">IEEE</a>
 </li>
 
 
@@ -785,7 +798,7 @@ ICASSP 2024 - 2024 IEEE International Conference on Acoustics, Speech and Signal
 (<span class="conference-name">ICASSP</span>),
 Seoul, Korea, Republic of, 2024, pp. 9036-9040.
 <span class="paper-info">(EI, CCF B, IEEE SPS旗舰会议)</span>
-<a href="https://ieeexplore.ieee.org/document/10446199">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/10446199">IEEE</a>
 </li>
 
 
@@ -798,7 +811,7 @@ Guanghui Luo,
 (<span class="conference-name">VTC2024-Spring</span>),
 Singapore, Singapore, 2024, pp. 1-6.
 <span class="paper-info">(EI, IEEE VTS旗舰会议)</span>
-<a href="https://ieeexplore.ieee.org/abstract/document/10683637">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/abstract/document/10683637">IEEE</a>
 </li>
 
 
@@ -810,7 +823,7 @@ Yuhui Jiao†,
 <span class="conference-name">WCNC2026</span> -
 IEEE Wireless Communications and Networking Conference (WCNC).
 <span class="paper-info">(共一，主要指导人, IEEE通信协会旗舰会议)</span>
-<a href="https://ieeexplore.ieee.org/document/11555646?denied=">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11555646?denied=">IEEE</a>
 </li>
 
 
@@ -822,7 +835,7 @@ Xuejun Cheng†,
 <span class="conference-name">ICC2026</span> -
 IEEE International Conference on Communications (ICC).
 <span class="paper-info">(共一, 主要指导人, IEEE通信协会旗舰会议)</span>
-<a href="https://ieeexplore.ieee.org/abstract/document/11586512">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/abstract/document/11586512">IEEE</a>
 </li>
 
 
@@ -835,7 +848,7 @@ Xuejun Cheng,
 (<span class="conference-name">ICCC</span>),
 Shanghai, China, 2025, pp. 1-6.
 <span class="paper-info">(主要指导人)</span>
-<a href="https://ieeexplore.ieee.org/document/11148732">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/11148732">IEEE</a>
 </li>
 
 
@@ -849,7 +862,7 @@ Guanghui Luo,
 (<span class="conference-name">ICCC Workshops</span>),
 Hangzhou, China, 2024, pp. 401-406.
 <span class="paper-info">(主要指导人)</span>
-<a href="https://ieeexplore.ieee.org/document/10693724">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/10693724">IEEE</a>
 </li>
 
 
@@ -860,7 +873,7 @@ Zhiying Peng, Ju Liu, Zheng Dong, Zhichao Gao, and
 2022 3rd Information Communication Technologies Conference
 (<span class="conference-name">ICTC</span>),
 Nanjing, China, 2022.
-<a href="https://ieeexplore.ieee.org/document/9778638">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/9778638">IEEE</a>
 </li>
 
 
@@ -872,7 +885,7 @@ Xiangcheng Wang, Ju Liu, Zheng Dong, Ziyu Li,
 2023 IEEE/CIC International Conference on Communications in China
 (<span class="conference-name">ICCC</span>),
 Dalian, China, 2023, pp. 1-6.
-<a href="https://ieeexplore.ieee.org/document/10233623">Full Paper</a>
+<a href="https://ieeexplore.ieee.org/document/10233623">IEEE</a>
 </li>
 
 
