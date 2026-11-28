@@ -463,8 +463,9 @@ nav_order: 2
 "Hierarchical sub-array beam training for flexible intelligent metasurface-enabled hybrid near-far-field multiuser communications,"
 <span class="journal-name">IEEE Journal on Selected Areas in Communications</span>,
 2026.
-<span class="paper-info">(JCR Q1, IF = 16.8, 接收)</span>
-<a href="https://arxiv.org/abs/2611.28539">Full Paper</a>
+<span class="paper-info">(JCR Q1, IF = 16.8)</span>
+<a href="https://ieeexplore.ieee.org/document/11816103">IEEE</a>
+<a href="https://arxiv.org/abs/2611.28539">ArXiv</a>
 </li>
 
 
